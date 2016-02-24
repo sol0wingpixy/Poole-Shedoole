@@ -1,0 +1,50 @@
+<html style="overflow: auto">
+<head>
+    <meta charset="UTF-8">
+    <title>Tester</title>
+</head>
+<body>
+<script src="PooleProjectDataBase.js"></script>
+<script src="SheduleGrid.js"></script>
+<script>
+    (function() {
+        var fileIn = {
+            class1: "French 1",
+            class2: "French 2",
+            class4: "French 3",
+            class5: "Latin 2",
+            class6: "Spanish 1",
+            class7: "Spanish 2",
+            class8: "Latin 1",
+            sports: ["Anime Club"],
+            clubs: ["Computer Science", "Chess Club"]
+        };//get this from
+        for (var k = 1; k < 9; k++) {
+            for (var i = 0; i < Classes.length; i++) {
+                if (k == 3) {
+                    break;
+                }
+                if (Classes[i].name === fileIn["class" + k]) {
+                    fileIn["class" + k] = Classes[i];
+                }
+            }
+        }
+        for (var k = 0; k < fileIn.sports.length; k++) {
+            for (var i = 0; i < Sports.length; i++) {
+                if (Sports[i].name === fileIn.sports[k]) {
+                    fileIn.sports[k] = Sports[i];
+                }
+            }
+        }
+        for (var k = 0; k < fileIn.clubs.length; k++) {
+            for (var i = 0; i < Clubs.length; i++) {
+                if (Clubs[i].name === fileIn.clubs[k]) {
+                    fileIn.clubs[k] = Clubs[i];
+                }
+            }
+        }
+        funcy(fileIn);
+    }).call(this);
+</script>
+</body>
+</html>
