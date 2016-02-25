@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Schedule Picker</title>
+		<link rel="icon" type="image/png" href="images/woodsonlogo.png">
+		 <!-- CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link href="CSS/style.css" rel="stylesheet"/>
+		<link href="CSS/responsive.css" rel="stylesheet"/>
+	
+	</header>
+	<script>
+		
+	</script>
+	<body>
+		<nav class="fixed-nav-bar">
+			<h1>Schedule Picker</h1>
+			
+				<form action="#classes" method="get" id="top-buttons">
+					<input class="button-primary" type="button" value="Classes" />
+				</form>
+				<form action="#activities" method="get" id="top-buttons">
+					<input class="button-primary" type="button" value="Activities" />
+				</form>
+				<form action=generate() method="get" id="top-buttons">
+					<input class="button-primary" type="submit" value="Generate" />
+				</form>
+		</nav>
+		
+		<!-- <div id="classes" class="sectionHead">
+			<h4> Classes </h4>
+		</div> -->
+		
+		<div class="container">
+                <div class="row">
+                    <div class="columns" class="classList">
+						<div class="colHead">
+							<p>
+								<h4>English</h4>
+							</p>
+                        </div>  
+						<iframe src="english.html" id="frame1"></iframe>
+                    </div>
+                    <div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h4>Math</h4>
+							</p>
+                        </div>
+						<iframe src="math.html" id="frame2"></iframe>
+                    </div>
+                    <div class="columns" class="classList">
+                         <div class="colHead">
+							<p>
+								<h4>Science</h4>
+							</p>
+                        </div>
+						<iframe src="science.html" id="frame3"></iframe>
+                    </div>
+					<div class="columns" class="classList">
+                         <div class="colHead">
+							<p>
+								<h4>Social Studies</h4>
+							</p>
+                        </div>
+						<iframe src="socialSciences.html" id="frame4"></iframe>
+                    </div>
+					<div class="columns" class="classList">
+                          <div class="colHead">
+							<p>
+								<h4>World Languages</h4>
+							</p>
+                        </div>  
+						<iframe src="languages.html" id="frame5"></iframe>
+                    </div>
+					<div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h4>Fine Arts</h4>
+							</p>
+                        </div>    
+						<iframe src="fineArts.html" id="frame6"></iframe>
+                    </div>
+					<div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h4>Student Resources</h4>
+							</p>
+                        </div>     
+						<iframe src="studentResources.html" id="frame7"></iframe>
+                    </div>
+					<div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h4>Other Electives</h4>
+							</p>
+                        </div>    
+						<iframe src="electives.html" id="frame8"></iframe>
+                    </div>
+					
+                </div>
+		</div>
+		
+		<!-- <div id="activities" class="sectionHead">
+			<h4> Activities </h4>
+		</div> -->
+		
+		<div class="container">
+			<div class="columns" class="classList">
+                <div class="colHead">
+					<h4>Clubs</h4>
+                </div>    
+				<iframe src="clubs.html" id="frame9"></iframe>
+            </div>
+		</div>
+	
+	</body> 
+
+	<script>
+		(function(){
+		function generate(){
+			
+			for(i = 1; i < 10; i++){
+				frame = document.getElementById("frame"+i);
+				frame.contentWindow.document.forms[0];
+				
+				
+			}
+			
+			document.getElementById('frame1').contentWindow.document.getElementById('x')
+			}
+		}
+	</script>
+<html>

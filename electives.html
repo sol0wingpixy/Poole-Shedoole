@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="CSS/iFrameStyle.css">
+		<script src="PooleProjectDatabase.js"></script>
+	</head>
+	
+	<body>
+	
+
+	<h2>Health and Physical Education</h2>
+	<form id="health">
+	</form>
+	
+	<br>
+	<br>
+	
+	<h2>Business and Information Tech</h2>
+	<form id="business">
+	</form>
+	
+	<br>
+	<br>
+	
+	<h2>Technology and Engineering</h2>
+	<form id="technology">
+	</form>
+	
+	<br>
+	<br>
+	
+	<h2>Family and Consumer Sciences</h2>
+	<form id="family">
+	</form>
+	
+	<br>
+	<br>
+	
+	</body>
+	
+	<script>
+		(function(){
+
+				var container = document.getElementById("health");
+				
+				for(var i=0;i<Classes.length;i++)
+				{
+					if(Classes[i].header == "Health and Physical Education"){
+						var input = document.createElement("input");
+						input.type = "checkbox";
+						input.value = Classes[i].name;
+						input.appendChild
+						container.appendChild(input); // put it into the DOM
+						
+						var e = document.createElement("label");
+						e.setAttribute("class", "text"); 
+						e.innerHTML = Classes[i].name + "<br>";
+						container.appendChild(e);
+					}
+					
+					if(Classes[i].header == "Business"){
+						container = document.getElementById("business");
+						var input = document.createElement("input");
+						input.type = "checkbox";
+						input.value = Classes[i].name;
+						container.appendChild(input); // put it into the DOM
+						
+						var e = document.createElement("label");
+						e.setAttribute("class", "text");
+						e.innerHTML = Classes[i].name + "<br>";
+						container.appendChild(e);
+					}
+					
+					if(Classes[i].header == "Technology"){
+						container = document.getElementById("technology");
+						var input = document.createElement("input");
+						input.type = "checkbox";
+						input.value = Classes[i].name;
+						container.appendChild(input); // put it into the DOM
+						
+						var e = document.createElement("label");
+						e.setAttribute("class", "text");
+						e.innerHTML = Classes[i].name + "<br>";
+						container.appendChild(e);
+					}
+					
+					if(Classes[i].header == "Family"){
+						container = document.getElementById("family");
+						var input = document.createElement("input");
+						input.type = "checkbox";
+						input.value = Classes[i].name;
+						container.appendChild(input); // put it into the DOM
+						
+						var e = document.createElement("label");
+						e.setAttribute("class", "text");
+						e.innerHTML = Classes[i].name + "<br>";
+						container.appendChild(e);
+					}
+				}
+			
+		}).call(this);	
+
+	</script>
+</html>
