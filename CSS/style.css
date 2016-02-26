@@ -67,6 +67,12 @@ h1 {
 	color: white;
 }
 
+h2{
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #222;
+	font-size: 18px;
+}
+
 @font-face {
     font-family: myFirstFont;
     src: url(MarkoOne-Regular.ttf);

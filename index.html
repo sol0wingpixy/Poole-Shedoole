@@ -8,7 +8,7 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<link href="CSS/style.css" rel="stylesheet"/>
 		<link href="CSS/responsive.css" rel="stylesheet"/>
-		<script src="PooleProjectDatabase.js"></script>
+		<script src="PooleProjectDataBase.js"></script>
 	
 	</header>
 	<script>
@@ -24,8 +24,8 @@
 				<form action="#activities" method="get" id="top-buttons">
 					<input class="button-primary" type="button" value="Activities" />
 				</form>
-				<form action="" method="get" id="top-buttons" >
-					<input class="button-primary" type="button" value="Generate" />
+				<form action="" method="" id="top-buttons" >
+					<input class="button-primary" type="button" onClick="checkBoxes()" value="Generate" />
 				</form>
 		</nav>
 		
@@ -184,9 +184,8 @@
 	</body> 
 
 	<script>
-		var scheduleList;
-		
 		(function(){
+				var scheduleList;
 
 				var container;
 				
@@ -254,6 +253,7 @@
 					var input = document.createElement("input");
 					input.type = "checkbox";
 					input.value = Classes[i].name;
+					input.class = "checkbox";
 					input.appendChild
 					container.appendChild(input); // put it into the DOM
 						
@@ -268,6 +268,7 @@
 						container = document.getElementById("clubs");
 						var input = document.createElement("input");
 						input.type = "checkbox";
+						input.class = "checkbox";
 						input.value = Clubs[i].name;
 						input.appendChild
 						container.appendChild(input); // put it into the DOM
@@ -277,26 +278,15 @@
 						e.innerHTML = Clubs[i].name + "<br>";
 						container.appendChild(e);
 				}
-
-
-				//gets the state of the generate button from the parent document
-				var shouldCheck = parent.document.getElementById('generate');
-
-				//if generate is clicked, goes through check boxes
-				if(shouldCheck){
-					var checkedValue = null; 
-
-					//creates array of all elements of the type checkbox
-					var inputElements = document.getElementsByType('checkbox');
+				
+				function checkBoxes(){
+				
+					var checkboxes = document.getElementsByClass("checkbox");
 					
-					//loop through all checkboxes
-					for(var i=0; inputElements[i]; ++i){
-      					if(inputElements[i].checked){
-           					checkedValue = inputElements[i].value;
-
-           					//adds checked value to the array object in the parent document's global
-           					parent.scheduleList.add(checkedValue);
-     					 }
+					for(var i=0, i<checkboxes.length; i++){
+						if(checkboxes[i].checked){
+							// do what you need to do with checkboxes[i].value
+						}
 					}
 				}
 			
