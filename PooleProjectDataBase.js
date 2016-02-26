@@ -92,9 +92,9 @@ Classes.push({header: "World Languages", name:"Italian 2", time: 20});//Italian 
 
 //HEALTH AND PHYSICAL EDUCATION
 /*done*/
-Classes.push({header: "Health and Physical Educatoin", name:"HPE 9 ", time: 10});//HPE 9
-Classes.push({header: "Health and Physical Educatoin", name:"Adapted PE (9/10)", time: 0});//Adapted PE (9/10)
-Classes.push({header: "Health and Physical Educatoin", name:"Sports Medicine", time: 20});//Sports Medicine
+Classes.push({header: "Health and Physical Education", name:"HPE 9 ", time: 10});//HPE 9
+Classes.push({header: "Health and Physical Education", name:"Adapted PE (9/10)", time: 0});//Adapted PE (9/10)
+Classes.push({header: "Health and Physical Education", name:"Sports Medicine", time: 20});//Sports Medicine
 
 //STUDENT RESOURCES
 /*INCOMPLETE*/
@@ -163,11 +163,11 @@ Classes.push({header: "Fine and Performing Arts", name:"Men’s Chorus", time: 1
 Classes.push({header: "Fine and Performing Arts", name:"Music Theory", time: 150});//Music Theory
 Classes.push({header: "Fine and Performing Arts", name:"Music Sampler 1 (SPED)", time: 0});//Music Sampler 1 (SPED)
 
-//BUISNESS/INFORMATION TECH & MARKETING
+//BUSiNESS/INFORMATION TECH & MARKETING
 /*incomplete*/
-Classes.push({header: "Buisness/Informatoin Tech & Marketing", name:"Information Systems", time: -1});//Information Systems
-Classes.push({header: "Buisness/Informatoin Tech & Marketing", name:"Principles of Business and Marketing", time: -1});//Principles of Business and Marketing
-Classes.push({header: "Buisness/Informatoin Tech & Marketing", name:"Programming", time: -1});//Programming
+Classes.push({header: "Business/Information Tech & Marketing", name:"Information Systems", time: -1});//Information Systems
+Classes.push({header: "Business/Information Tech & Marketing", name:"Principles of Business and Marketing", time: -1});//Principles of Business and Marketing
+Classes.push({header: "Business/Information Tech & Marketing", name:"Programming", time: -1});//Programming
 
 //TECHNOLOGY AND ENGINEERING
 /*done*/
