@@ -130,65 +130,65 @@ function funcy(fileIn){
 			}
 			for(var i=0;i<fileIn.sports.length;i++)
 			{
-				if((x==1||x==8)&&fileIn.sports[i].day.indexOf("Mon")!=-1)//monday
+				if((x==1||x==8))//monday
 				{
 					sportName=fileIn.sports[i].name;
-					startHr=fileIn.sports[i].hourEnd+1;
-					startMin=fileIn.sports[i].minEnd;
-					startHrS=fileIn.sports[i].hourStart;
-					startMinS=fileIn.sports[i].minStart;
-					endHrS=fileIn.sports[i].hourEnd;
-					endMinS=fileIn.sports[i].minEnd;
+					startHr=fileIn.sports[i].hourEnd[0]+1;
+					startMin=fileIn.sports[i].minEnd[0];
+					startHrS=fileIn.sports[i].hourStart[0];
+					startMinS=fileIn.sports[i].minStart[0];
+					endHrS=fileIn.sports[i].hourEnd[0];
+					endMinS=fileIn.sports[i].minEnd[0];
 				}
-				if((x==2||x==9)&&fileIn.sports[i].day.indexOf("Tue")!=-1)//tuesday
+				if(x==2||x==9)//tuesday
 				{
 					sportName=fileIn.sports[i].name;
-					startHr=fileIn.sports[i].hourEnd+1;
-					startMin=fileIn.sports[i].minEnd;
-					startHrS=fileIn.sports[i].hourStart;
-					startMinS=fileIn.sports[i].minStart;
-					endHrS=fileIn.sports[i].hourEnd;
-					endMinS=fileIn.sports[i].minEnd;
+					startHr=fileIn.sports[i].hourEnd[1]+1;
+					startMin=fileIn.sports[i].minEnd[1];
+					startHrS=fileIn.sports[i].hourStart[1];
+					startMinS=fileIn.sports[i].minStart[1];
+					endHrS=fileIn.sports[i].hourEnd[1];
+					endMinS=fileIn.sports[i].minEnd[1];
 				}
-				if((x==3||x==10)&&fileIn.sports[i].day.indexOf("Wed")!=-1)//wednesday
+				if(x==3||x==10)//wednesday
 				{
 					sportName=fileIn.sports[i].name;
-					startHr=fileIn.sports[i].hourEnd+1;
-					startMin=fileIn.sports[i].minEnd;
-					startHrS=fileIn.sports[i].hourStart;
-					startMinS=fileIn.sports[i].minStart;
-					endHrS=fileIn.sports[i].hourEnd;
-					endMinS=fileIn.sports[i].minEnd;
+					startHr=fileIn.sports[i].hourEnd[2]+1;
+					startMin=fileIn.sports[i].minEnd[2];
+					startHrS=fileIn.sports[i].hourStart[2];
+					startMinS=fileIn.sports[i].minStart[2];
+					endHrS=fileIn.sports[i].hourEnd[2];
+					endMinS=fileIn.sports[i].minEnd[2];
 				}
-				if((x==4||x==11)&&fileIn.sports[i].day.indexOf("Thur")!=-1)//thursday
+				if(x==4||x==11)//thursday
 				{
 					sportName=fileIn.sports[i].name;
-					startHr=fileIn.sports[i].hourEnd+1;
-					startMin=fileIn.sports[i].minEnd;
-					startHrS=fileIn.sports[i].hourStart;
-					startMinS=fileIn.sports[i].minStart;
-					endHrS=fileIn.sports[i].hourEnd;
-					endMinS=fileIn.sports[i].minEnd;
+					startHr=fileIn.sports[i].hourEnd[3]+1;
+					startMin=fileIn.sports[i].minEnd[3];
+					startHrS=fileIn.sports[i].hourStart[3];
+					startMinS=fileIn.sports[i].minStart[3];
+					endHrS=fileIn.sports[i].hourEnd[3];
+					endMinS=fileIn.sports[i].minEnd[3];
 				}
-				if((x==5||x==12)&&fileIn.sports[i].day.indexOf("Fri")!=-1)//friday
+				if(x==5||x==12)//friday
 				{
 					sportName=fileIn.sports[i].name;
-					startHr=fileIn.sports[i].hourEnd+1;
-					startMin=fileIn.sports[i].minEnd;
-					startHrS=fileIn.sports[i].hourStart;
-					startMinS=fileIn.sports[i].minStart;
-					endHrS=fileIn.sports[i].hourEnd;
-					endMinS=fileIn.sports[i].minEnd;
+					startHr=fileIn.sports[i].hourEnd[4]+1;
+					startMin=fileIn.sports[i].minEnd[4];
+					startHrS=fileIn.sports[i].hourStart[4];
+					startMinS=fileIn.sports[i].minStart[4];
+					endHrS=fileIn.sports[i].hourEnd[4];
+					endMinS=fileIn.sports[i].minEnd[4];
 				}
-				if((x==6||x==13)&&fileIn.sports[i].day.indexOf("Sat")!=-1)//saturday
+				if(x==6||x==13)//saturday
 				{
 					sportName=fileIn.sports[i].name;
-					startHr=fileIn.sports[i].hourEnd+1;
-					startMin=fileIn.sports[i].minEnd;
-					startHrS=fileIn.sports[i].hourStart;
-					startMinS=fileIn.sports[i].minStart;
-					endHrS=fileIn.sports[i].hourEnd;
-					endMinS=fileIn.sports[i].minEnd;
+					startHr=fileIn.sports[i].hourEnd[5]+1;
+					startMin=fileIn.sports[i].minEnd[5];
+					startHrS=fileIn.sports[i].hourStart[5];
+					startMinS=fileIn.sports[i].minStart[5];
+					endHrS=fileIn.sports[i].hourEnd[5];
+					endMinS=fileIn.sports[i].minEnd[5];
 				}
 			}
 			var startMinTol=startMin+60*startHr;

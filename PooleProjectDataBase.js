@@ -182,7 +182,7 @@ Classes.push({header: "Family & Consumer Sciences", name:"Gourmet & Internationa
 //**SPORTS**
 /*MILITARY TIME*/
 var Sports = new Array();//Databse for all available sports name, hourStart, minStart, time
-Sports.push({name:"Cheerleading", hourStart: 0, minStart: 0, time: 0});//Cheerleading
+Sports.push({name:"Cheerleading", hourStart:17, minStart:0, });//Cheerleading
 Sports.push({name:"Cross Country", hourStart: 0, minStart: 0, time: 0});//Cross Country
 Sports.push({name:"Field Hockey", hourStart: 0, minStart: 0, time: 0});//Field Hockey
 Sports.push({name:"Football", hourStart: 0, minStart: 0, time: 0});//Football
@@ -207,7 +207,7 @@ Sports.push({name:"Girls Soccer", hourStart: 0, minStart: 0, time: 0});//Girls S
 Sports.push({name:"Boys Tennis", hourStart: 0, minStart: 0, time: 0});//Boys Tennis
 Sports.push({name:"Girls Tennis", hourStart: 0, minStart: 0, time: 0});//Girls Tennis
 Sports.push({name:"Outdoor Track", hourStart: 0, minStart: 0, time: 0});//Outdoor Track
-/*NOT ACTUALLY A SPORT YET*/Sports.push({name: "Anime Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Tue,Thur,Fri,Sat", weekly: true});//Anime Club
+/*NOT ACTUALLY A SPORT YET*/Sports.push({name: "Anime Club", hourStart: [17,17,17,17,17,13], minStart: [0,0,0,0,0,0], hourEnd: [18,18,18,18,18,18], minEnd:  [0,0,0,0,0,0]});//Anime Club
 
 //**CLUBS**
 var Clubs = new Array();
