@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="CSS/iFrameStyle.css">
+		<script src="PooleProjectDatabase.js"></script>
+	</head>
+	
+	<body>
+	
+	<form id="resources">
+	</form>
+	
+	
+	<script>
+		(function(){
+
+				var container = document.getElementById("resources");
+				
+				for(var i=0;i<Classes.length;i++)
+				{
+					if(Classes[i].header == "Student Resources"){
+						var input = document.createElement("input");
+						input.type = "checkbox";
+						input.value = Classes[i].name;
+						input.appendChild
+						container.appendChild(input); // put it into the DOM
+						
+						var e = document.createElement("label");
+						e.setAttribute("class", "text"); 
+						e.innerHTML = Classes[i].name + "<br>";
+						container.appendChild(e);
+					}
+				}
+			
+		}).call(this);	
+
+	</script>
+</html>
