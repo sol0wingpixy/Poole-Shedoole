@@ -11,31 +11,37 @@
 			var inputs = document.getElementsByTagName("input");
 			
             //will be array of selected values
-            var shedooleThings = new Array();	
-
+            var classesIn = new Array();	
+			var clubsIn = new Array();
+			var sportsIn = new Array();	
             //loop through all inputs
 			for(var i=0; i < inputs.length; i++){
 
                 //if input is a checkbox, sees if it is checked
                 if(inputs[i].type == "checkbox"){
 				    if(inputs[i].checked){
-
+						if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
+                            classesIn.push(inputs[i].value);
+                        }
+						if (inputs[i].id === "club") {//'id' tells whether sport, club, or class
+                            clubsIn.push(inputs[i].value);
+                        }
                         //adds value (which == name)
-                        shedooleThings.push(inputs[i].value);
 					}
                 }
 			}
 
-            intoTheShedoole(shedooleThings);
+            intoTheShedoole(classesIn, clubsIn, sportsIn);
 		}
 
 
         //function to move into the schedule grid
-        function intoTheShedoole(shedooleThings) {
+        function intoTheShedoole(classesIn, clubsIn,sportsIn) {
+			
             var fileIn = {
-            classes:shedooleThings,//temp - will check if class, sport, or club
-            sports: ["This Sport"],
-            clubs: ["Computer Science", "Chess Club"]
+            classes:classesIn,//temp - will check if class, sport, or club
+            sports: sportsIn,
+            clubs: clubsIn
         };//get this from
         for (var k = 0; k < fileIn.classes.length; k++) {
             for (var i = 0; i < Classes.length; i++) {
@@ -319,6 +325,7 @@
 					input.type = "checkbox";
 					input.value = Classes[i].name;
 					input.class = "checkbox";
+					input.id = "class";//'id' tells whether sport, club, or class
 					input.appendChild
 					container.appendChild(input); // put it into the DOM
 						
@@ -334,6 +341,7 @@
 						var input = document.createElement("input");
 						input.type = "checkbox";
 						input.value = Clubs[i].name;
+						input.id = "club"; //'id' tells whether sport, club, or class
 						input.appendChild
 						container.appendChild(input); // put it into the DOM
 						
