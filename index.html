@@ -1,17 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
-<script>
-function checkBoxes(){
+    <script>
+        function checkBoxes(){
 				
-					var checkboxes = document.getElementsByClassName("checkbox");
+			var inputs = document.getElementsByTagName("input");
 					
-					//for(var i=0, i<checkboxes.length; i++){
-					//	if(checkboxes[i].checked){
-					//		// do what you need to do with checkboxes[i].value
-					//	}
-					//}
-				}
-</script>
+
+			for(var i=0; i < inputs.length; i++){
+                if(inputs[i].type == checkbox){
+				    if(inputs[i].checked){
+							// do what you need to do with checkboxes[i].value
+					}
+                }
+			}
+		}
+    </script>
 	<head>
 	
 		<title>Schedule Picker</title>
@@ -36,9 +39,9 @@ function checkBoxes(){
 				<form action="#activities" method="get" id="top-buttons">
 					<input class="button-primary" type="button" value="Activities" />
 				</form>
-				<form action="" method="" id="top-buttons" >
-					<input class="button-primary" type="button" onClick="checkBoxes()" value="Generate" />
-				</form>
+				
+					<input class="button-primary" type="button" onClick="checkBoxes()" value="Generate" id="top-buttons" />
+				
 		</nav>
 		
 		<!-- <div id="classes" class="sectionHead">
@@ -280,7 +283,6 @@ function checkBoxes(){
 						container = document.getElementById("clubs");
 						var input = document.createElement("input");
 						input.type = "checkbox";
-						input.class = "checkbox";
 						input.value = Clubs[i].name;
 						input.appendChild
 						container.appendChild(input); // put it into the DOM
