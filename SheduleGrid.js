@@ -327,6 +327,7 @@ function funcy(fileIn){
 		createCanvas();
 		drawGrid();
 	}
+	onLoad();
 	window.onload=function(){onLoad();};
 	window.onresize=function(){drawGrid();};
 }

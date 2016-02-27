@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
-   
+   <script src="PooleProjectDataBase.js"></script>
+<script src="SheduleGrid.js"></script>
    <!--Extra methods-->
     <script>
         //called when Generate button clicked
@@ -10,17 +11,17 @@
 			var inputs = document.getElementsByTagName("input");
 			
             //will be array of selected values
-            var shedooleThings;	
+            var shedooleThings = new Array();	
 
             //loop through all inputs
 			for(var i=0; i < inputs.length; i++){
 
                 //if input is a checkbox, sees if it is checked
-                if(inputs[i].type == checkbox){
+                if(inputs[i].type == "checkbox"){
 				    if(inputs[i].checked){
 
                         //adds value (which == name)
-                        shedooleThings.add(inputs[i].value);
+                        shedooleThings.push(inputs[i].value);
 					}
                 }
 			}
@@ -30,26 +31,16 @@
 
 
         //function to move into the schedule grid
-        function intoTheShedoole(var shedooleThings) {
+        function intoTheShedoole(shedooleThings) {
             var fileIn = {
-                class1: "French 1",
-                class2: "French 2",
-                class4: "French 3",
-                class5: "Latin 2",
-                class6: "Spanish 1",
-                class7: "Spanish 2",
-                class8: "Latin 1",
-                sports: ["Anime Club"],
-                clubs: ["Computer Science", "Chess Club"]
-            };//get this from
-
-        for (var k = 1; k < 9; k++) {
+            classes:shedooleThings,//temp - will check if class, sport, or club
+            sports: ["This Sport"],
+            clubs: ["Computer Science", "Chess Club"]
+        };//get this from
+        for (var k = 0; k < fileIn.classes.length; k++) {
             for (var i = 0; i < Classes.length; i++) {
-                if (k == 3) {
-                    break;
-                }
-                if (Classes[i].name === fileIn["class" + k]) {
-                    fileIn["class" + k] = Classes[i];
+                if (Classes[i].name === fileIn.classes[k]) {
+                    fileIn.classes[k] = Classes[i];
                 }
             }
         }
@@ -83,7 +74,6 @@
 		<link href="CSS/responsive.css" rel="stylesheet"/>
 
 
-		<script src="PooleProjectDataBase.js"></script>
 	
 	</header>
 	<script>
