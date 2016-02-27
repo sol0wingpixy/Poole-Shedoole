@@ -56,7 +56,12 @@ function funcy(fileIn){
 			ctx.stroke();
 		};
 
-		var hwTime=(fileIn.class1.time+fileIn.class5.time+fileIn.class7.time+fileIn.class2.time+fileIn.class4.time+fileIn.class6.time+fileIn.class8.time)/6;//HW per week
+		var hwTime=0;
+		for(var i=0;i<fileIn.classes.length;i++)
+		{
+			hwTime+=fileIn.classes[i].time;
+		}
+		hwTime/=6;
 		for(var x=0;x<15;x++)
 		{
 			var printS=false;
@@ -66,15 +71,15 @@ function funcy(fileIn){
 			var sportName;
 
 			var startHr=16;//HW
-			var startMin=00;
+			var startMin=0;
 			var startHrC=16;//clubs
-			var startMinC=00;
+			var startMinC=0;
 			var endHrC=16;
-			var endMinC=00;
+			var endMinC=0;
 			var startHrS=16;//sports
-			var startMinS=00;
+			var startMinS=0;
 			var endHrS=16;
-			var endMinS=00;
+			var endMinS=0;
 			for(var i=0;i<fileIn.clubs.length;i++)
 			{
 				if((x==1||x==8)&&fileIn.clubs[i].day.indexOf("Mon")!=-1)//monday

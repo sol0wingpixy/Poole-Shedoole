@@ -179,6 +179,8 @@ Classes.push({header: "Technology and Engineering", name:"Basic Technical Drawin
 /*done*/
 Classes.push({header: "Family & Consumer Sciences", name:"Gourmet & International Foods (full year)", time: 0});//Gourmet & International Foods (full year)
 
+var Sports = new Array();
+Sports.push({name:"This Sport",hourStart:[17,17,17,17,17,12],minStart:[0,0,0,0,0,0],hourEnd:[19,19,19,19,19,19],minEnd:[0,0,0,0,0,0]});
 //**SPORTS**
 /*MILITARY TIME*/
 /*var Sports = new Array();//Databse for all available sports name, hourStart, minStart, time
