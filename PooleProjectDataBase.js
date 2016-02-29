@@ -165,9 +165,9 @@ Classes.push({header: "Fine and Performing Arts", name:"Music Sampler 1 (SPED)",
 
 //BUISNESS/INFORMATION TECH & MARKETING
 /*incomplete*/
-Classes.push({header: "Buisness/Informatoin Tech & Marketing", name:"Information Systems", time: -1});//Information Systems
-Classes.push({header: "Buisness/Informatoin Tech & Marketing", name:"Principles of Business and Marketing", time: -1});//Principles of Business and Marketing
-Classes.push({header: "Buisness/Informatoin Tech & Marketing", name:"Programming", time: -1});//Programming
+Classes.push({header: "Business/Information Tech & Marketing", name:"Information Systems", time: -1});//Information Systems
+Classes.push({header: "Business/Information Tech & Marketing", name:"Principles of Business and Marketing", time: -1});//Principles of Business and Marketing
+Classes.push({header: "Business/Information Tech & Marketing", name:"Programming", time: -1});//Programming
 
 //TECHNOLOGY AND ENGINEERING
 /*done*/
