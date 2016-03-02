@@ -322,6 +322,8 @@ function funcy(fileIn){
 				}
 			}
 		}
+		var newWindow=window.open();
+		newWindow.document.body.appendChild(canvas);
 	};
 	function onLoad(){
 		createCanvas();
