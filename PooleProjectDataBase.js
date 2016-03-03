@@ -258,7 +258,7 @@ var Clubs = new Array();
 //*0*/Clubs.push({name: "Math Honor Society  (Mu Alpha Theta)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Math Honor Society  (Mu Alpha Theta)
 /*1*/Clubs.push({name: "Math Team (JV)", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 40, day: "Wed", weekly: false});//Math Team (JV)
 /*1*/Clubs.push({name: "Math Team (Varsity)", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Wed", weekly: false});//Math Team (Varsity)
-/*1*/Clubs.push({name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
+//*1*/Clubs.push({name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
 /*1*/Clubs.push({name: "National Art Honor Society", hourStart: 15, minStart: 30, hourEnd: 17, minEnd: 0, day: "Mon", weekly: false});//National Art Honor Society
 /*1*/Clubs.push({name: "National English Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Tue", weekly: false});//National English Honor Society
 //*0*/Clubs.push({name: "National Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Thu", weekly: false});//National Honor Society
@@ -267,7 +267,7 @@ var Clubs = new Array();
 //*0*/Clubs.push({name: "Page (Literary/Art Magazine)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Page (Literary/Art Magazine)
 /*1*/Clubs.push({name: "Photography Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Photography Club
 /*1*/Clubs.push({name: "Poetry Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Poetry Club
-/*1*/Clubs.push({name: "Relay for Life", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Relay for Life
+//*1*/Clubs.push({name: "Relay for Life", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Relay for Life
 /*1*/Clubs.push({name: "Robotics Club", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue, Thu", weekly: true});//Robotics Club
 /*1*/Clubs.push({name: "Scholastic Quiz Bowl /It's Academic", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 50, day: "Tue, Thu", weekly: true});//Scholastic Quiz Bowl /It's Academic
 //*0*/Clubs.push({name: "Science Olympiad", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Science Olympiad
