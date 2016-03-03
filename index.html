@@ -87,33 +87,34 @@
 	</script>
 	<body>
 		<nav class="fixed-nav-bar">
+            <img src="images/woodsonlogo.png" alt="Woodson Logo" style="width:90px;height:85px;margin-right: 40px;float:left;">
 			<h1>Schedule Picker</h1>
 			
-				<form action="#classes" method="get" id="top-buttons">
+				<!--<form action="#frame1" method="get" id="top-buttons">
 					<input class="button-primary" type="button" value="Classes" />
 				</form>
-				<form action="#activities" method="get" id="top-buttons">
+				<form action="#frame9" method="get" id="top-buttons">
 					<input class="button-primary" type="button" value="Activities" />
-				</form>
+				</form>-->
 				
-					<input class="button-primary" type="button" onClick="checkBoxes()" value="Generate" id="top-buttons" />
+					<input class="button-primary" type="button" onClick="checkBoxes()" value="Generate" id="generate" />
 				
 		</nav>
 		
-		<!-- <div id="classes" class="sectionHead">
-			<h4> Classes </h4>
-		</div> -->
+		<!--<div id="classes" class="sectionHead">
+			<h3> Classes </h3>
+		</div>-->
 		
 		<div class="container">
                 <div class="row">
                     <div class="columns" class="classList">
 						<div class="colHead">
 							<p>
-								<h4>English</h4>
+								<h3>English</h3>
 							</p>
                         </div>  
 						<div class="frame" id="frame1">
-								<h2>English</h2>
+								<h4>English</h4>
 	
 								<form id="English">
 								</form>
@@ -121,7 +122,7 @@
 								<br>
 								<br>
 	
-								<h2>ESOL</h2>
+								<h4>ESOL</h4>
 								<form id="ESOL"></form>
 
 						</div>
@@ -129,7 +130,7 @@
                     <div class="columns" class="classList">
                         <div class="colHead">
 							<p>
-								<h4>Math</h4>
+								<h3>Math</h3>
 							</p>
                         </div>
 						<div class="frame" id="frame2">
@@ -140,7 +141,7 @@
                     <div class="columns" class="classList">
                          <div class="colHead">
 							<p>
-								<h4>Science</h4>
+								<h3>Science</h3>
 							</p>
                         </div>
 						<div class="frame" id="frame3">
@@ -151,7 +152,7 @@
 					<div class="columns" class="classList">
                          <div class="colHead">
 							<p>
-								<h4>Social Studies</h4>
+								<h3>Social Studies</h3>
 							</p>
                         </div>
 						<div class="frame" id="frame4">
@@ -162,7 +163,7 @@
 					<div class="columns" class="classList">
                           <div class="colHead">
 							<p>
-								<h4>World Languages</h4>
+								<h3>Languages</h3>
 							</p>
                         </div>  
 						<div class="frame" id="frame5">
@@ -172,12 +173,12 @@
 					<div class="columns" class="classList">
                         <div class="colHead">
 							<p>
-								<h4>Fine Arts</h4>
+								<h3>Fine Arts</h3>
 							</p>
                         </div>    
 						<div class="frame" id="frame6">
 						
-							<h2>Visual Arts</h2>
+							<h4>Visual Arts</h4>
 	
 							<form id="visual arts">
 							</form>
@@ -185,7 +186,7 @@
 							<br>
 							<br>
 							
-							<h2>Performing Arts</h2>
+							<h4>Performing Arts</h4>
 							<form id="performing arts">
 							</form>
 						</div>
@@ -193,7 +194,7 @@
 					<div class="columns" class="classList">
                         <div class="colHead">
 							<p>
-								<h4>Student Resources</h4>
+								<h3>Student Resources</h3>
 							</p>
                         </div>     
 						<div class="frame" id="frame7">
@@ -203,32 +204,32 @@
 					<div class="columns" class="classList">
                         <div class="colHead">
 							<p>
-								<h4>Other Electives</h4>
+								<h3>Other Electives</h3>
 							</p>
                         </div>    
 						<div class="frame" id="frame8">
-							<h2>Health and Physical Education</h2>
+							<h4>Health and Physical Education</h4>
 							<form id="health">
 							</form>
 								
 								<br>
 								<br>
 								
-								<h2>Business and Information Technology</h2>
+								<h4>Business and Information Technology</h4>
 								<form id="business">
 								</form>
 								
 								<br>
 								<br>
 								
-								<h2>Technology and Engineering</h2>
+								<h4>Technology and Engineering</h4>
 								<form id="technology">
 								</form>
 								
 								<br>
 								<br>
 								
-								<h2>Family and Consumer Sciences</h2>
+								<h4>Family and Consumer Sciences</h4>
 								<form id="family">
 								</form>
 						</div>
@@ -236,19 +237,33 @@
 					
                 </div>
 		</div>
-		
-		<!-- <div id="activities" class="sectionHead">
-			<h4> Activities </h4>
-		</div> -->
+		</section>
+
+		<!--<div id="activities" class="sectionHead">
+			<h3> Activities </h3>
+		</div>-->
 		
 		<div class="container">
 			<div class="columns" class="classList">
                 <div class="colHead">
-					<h4>Clubs</h4>
+                    <p>
+					   <h3>Clubs</h3>
+                    </p>
                 </div>    
 				<div class="frame" id="frame9">
 					<form id="clubs"></form>
 				</div>
+            </div>
+
+            <div class="columns" class="classList">
+                <div class="colHead">
+                    <p>
+                        <h3>Sports</h3>
+                    </p>
+                </div>    
+                <div class="frame" id="frame10">
+                    <form id="sports"></form>
+                </div>
             </div>
 		</div>
 	
@@ -350,6 +365,21 @@
 						e.innerHTML = Clubs[i].name + "<br>";
 						container.appendChild(e);
 				}
+
+                for(var i=0; i<Sports.length; i++){
+                        container = document.getElementById("sports");
+                        var input = document.createElement("input");
+                        input.type = "checkbox";
+                        input.value = Sports[i].name;
+                        input.id = "sport"; //'id' tells whether sport, club, or class
+                        input.appendChild
+                        container.appendChild(input); // put it into the DOM
+                        
+                        var e = document.createElement("label");
+                        e.setAttribute("class", "text"); 
+                        e.innerHTML = Sports[i].name + "<br>";
+                        container.appendChild(e);
+                }
 				
 				
 			

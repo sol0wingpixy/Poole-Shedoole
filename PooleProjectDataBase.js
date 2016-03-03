@@ -183,32 +183,33 @@ var Sports = new Array();
 Sports.push({name:"This Sport",hourStart:[17,17,17,17,17,12],minStart:[0,0,0,0,0,0],hourEnd:[19,19,19,19,19,19],minEnd:[0,0,0,0,0,0]});
 //**SPORTS**
 /*MILITARY TIME*/
-/*var Sports = new Array();//Databse for all available sports name, hourStart, minStart, time
-Sports.insert({name:"Cheerleading", hourStart: 0, minStart: 0, time: 0});//Cheerleadinglkj;
-Sports.insert({name:"Cross Country", hourStart: 0, minStart: 0, time: 0});//Cross Country
-Sports.insert({name:"Field Hockey", hourStart: 0, minStart: 0, time: 0});//Field Hockey
-Sports.insert({name:"Football", hourStart: 0, minStart: 0, time: 0});//Football
-Sports.insert({name:"Boys Golf", hourStart: 0, minStart: 0, time: 0});//Boys Golf
-Sports.insert({name:"Girls Golf", hourStart: 0, minStart: 0, time: 0});//Girls Golf
-Sports.insert({name:"Precisionettes", hourStart: 0, minStart: 0, time: 0});//Precisionettes
-Sports.insert({name:"Volleyball", hourStart: 0, minStart: 0, time: 0});//Volleyball
-Sports.insert({name:"Boys Basketball", hourStart: 0, minStart: 0, time: 0});//Boys Basketball
-Sports.insert({name:"Girls Basketball", hourStart: 0, minStart: 0, time: 0});//Girls Basketball
-Sports.insert({name:"Gymnastics", hourStart: 0, minStart: 0, time: 0});//Gymnastics
-Sports.insert({name:"Swim and Dive", hourStart: 0, minStart: 0, time: 0});//Swim and Dive
-Sports.insert({name:"Indoor Track", hourStart: 0, minStart: 0, time: 0});//Indoor Track
-Sports.insert({name:"Rifle Team", hourStart: 0, minStart: 0, time: 0});//Rifle Team
-Sports.insert({name:"Wrestling", hourStart: 0, minStart: 0, time: 0});//Wrestling
-Sports.insert({name:"Baseball", hourStart: 0, minStart: 0, time: 0});//Baseball
-Sports.insert({name:"Crew", hourStart: 0, minStart: 0, time: 0});//Crew
-Sports.insert({name:"Boys Lacrosse", hourStart: 0, minStart: 0, time: 0});//Boys Lacrosse
-Sports.insert({name:"Girls Lacrosse", hourStart: 0, minStart: 0, time: 0});//Girls Lacrosse
-Sports.insert({name:"Softball", hourStart: 0, minStart: 0, time: 0});//Softball
-Sports.insert({name:"Boys Soccer", hourStart: 0, minStart: 0, time: 0});//Boys Soccer
-Sports.insert({name:"Girls Soccer", hourStart: 0, minStart: 0, time: 0});//Girls Soccer
-Sports.insert({name:"Boys Tennis", hourStart: 0, minStart: 0, time: 0});//Boys Tennis
-Sports.insert({name:"Girls Tennis", hourStart: 0, minStart: 0, time: 0});//Girls Tennis
-Sports.insert({name:"Outdoor Track", hourStart: 0, minStart: 0, time: 0});//Outdoor Track*/
+
+var Sports = new Array();//Databse for all available sports name, hourStart, minStart, time
+Sports.push({name:"Cheerleading", hourStart: 0, minStart: 0, time: 0});//Cheerleadinglkj;
+Sports.push({name:"Cross Country", hourStart: 0, minStart: 0, time: 0});//Cross Country
+Sports.push({name:"Field Hockey", hourStart: 0, minStart: 0, time: 0});//Field Hockey
+Sports.push({name:"Football", hourStart: 0, minStart: 0, time: 0});//Football
+Sports.push({name:"Boys Golf", hourStart: 0, minStart: 0, time: 0});//Boys Golf
+Sports.push({name:"Girls Golf", hourStart: 0, minStart: 0, time: 0});//Girls Golf
+Sports.push({name:"Precisionettes", hourStart: 0, minStart: 0, time: 0});//Precisionettes
+Sports.push({name:"Volleyball", hourStart: 0, minStart: 0, time: 0});//Volleyball
+Sports.push({name:"Boys Basketball", hourStart: 0, minStart: 0, time: 0});//Boys Basketball
+Sports.push({name:"Girls Basketball", hourStart: 0, minStart: 0, time: 0});//Girls Basketball
+Sports.push({name:"Gymnastics", hourStart: 0, minStart: 0, time: 0});//Gymnastics
+Sports.push({name:"Swim and Dive", hourStart: 0, minStart: 0, time: 0});//Swim and Dive
+Sports.push({name:"Indoor Track", hourStart: 0, minStart: 0, time: 0});//Indoor Track
+Sports.push({name:"Rifle Team", hourStart: 0, minStart: 0, time: 0});//Rifle Team
+Sports.push({name:"Wrestling", hourStart: 0, minStart: 0, time: 0});//Wrestling
+Sports.push({name:"Baseball", hourStart: 0, minStart: 0, time: 0});//Baseball
+Sports.push({name:"Crew", hourStart: 0, minStart: 0, time: 0});//Crew
+Sports.push({name:"Boys Lacrosse", hourStart: 0, minStart: 0, time: 0});//Boys Lacrosse
+Sports.push({name:"Girls Lacrosse", hourStart: 0, minStart: 0, time: 0});//Girls Lacrosse
+Sports.push({name:"Softball", hourStart: 0, minStart: 0, time: 0});//Softball
+Sports.push({name:"Boys Soccer", hourStart: 0, minStart: 0, time: 0});//Boys Soccer
+Sports.push({name:"Girls Soccer", hourStart: 0, minStart: 0, time: 0});//Girls Soccer
+Sports.push({name:"Boys Tennis", hourStart: 0, minStart: 0, time: 0});//Boys Tennis
+Sports.push({name:"Girls Tennis", hourStart: 0, minStart: 0, time: 0});//Girls Tennis
+Sports.push({name:"Outdoor Track", hourStart: 0, minStart: 0, time: 0});//Outdoor Track
 
 //**CLUBS**
 var Clubs = new Array();

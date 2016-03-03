@@ -9,21 +9,23 @@
 	padding: 30px;
 }
 
+section{
+	display:block;
+}
+
 .sectionHead{
-	background-color: #003399;
-	width: 100%;
-	margin-top: 150px;
-	height: 50px;
+	background-color: #232767;
 	padding: 30px;
-	top: 0;
-	left: 0;
-	position: relative;
+	top: 150px;
+	left: -10;
 	z-index: 9999;
+	width: 100%;
+	height: 20px;
 }
 
 .colHead{
 	
-	background-color: #2C6AA3;
+	background-color: #232767;
 	border-radius: 25px;
 	position: relative;
 	text-align: center;
@@ -31,7 +33,7 @@
 	margin-bottom: 10px;
 	padding-top: auto;
 	vertical-align: text-middle;
-	margin-top: 150px;
+	margin-top: 40px;
 }
 
 p{
@@ -41,11 +43,8 @@ p{
 	table-layout: fixed;
 }
 
-.classes{
-	top: 120px;
-}
 .fixed-nav-bar{
-	padding: 30px;
+	padding: 40px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -65,26 +64,30 @@ h1 {
 	display: inline;
 	font-family: myFirstFont;
 	color: white;
+	font-size: 50px;
 }
 
-h2{
+h4{
 	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #222;
 	font-size: 18px;
+	font-weight: bold;
 }
 
 @font-face {
     font-family: myFirstFont;
     src: url(MarkoOne-Regular.ttf);
+
 }
 
-h4{
+h3{
 	position: relative;
-	text-size: 100%;
+	font-size: 4vw;
 	color: #222;
 	font-family: myFirstFont;
 	color: white;
 }
+
 .classList {
 	border-color: black;
 	border: 5px;
@@ -116,10 +119,13 @@ iframe {
 
 #generate{
 	display: inline;
-	background-color: #1c4468;
-	border-color: #1c4468;
+	background-color: #232767;
+	border-color: #232767;
 	padding: 5 25px;
+	height: 45px;
+	margin-left: 50px;
 }
+
 .button,
 button,
 input[type="submit"],
