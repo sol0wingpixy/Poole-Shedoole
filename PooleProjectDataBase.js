@@ -258,7 +258,7 @@ var Clubs = new Array();
 //*0*/Clubs.push({name: "Math Honor Society  (Mu Alpha Theta)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Math Honor Society  (Mu Alpha Theta)
 /*1*/Clubs.push({name: "Math Team (JV)", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 40, day: "Wed", weekly: false});//Math Team (JV)
 /*1*/Clubs.push({name: "Math Team (Varsity)", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Wed", weekly: false});//Math Team (Varsity)
-//*1*/Clubs.push({name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
+/*1*/Clubs.push({name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
 /*1*/Clubs.push({name: "National Art Honor Society", hourStart: 15, minStart: 30, hourEnd: 17, minEnd: 0, day: "Mon", weekly: false});//National Art Honor Society
 /*1*/Clubs.push({name: "National English Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Tue", weekly: false});//National English Honor Society
 //*0*/Clubs.push({name: "National Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Thu", weekly: false});//National Honor Society
@@ -286,6 +286,6 @@ var Clubs = new Array();
 //*0*/Clubs.push({name: "Young Republicans", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Young Republicans
 //Extra Clubs and thingys
 var Stupid=new Array();
-/*1*/Stupid.push({name: "Model United Nations Sat", hourStart: 9, minStart: 0, hourEnd:-17, minEnd: 0, day: "Sat", weekly: false});//Model United Nations
-/*1*/Stupid.push({name: "Model United Nations Fri", hourStart: 16, minStart: 30, hourEnd: 21, minEnd: 0, day: "Fri", weekly: false});//Model United Nations
-/*1*/Stupid.push({name: "Relay for Life Smoothie", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 30, day: "Fri", weekly: true});//Relay for Life
+/*1*/Stupid.push({name: "Model United Nations Sat", hourStart: 9, minStart: 0, hourEnd:17, minEnd: 0, day: "Sat", weekly: false});//Model United Nations [0]
+/*1*/Stupid.push({name: "Model United Nations Fri", hourStart: 16, minStart: 30, hourEnd: 21, minEnd: 0, day: "Fri", weekly: false});//Model United Nations [1]
+/*1*/Stupid.push({name: "Relay for Life Smoothie", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 30, day: "Fri", weekly: true});//Relay for Life [2]

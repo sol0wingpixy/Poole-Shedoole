@@ -132,6 +132,16 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
+				if((x==6||(x==13&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Sat")!=-1)//saturday
+				{
+					clubName=fileIn.clubs[i].name;
+					startHr=fileIn.clubs[i].hourEnd+1;
+					startMin=fileIn.clubs[i].minEnd;
+					startHrC=fileIn.clubs[i].hourStart;
+					startMinC=fileIn.clubs[i].minStart;
+					endHrC=fileIn.clubs[i].hourEnd;
+					endMinC=fileIn.clubs[i].minEnd;
+				}
 			}
 			for(var i=0;i<fileIn.sports.length;i++)
 			{

@@ -25,6 +25,10 @@
                         }
 						if (inputs[i].id === "club") {//'id' tells whether sport, club, or class
                             clubsIn.push(inputs[i].value);
+							if(inputs[i].value=="Model United Nations") {
+								clubsIn.push(Stupid[0]);
+								clubsIn.push(Stupid[1]);
+							}
                         }
 						if (inputs[i].id === "sport") {//'id' tells whether sport, club, or class
 							sportsIn.push(inputs[i].value);
