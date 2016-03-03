@@ -3,8 +3,8 @@ function funcy(fileIn){
 	array = new Array(16);
 	for (var i = 0; i < array.length; i++)
 	{
-		array[i] = new Array(58);
-		for(var k=0;k<58;k++)
+		array[i] = new Array(66);
+		for(var k=0;k<66;k++)
 		{
 			array[i][k]="#ffffff";
 		}
@@ -40,12 +40,12 @@ function funcy(fileIn){
 		var ctx=canvas.getContext("2d");
 		//resize grid to window
 		c.width =  1500;//window.innerWidth;
-		c.height = 1025;//window.innerHeight;
+		c.height = 1160;//window.innerHeight;
 
 		//Draw grid
 		//8:00 is 0:00
 		//20:00 is 14:00
-		var numY=14*4+2;//num hours*number of boxes per hours*hour
+		var numY=16*4+2;//num hours*number of boxes per hours*hour
 		var width=100;//c.width/8;
 		var height=17.5;//canvas.height/numY;
 
