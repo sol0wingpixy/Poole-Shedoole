@@ -190,27 +190,26 @@ Sports.push({name: "Cross Country", hourStart: [15, 15, 15, 15, 15, 8, 0], minSt
 //Sports.push({name: "Crew", hourStart: [0,0,0,0,0,0,5], minStart: [0,0,0,0,0,0,6], hourEnd: [0,0,0,0,0,0,5], minEnd: [0,0,0,0,0,0,5]});//Crew
 Sports.push({name: "Field Hockey", hourStart: [19, 19, 18, 15, 18, 0, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [21, 21, 21, 17, 21, 0, 0], minEnd: [0, 0, 30, 30, 30, 0, 0]});//Field Hockey
 Sports.push({name: "Varsity Football", hourStart: [16, 16, 16, 16, 15, 9, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 18, 18, 17, 22, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Varsity Football
-Sports.push({name: "Swim/Dive", hourStart: [16, 16, 16, 17, 15, 9, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [18, 18, 18, 19, 17, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Swim/Dive
-//Sports.push({name: "Golf (Boys)", hourStart: [0,0,0,0,0,0,9], minStart: [0,0,0,0,0,0,9], hourEnd: [0,0,0,0,0,0,9], minEnd: [0,0,0,0,0,0,9]});//Golf (Boys)
-//Sports.push({name: "Golf (Girls)", hourStart: [0,0,0,0,0,0,10], minStart: [0,0,0,0,0,0,10], hourEnd: [0,0,0,0,0,0,10], minEnd: [0,0,0,0,0,0,10]});//Golf (Girls)
-//Sports.push({name: "Gymnastics", hourStart: [0,0,0,0,0,0,11], minStart: [0,0,0,0,0,0,11], hourEnd: [0,0,0,0,0,0,11], minEnd: [0,0,0,0,0,0,11]});//Gymnastics
-//Sports.push({name: "Indoor Track", hourStart: [0,0,0,0,0,0,12], minStart: [0,0,0,0,0,0,12], hourEnd: [0,0,0,0,0,0,12], minEnd: [0,0,0,0,0,0,12]});//Indoor Track
-//Sports.push({name: "Lacrosse (Boys)", hourStart: [0,0,0,0,0,0,13], minStart: [0,0,0,0,0,0,13], hourEnd: [0,0,0,0,0,0,13], minEnd: [0,0,0,0,0,0,13]});//Lacrosse (Boys)
-Sports.push({name: "Lacrosse (Girls)", hourStart: [16, 19, 16, 19, 16, 8, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 21, 18, 21, 18, 10, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Lacrosse (Girls)
-//Sports.push({name: "Outdoor Track", hourStart: [0,0,0,0,0,0,15], minStart: [0,0,0,0,0,0,15], hourEnd: [0,0,0,0,0,0,15], minEnd: [0,0,0,0,0,0,15]});//Outdoor Track
-Sports.push({name: "Precisionettes", hourStart: [15, 15, 15, 15, 15, 9, 0], minStart: [15, 15, 15, 15, 15, 0, 0], hourEnd: [17, 17, 17, 17, 17, 17, 0], minEnd: [30, 30, 30, 30, 30, 0, 0]});//Precisionettes
-Sports.push({name: "Rifle", hourStart: [15, 16, 0, 15, 0, 0, 0], minStart: [30, 30, 0, 30, 0, 0, 0], hourEnd: [18, 19, 0, 18, 0, 0, 0], minEnd: [0, 30, 0, 0, 0, 0, 0]});//Rifle
-Sports.push({name: "Soccer (Boys)", hourStart: [0, 0, 0, 17, 0, 0, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [0, 0, 0, 21, 0, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Soccer (Boys)
-//Sports.push({name: "Soccer (Girls)", hourStart: [0,0,0,0,0,0,19], minStart: [0,0,0,0,0,0,19], hourEnd: [0,0,0,0,0,0,19], minEnd: [0,0,0,0,0,0,19]});//Soccer (Girls)
-//Sports.push({name: "Softball", hourStart: [0,0,0,0,0,0,20], minStart: [0,0,0,0,0,0,20], hourEnd: [0,0,0,0,0,0,20], minEnd: [0,0,0,0,0,0,20]});//Softball
-Sports.push({name: "Swim/Dive", hourStart: [15, 16, 15, 15, 16, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [18, 21, 18, 18, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Swim/Dive
-//Sports.push({name: "Tennis (Boys)", hourStart: [0,0,0,0,0,0,22], minStart: [0,0,0,0,0,0,22], hourEnd: [0,0,0,0,0,0,22], minEnd: [0,0,0,0,0,0,22]});//Tennis (Boys)
-Sports.push({name: "Tennis (Girls)", hourStart: [16, 15, 16, 15, 16, 0, 0], minStart: [0, 30, 0, 30, 0, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [15, 45, 15, 45, 15, 0, 0]});//Tennis (Girls)
-Sports.push({name: "Volleyball", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [0, 45, 0, 45, 0, 0, 0]});//Volleyball
-Sports.push({name: "Varsity Wrestling", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [21, 21, 21, 21, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Varsity Wrestling
+Sports.push({name: "JV Football", hourStart: [16, 16, 16, 17, 15, 9, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [18, 18, 18, 19, 17, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Swim/Dive
+//Sports.push({name: "Swim/Dive", hourStart: [0,0,0,0,0,0,9], minStart: [0,0,0,0,0,0,9], hourEnd: [0,0,0,0,0,0,9], minEnd: [0,0,0,0,0,0,9]});//Golf (Boys)
+//Sports.push({name: "Golf (Boys)", hourStart: [0,0,0,0,0,0,10], minStart: [0,0,0,0,0,0,10], hourEnd: [0,0,0,0,0,0,10], minEnd: [0,0,0,0,0,0,10]});//Golf (Girls)
+//Sports.push({name: "Golf (Girls)", hourStart: [0,0,0,0,0,0,11], minStart: [0,0,0,0,0,0,11], hourEnd: [0,0,0,0,0,0,11], minEnd: [0,0,0,0,0,0,11]});//Gymnastics
+//Sports.push({name: "Gymnastics", hourStart: [0,0,0,0,0,0,12], minStart: [0,0,0,0,0,0,12], hourEnd: [0,0,0,0,0,0,12], minEnd: [0,0,0,0,0,0,12]});//Indoor Track
+//Sports.push({name: "Indoor Track", hourStart: [0,0,0,0,0,0,13], minStart: [0,0,0,0,0,0,13], hourEnd: [0,0,0,0,0,0,13], minEnd: [0,0,0,0,0,0,13]});//Lacrosse (Boys)
+Sports.push({name: "Lacrosse (Boys)", hourStart: [16, 19, 16, 19, 16, 8, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 21, 18, 21, 18, 10, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Lacrosse (Girls)
+//Sports.push({name: "Lacrosse (Girls)", hourStart: [0,0,0,0,0,0,15], minStart: [0,0,0,0,0,0,15], hourEnd: [0,0,0,0,0,0,15], minEnd: [0,0,0,0,0,0,15]});//Outdoor Track
+Sports.push({name: "Outdoor Track", hourStart: [15, 15, 15, 15, 15, 9, 0], minStart: [15, 15, 15, 15, 15, 0, 0], hourEnd: [17, 17, 17, 17, 17, 17, 0], minEnd: [30, 30, 30, 30, 30, 0, 0]});//Precisionettes
+Sports.push({name: "Precisionettes", hourStart: [15, 16, 0, 15, 0, 0, 0], minStart: [30, 30, 0, 30, 0, 0, 0], hourEnd: [18, 19, 0, 18, 0, 0, 0], minEnd: [0, 30, 0, 0, 0, 0, 0]});//Rifle
+Sports.push({name: "Rifle", hourStart: [0, 0, 0, 17, 0, 0, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [0, 0, 0, 21, 0, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Soccer (Boys)
+//Sports.push({name: "Soccer (Boys)", hourStart: [0,0,0,0,0,0,19], minStart: [0,0,0,0,0,0,19], hourEnd: [0,0,0,0,0,0,19], minEnd: [0,0,0,0,0,0,19]});//Soccer (Girls)
+//Sports.push({name: "Soccer (Girls)", hourStart: [0,0,0,0,0,0,20], minStart: [0,0,0,0,0,0,20], hourEnd: [0,0,0,0,0,0,20], minEnd: [0,0,0,0,0,0,20]});//Softball
+Sports.push({name: "Softball", hourStart: [15, 16, 15, 15, 16, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [18, 21, 18, 18, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Swim/Dive
+//Sports.push({name: "Swim/Dive", hourStart: [0,0,0,0,0,0,22], minStart: [0,0,0,0,0,0,22], hourEnd: [0,0,0,0,0,0,22], minEnd: [0,0,0,0,0,0,22]});//Tennis (Boys)
+Sports.push({name: "Tennis (Boys)", hourStart: [16, 15, 16, 15, 16, 0, 0], minStart: [0, 30, 0, 30, 0, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [15, 45, 15, 45, 15, 0, 0]});//Tennis (Girls)
+Sports.push({name: "Tennis (Girls)", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [0, 45, 0, 45, 0, 0, 0]});//Volleyball
+Sports.push({name: "Volleyball", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [21, 21, 21, 21, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Varsity Wrestling
 //Sports.push({name: "Varsity Wrestling", hourStart: [0,0,0,0,0,0,26], minStart: [0,0,0,0,0,0,26], hourEnd: [0,0,0,0,0,0,26], minEnd: [0,0,0,0,0,0,26]});//Varsity Wrestling
 //Sports.push({name: "JV Wrestling", hourStart: [0,0,0,0,0,0,27], minStart: [0,0,0,0,0,0,27], hourEnd: [0,0,0,0,0,0,27], minEnd: [0,0,0,0,0,0,27]});//JV Wrestling
-
 
 //**CLUBS**
 var Clubs = new Array();
@@ -286,6 +285,12 @@ var Clubs = new Array();
 //*0*/Clubs.push({name: "Young Republicans", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Young Republicans
 //Extra Clubs and thingys
 var Stupid=new Array();
+<<<<<<< HEAD
+/*1*/Stupid.push({name: "Model United Nations Sat", hourStart: 9, minStart: 0, hourEnd:17, minEnd: 0, day: "Sat", weekly: false});//Model United Nations
+/*1*/Stupid.push({name: "Model United Nations Fri", hourStart: 16, minStart: 30, hourEnd: 21, minEnd: 0, day: "Fri", weekly: false});//Model United Nations
+/*1*/Stupid.push({name: "Relay for Life Smoothie", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 30, day: "Fri", weekly: true});//Relay for Life
+=======
 /*1*/Stupid.push({name: "Model United Nations Sat", hourStart: 9, minStart: 0, hourEnd:17, minEnd: 0, day: "Sat", weekly: false});//Model United Nations [0]
 /*1*/Stupid.push({name: "Model United Nations Fri", hourStart: 16, minStart: 30, hourEnd: 21, minEnd: 0, day: "Fri", weekly: false});//Model United Nations [1]
 /*1*/Stupid.push({name: "Relay for Life Smoothie", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 30, day: "Fri", weekly: true});//Relay for Life [2]
+>>>>>>> origin/master
