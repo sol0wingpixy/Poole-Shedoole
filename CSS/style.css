@@ -49,6 +49,7 @@ p{
 	margin-top: 40px;
 	position: relative;	
 	display:table;
+	width: 600px;
 }
 
 .fixed-nav-bar{
@@ -141,16 +142,9 @@ iframe {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 #generate{
-	display: table-cell;
-	background-color: #232767;
-	border-radius: 25px;
-	position: relative;
-	text-align: center;
-	height: 30px;
-	vertical-align: text-middle;
-	margin-top: 40px;
+	float: right;
+	margin-top: 20px;
 }
 
 .button,
@@ -158,14 +152,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display:inline;
+  display: inline-block;
   height: 38px;
-  padding: 0 20px;
-  color: #555;
+  padding: 0 30px;
+  color: #232767;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -174,22 +168,28 @@ input[type="button"] {
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
-  box-sizing: border-box; 
-  margin-left: 20px;
-  margin-right: 20px;
-  top: 400px;
-  }
-  
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #232767;
+  border-color: #232767;
+  outline: 0; }
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #2C6AA3;
-  border-color: #2C6AA3; 
-  display: inline;
-  }
+  background-color: #232767;
+  border-color: #232767; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -201,6 +201,6 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #232767;
-  border-color: #232767; }
+  background-color: #0038A8;
+  border-color: #0038A8; }
   

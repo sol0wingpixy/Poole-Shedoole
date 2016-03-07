@@ -1,81 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
    <script src="PooleProjectDataBase.js"></script>
-<script src="SheduleGrid.js"></script>
+   
    <!--Extra methods-->
-    <script>
-        //called when Generate button clicked
-        function checkBoxes(){
-				
-            //creates array of all input objects    
-			var inputs = document.getElementsByTagName("input");
-			
-            //will be array of selected values
-            var classesIn = new Array();	
-			var clubsIn = new Array();
-			var sportsIn = new Array();	
-            //loop through all inputs
-			for(var i=0; i < inputs.length; i++){
-
-                //if input is a checkbox, sees if it is checked
-                if(inputs[i].type == "checkbox"){
-				    if(inputs[i].checked){
-						if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
-                            classesIn.push(inputs[i].value);
-                        }
-						if (inputs[i].id === "club") {//'id' tells whether sport, club, or class
-                            clubsIn.push(inputs[i].value);
-							if(inputs[i].value=="Model United Nations") {
-								clubsIn.push(Stupid[0]);
-								clubsIn.push(Stupid[1]);
-							}
-                        }
-						if (inputs[i].id === "sport") {//'id' tells whether sport, club, or class
-							sportsIn.push(inputs[i].value);
-						}
-                        //adds value (which == name)
-					}
-                }
-			}
-
-            intoTheShedoole(classesIn, clubsIn, sportsIn);
-		}
-
-
-        //function to move into the schedule grid
-        function intoTheShedoole(classesIn, clubsIn,sportsIn) {
-			
-            var fileIn = {
-            classes:classesIn,//temp - will check if class, sport, or club
-            sports: sportsIn,
-            clubs: clubsIn
-        };//get this from
-        for (var k = 0; k < fileIn.classes.length; k++) {
-            for (var i = 0; i < Classes.length; i++) {
-                if (Classes[i].name === fileIn.classes[k]) {
-                    fileIn.classes[k] = Classes[i];
-                }
-            }
-        }
-        for (var k = 0; k < fileIn.sports.length; k++) {
-            for (var i = 0; i < Sports.length; i++) {
-                if (Sports[i].name === fileIn.sports[k]) {
-                    fileIn.sports[k] = Sports[i];
-                }
-            }
-        }
-        for (var k = 0; k < fileIn.clubs.length; k++) {
-            for (var i = 0; i < Clubs.length; i++) {
-                if (Clubs[i].name === fileIn.clubs[k]) {
-                    fileIn.clubs[k] = Clubs[i];
-                }
-            }
-        }
-        
-        funcy(fileIn);
-    }
-    </script>
-
+	<script src="indexScripts.js">
+		checkBoxes();
+	</script>
 
 	<head>
 	
@@ -85,18 +15,13 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<link href="CSS/style.css" rel="stylesheet"/>
 		<link href="CSS/responsive.css" rel="stylesheet"/>
-
-
-	
 	</header>
-	<script>
-		
-	</script>
+
 	<body>
 		<nav class="fixed-nav-bar">
             <img src="images/Something cool.png" alt="Woodson Logo" style="width:150px;height:150px;margin-right: 40px; float:left;">
 			<div id="title"><h1>Schedule Picker</h1>
-				<div onClick="checkBoxes()" id="generate"><h5>Generate</h5></div>
+				<button onClick="checkBoxes()" id="generate" class="button-primary">Generate</button>
 			 </div>
 			
 				<!--<form action="#frame1" method="get" id="top-buttons">
@@ -394,4 +319,4 @@
 			
 		}).call(this);	
 	</script>
-<html>
+</html>
