@@ -102,7 +102,7 @@
 		// set canvas id and append canvas to body
 		canvas.setAttribute("id","canvas");
 		canvas.setAttribute("style","overflow:auto")
-		document.body.appendChild(canvas);
+		document.body.div.appendChild(canvas);
 	};
 	function drawGrid(){
 
@@ -403,9 +403,11 @@
 				}
 			}
 		}
-		var newWindow=window.open();
-		newWindow.document.body.appendChild(canvas);
+		
+		var container= document.getElementById("canvas123");
+		container.appendChild(canvas);
 	};
+	
 	function onLoad(){
 		createCanvas();
 		drawGrid();
@@ -414,3 +416,4 @@
 	window.onload=function(){onLoad();};
 	window.onresize=function(){drawGrid();};
 }
+

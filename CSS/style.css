@@ -147,7 +147,7 @@ iframe {
 	margin-top: 20px;
 }
 
-.button,
+.button, a,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -169,7 +169,8 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
-.button:hover,
+
+  .button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
@@ -182,7 +183,7 @@ input[type="button"]:focus {
   color: #232767;
   border-color: #232767;
   outline: 0; }
-.button.button-primary,
+.button.button-primary,a,
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
