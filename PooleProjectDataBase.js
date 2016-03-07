@@ -98,43 +98,43 @@ Classes.push({header: "Health and Physical Education", name:"Sports Medicine", t
 
 //STUDENT RESOURCES
 /*INCOMPLETE*/
-//Classes.push({header: "Student Resources", name:"Developmental Reading (SCLD)", time: -1});//Developmental Reading (SCLD)
-//Classes.push({header: "Student Resources", name:"Developmental Reading (SCSPED)", time: -1});//Developmental Reading (SCSPED)
+//Classes.push({header: "Student Resources", name:"Developmental Reading (SCLD)", time: 0});//Developmental Reading (SCLD)
+//Classes.push({header: "Student Resources", name:"Developmental Reading (SCSPED)", time: 0});//Developmental Reading (SCSPED)
 Classes.push({header: "Student Resources", name:"Developmental Reading (CSS)", time: 0});//Developmental Reading (CSS)
-//Classes.push({header: "Student Resources", name:"Developmental Reading (SCHI)", time: -1});//Developmental Reading (SCHI)
-//Classes.push({header: "Student Resources", name:"Literacy LAB 1 (SCHI)", time: -1});//Literacy LAB 1 (SCHI)
-//Classes.push({header: "Student Resources", name:"Literacy LAB 2 (SCLD)", time: -1});//Literacy LAB 2 (SCLD)
+//Classes.push({header: "Student Resources", name:"Developmental Reading (SCHI)", time: 0});//Developmental Reading (SCHI)
+//Classes.push({header: "Student Resources", name:"Literacy LAB 1 (SCHI)", time: 0});//Literacy LAB 1 (SCHI)
+//Classes.push({header: "Student Resources", name:"Literacy LAB 2 (SCLD)", time: 0});//Literacy LAB 2 (SCLD)
 Classes.push({header: "Student Resources", name:"Algebra 1 Part 1 (SCLD)", time: 60});//Algebra 1 Part 1 (SCLD)
 Classes.push({header: "Student Resources", name:"Algebra 1 Part 1 (CSS)", time: 40});//Algebra 1 Part 1 (CSS)
-//Classes.push({header: "Student Resources", name:"Algebra 1 Part 1 (SCHI)", time: -1});//Algebra 1 Part 1 (SCHI)
-//Classes.push({header: "Student Resources", name:"Geometry/Part 1 (SCHI)", time: -1});//Geometry/Part 1 (SCHI)
-//Classes.push({header: "Student Resources", name:"Individualized Math (SCLD)", time: -1});//Individualized Math (SCLD)
+//Classes.push({header: "Student Resources", name:"Algebra 1 Part 1 (SCHI)", time: 0});//Algebra 1 Part 1 (SCHI)
+//Classes.push({header: "Student Resources", name:"Geometry/Part 1 (SCHI)", time: 10});//Geometry/Part 1 (SCHI)
+//Classes.push({header: "Student Resources", name:"Individualized Math (SCLD)", time: 0});//Individualized Math (SCLD)
 Classes.push({header: "Student Resources", name:"Individualized Math (CSS)", time: 15});//Individualized Math (CSS)
-//Classes.push({header: "Student Resources", name:"Individualized Math (SCHI)", time: -1});//Individualized Math (SCHI)
-//Classes.push({header: "Student Resources", name:"Individualized Math (SCSPED)", time: -1});//Individualized Math (SCSPED)
-//Classes.push({header: "Student Resources", name:"Economics & Personal Finance (SCSPED)", time: -1});//Economics & Personal Finance (SCSPED)
-//Classes.push({header: "Student Resources", name:"Strategies for Success (SCLD)", time: -1});//Strategies for Success (SCLD)
-//Classes.push({header: "Student Resources", name:"Strategies for Success (SCHI)", time: -1});//Strategies for Success (SCHI)
-//Classes.push({header: "Student Resources", name:"Personal Development (SCSPED)", time: -1});//Personal Development (SCSPED)
+//Classes.push({header: "Student Resources", name:"Individualized Math (SCHI)", time: 0});//Individualized Math (SCHI)
+//Classes.push({header: "Student Resources", name:"Individualized Math (SCSPED)", time: 0});//Individualized Math (SCSPED)
+//Classes.push({header: "Student Resources", name:"Economics & Personal Finance (SCSPED)", time: 0});//Economics & Personal Finance (SCSPED)
+//Classes.push({header: "Student Resources", name:"Strategies for Success (SCLD)", time: 0});//Strategies for Success (SCLD)
+//Classes.push({header: "Student Resources", name:"Strategies for Success (SCHI)", time: 0});//Strategies for Success (SCHI)
+//Classes.push({header: "Student Resources", name:"Personal Development (SCSPED)", time: 0});//Personal Development (SCSPED)
 Classes.push({header: "Student Resources", name:"Personal Development (CEDSS)", time: 0});//Personal Development (CEDSS)
-//Classes.push({header: "Student Resources", name:"Personal Development (SCHI)", time: -1});//Personal Development (SCHI)
-//Classes.push({header: "Student Resources", name:"Career Prep (1 pd)", time: -1});//Career Prep (1 pd)
-//Classes.push({header: "Student Resources", name:"Career Prep (2 pds)", time: -1});//Career Prep (2 pds)
-//Classes.push({header: "Student Resources", name:"Foundations of Science (SCSPED)", time: -1});//Foundations of Science (SCSPED)
-//Classes.push({header: "Student Resources", name:"Foundations of Science (SCHI)", time: -1});//Foundations of Science (SCHI)
-//Classes.push({header: "Student Resources", name:"Foundations of English (SCSPED)", time: -1});//Foundations of English (SCSPED)
-//Classes.push({header: "Student Resources", name:"Foundations of English (SCHI)", time: -1});//Foundations of English (SCHI)
-//Classes.push({header: "Student Resources", name:"American Sign Language 1 (SCHI)", time: -1});//American Sign Language 1 (SCHI)
-//Classes.push({header: "Student Resources", name:"American Sign Language 2 (SCHI)", time: -1});//American Sign Language 2 (SCHI)
-//Classes.push({header: "Student Resources", name:"American Sign Language 3 (SCHI)", time: -1});//American Sign Language 3 (SCHI)
-//Classes.push({header: "Student Resources", name:"Foundations of World History/Geo (SCSPED)", time: -1});//Foundations of World History/Geo (SCSPED)
-//Classes.push({header: "Student Resources", name:"Foundations of World History/ Geo (SCHI)", time: -1});//Foundations of World History/ Geo (SCHI)
-//Classes.push({header: "Student Resources", name:"Life Skills (SCHI)", time: -1});//Life Skills (SCHI)
-//Classes.push({header: "Student Resources", name:"Independent Living Skills", time: -1});//Independent Living Skills
-//Classes.push({header: "Student Resources", name:"Studio Art & Design 1 (SCSPED)", time: -1});//Studio Art & Design 1 (SCSPED)
+//Classes.push({header: "Student Resources", name:"Personal Development (SCHI)", time: 0});//Personal Development (SCHI)
+//Classes.push({header: "Student Resources", name:"Career Prep (1 pd)", time: 0});//Career Prep (1 pd)
+//Classes.push({header: "Student Resources", name:"Career Prep (2 pds)", time: 0});//Career Prep (2 pds)
+//Classes.push({header: "Student Resources", name:"Foundations of Science (SCSPED)", time: 0});//Foundations of Science (SCSPED)
+//Classes.push({header: "Student Resources", name:"Foundations of Science (SCHI)", time: 0});//Foundations of Science (SCHI)
+//Classes.push({header: "Student Resources", name:"Foundations of English (SCSPED)", time: 0});//Foundations of English (SCSPED)
+//Classes.push({header: "Student Resources", name:"Foundations of English (SCHI)", time: 0});//Foundations of English (SCHI)
+//Classes.push({header: "Student Resources", name:"American Sign Language 1 (SCHI)", time: 0});//American Sign Language 1 (SCHI)
+//Classes.push({header: "Student Resources", name:"American Sign Language 2 (SCHI)", time: 0});//American Sign Language 2 (SCHI)
+//Classes.push({header: "Student Resources", name:"American Sign Language 3 (SCHI)", time: 0});//American Sign Language 3 (SCHI)
+//Classes.push({header: "Student Resources", name:"Foundations of World History/Geo (SCSPED)", time: 0});//Foundations of World History/Geo (SCSPED)
+//Classes.push({header: "Student Resources", name:"Foundations of World History/ Geo (SCHI)", time: 0});//Foundations of World History/ Geo (SCHI)
+//Classes.push({header: "Student Resources", name:"Life Skills (SCHI)", time: 0});//Life Skills (SCHI)
+//Classes.push({header: "Student Resources", name:"Independent Living Skills", time: 0});//Independent Living Skills
+//Classes.push({header: "Student Resources", name:"Studio Art & Design 1 (SCSPED)", time: 0});//Studio Art & Design 1 (SCSPED)
 Classes.push({header: "Student Resources", name:"Studio Art & Design 1 (CSS)", time: 0});//Studio Art & Design 1 (CSS)
-//Classes.push({header: "Student Resources", name:"Studio Art & Design 1 (SCHI)", time: -1});//Studio Art & Design 1 (SCHI)
-//Classes.push({header: "Student Resources", name:"Theatre Arts 1 (SCHI)", time: -1});//Theatre Arts 1 (SCHI)
+//Classes.push({header: "Student Resources", name:"Studio Art & Design 1 (SCHI)", time: 0});//Studio Art & Design 1 (SCHI)
+//Classes.push({header: "Student Resources", name:"Theatre Arts 1 (SCHI)", time: 0});//Theatre Arts 1 (SCHI)
 Classes.push({header: "Student Resources", name:"Music Sampler (SPED)", time: 0});//Music Sampler (SPED)
 
 //FINE ARTS: VISUAL ARTS
@@ -153,7 +153,7 @@ Classes.push({header: "Fine and Performing Arts", name:"Advanced Symphonic Band 
 Classes.push({header: "Fine and Performing Arts", name:"Percussion Ensemble (Audition)", time: 100});//Percussion Ensemble (Audition)
 Classes.push({header: "Fine and Performing Arts", name:"Intermediate Orchestra (Audition)", time: 100});//Intermediate Orchestra (Audition)
 Classes.push({header: "Fine and Performing Arts", name:"Advanced Orchestra (Audition)", time: 120});//Advanced Orchestra (Audition)
-//Classes.push({header: "Fine and Performing Arts", name:"Chamber Ensemble (Audition)", time:-1});//Chamber Ensemble (Audition)
+//Classes.push({header: "Fine and Performing Arts", name:"Chamber Ensemble (Audition)", time:0});//Chamber Ensemble (Audition)
 Classes.push({header: "Fine and Performing Arts", name:"Guitar 1", time: 0});//Guitar 1
 Classes.push({header: "Fine and Performing Arts", name:"Guitar 2 (Audition)", time: 0});//Guitar 2 (Audition)
 Classes.push({header: "Fine and Performing Arts", name:"Guitar 3 (Audition)", time: 0});//Guitar 3 (Audition)
@@ -166,8 +166,8 @@ Classes.push({header: "Fine and Performing Arts", name:"Music Sampler 1 (SPED)",
 //BUISNESS/INFORMATION TECH & MARKETING
 /*incomplete*/
 /*wrong data for test reasons*/Classes.push({header: "Business/Information Tech & Marketing", name:"Information Systems", time: 20});//Information Systems
-//Classes.push({header: "Business/Information Tech & Marketing", name:"Principles of Business and Marketing", time: -1});//Principles of Business and Marketing
-//Classes.push({header: "Business/Information Tech & Marketing", name:"Programming", time: -1});//Programming
+//Classes.push({header: "Business/Information Tech & Marketing", name:"Principles of Business and Marketing", time: 0});//Principles of Business and Marketing
+//Classes.push({header: "Business/Information Tech & Marketing", name:"Programming", time: 0});//Programming
 
 //TECHNOLOGY AND ENGINEERING
 /*done*/
@@ -216,45 +216,45 @@ var Clubs = new Array();
 /*MILITARY TIME*/
 //Clubs.insert({name:"String", hourStart:int, minStart:int, time:int, day:"String", weekly:boolean});
 /*1*/Clubs.push({name: "Anime Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Anime Club
-//*0*/Clubs.push({name: "Astronomy Club", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Astronomy Club
-//*0*/Clubs.push({name: "Athletic Training Club", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Athletic Training Club
-//*0*/Clubs.push({name: "Band", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Band
+//*0*/Clubs.push({name: "Astronomy Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Astronomy Club
+//*0*/Clubs.push({name: "Athletic Training Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Athletic Training Club
+//*0*/Clubs.push({name: "Band", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Band
 /*1*/Clubs.push({name: "Catholic Club", hourStart: 19, minStart: 30, hourEnd: 20, minEnd: 0, day: "Thu", weekly: true});//Catholic Club
-//*0*/Clubs.push({name: "Cavalcade (Newspaper)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Cavalcade (Newspaper)
-//*0*/Clubs.push({name: "Cavalier (Yearbook)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Cavalier (Yearbook)
+//*0*/Clubs.push({name: "Cavalcade (Newspaper)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Cavalcade (Newspaper)
+//*0*/Clubs.push({name: "Cavalier (Yearbook)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Cavalier (Yearbook)
 /*1*/Clubs.push({name: "Chess Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Mon", weekly: false});//Chess Club
-//*0*/Clubs.push({name: "Chorus", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Chorus
-//*0*/Clubs.push({name: "Class of 2016", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Class of 2016
-//*0*/Clubs.push({name: "Class of 2017", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Class of 2017
-//*0*/Clubs.push({name: "Class of 2018", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Class of 2018
-//*0*/Clubs.push({name: "Class of 2019", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Class of 2019
-//*0*/Clubs.push({name: "Color Guard", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Color Guard
+//*0*/Clubs.push({name: "Chorus", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Chorus
+//*0*/Clubs.push({name: "Class of 2016", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2016
+//*0*/Clubs.push({name: "Class of 2017", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2017
+//*0*/Clubs.push({name: "Class of 2018", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2018
+//*0*/Clubs.push({name: "Class of 2019", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2019
+//*0*/Clubs.push({name: "Color Guard", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Color Guard
 /*1*/Clubs.push({name: "Computer Science", hourStart: 16, minStart: 0, hourEnd: 17, minEnd: 0, day: "Thu", weekly: true});//Computer Science
 /*1*/Clubs.push({name: "Deaf Academic Bowl", hourStart: 15, minStart: 10, hourEnd: 17, minEnd: 0, day: "Wed", weekly: true});//Deaf Academic Bowl
-//*0*/Clubs.push({name: "DECA", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//DECA
-//*0*/Clubs.push({name: "DECA Officers", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//DECA Officers
+//*0*/Clubs.push({name: "DECA", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//DECA
+//*0*/Clubs.push({name: "DECA Officers", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//DECA Officers
 /*1*/Clubs.push({name: "Doctor Who Fan Club", hourStart: 15, minStart: 15, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Doctor Who Fan Club
 /*1*/Clubs.push({name: "Engineering Club/ACE Mentoring", hourStart: 16, minStart: 30, hourEnd: 18, minEnd: 0, day: "Wed", weekly: false});//Engineering Club/ACE Mentoring
-//*0*/Clubs.push({name: "Environment Club", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Environment Club
-//*0*/Clubs.push({name: "Family, Career and Community Leaders of America (FCCLA)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Family, Career and Community Leaders of America (FCCLA)
-//*0*/Clubs.push({name: "Fellowship of Christian Athletes", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Fellowship of Christian Athletes
+//*0*/Clubs.push({name: "Environment Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Environment Club
+//*0*/Clubs.push({name: "Family, Career and Community Leaders of America (FCCLA)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Family, Career and Community Leaders of America (FCCLA)
+//*0*/Clubs.push({name: "Fellowship of Christian Athletes", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Fellowship of Christian Athletes
 /*1*/Clubs.push({name: "French Club", hourStart: 15, minStart: 15, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//French Club
-//*0*/Clubs.push({name: "French Honor Society", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//French Honor Society
+//*0*/Clubs.push({name: "French Honor Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//French Honor Society
 /*1*/Clubs.push({name: "Gay-Straight Alliance (GSA)", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Gay-Straight Alliance (GSA)
 /*1*/Clubs.push({name: "German Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//German Club
 /*1*/Clubs.push({name: "German Honor Society", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//German Honor Society
 /*1*/Clubs.push({name: "Go Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Go Club
-//*0*/Clubs.push({name: "Habitat for Humanity", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Habitat for Humanity
+//*0*/Clubs.push({name: "Habitat for Humanity", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Habitat for Humanity
 /*1*/Clubs.push({name: "Hip Hop Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Tue", weekly: true});//Hip Hop Club
 /*1*/Clubs.push({name: "Improv Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 15, day: "Tue", weekly: true});//Improv Club
-//*0*/Clubs.push({name: "International Thespian Society", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//International Thespian Society
+//*0*/Clubs.push({name: "International Thespian Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//International Thespian Society
 /*1*/Clubs.push({name: "IT Girls", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue", weekly: false});//IT Girls
-//*0*/Clubs.push({name: "Key Club", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Key Club
-//*0*/Clubs.push({name: "KFC (Kosher Food Club)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//KFC (Kosher Food Club)
+//*0*/Clubs.push({name: "Key Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Key Club
+//*0*/Clubs.push({name: "KFC (Kosher Food Club)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//KFC (Kosher Food Club)
 /*1*/Clubs.push({name: "Latin Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Thu", weekly: true});//Latin Club
 /*1*/Clubs.push({name: "Latin Honor Society", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Latin Honor Society
-//*0*/Clubs.push({name: "Leadership", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Leadership
-//*0*/Clubs.push({name: "Math Honor Society  (Mu Alpha Theta)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Math Honor Society  (Mu Alpha Theta)
+//*0*/Clubs.push({name: "Leadership", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Leadership
+//*0*/Clubs.push({name: "Math Honor Society  (Mu Alpha Theta)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Math Honor Society  (Mu Alpha Theta)
 /*1*/Clubs.push({name: "Math Team (JV)", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 40, day: "Wed", weekly: false});//Math Team (JV)
 /*1*/Clubs.push({name: "Math Team (Varsity)", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Wed", weekly: false});//Math Team (Varsity)
 /*1*/Clubs.push({name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
@@ -262,35 +262,31 @@ var Clubs = new Array();
 /*1*/Clubs.push({name: "National English Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Tue", weekly: false});//National English Honor Society
 //*0*/Clubs.push({name: "National Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Thu", weekly: false});//National Honor Society
 /*1*/Clubs.push({name: "Operation Patriot", hourStart: 15, minStart: 5, hourEnd: 15, minEnd: 30, day: "Wed", weekly: false});//Operation Patriot
-//*0*/Clubs.push({name: "Orchestra", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Orchestra
-//*0*/Clubs.push({name: "Page (Literary/Art Magazine)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Page (Literary/Art Magazine)
+//*0*/Clubs.push({name: "Orchestra", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Orchestra
+//*0*/Clubs.push({name: "Page (Literary/Art Magazine)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Page (Literary/Art Magazine)
 /*1*/Clubs.push({name: "Photography Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Photography Club
 /*1*/Clubs.push({name: "Poetry Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Poetry Club
 //*1*/Clubs.push({name: "Relay for Life", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Relay for Life
 /*1*/Clubs.push({name: "Robotics Club", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue, Thu", weekly: true});//Robotics Club
 /*1*/Clubs.push({name: "Scholastic Quiz Bowl /It's Academic", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 50, day: "Tue, Thu", weekly: true});//Scholastic Quiz Bowl /It's Academic
-//*0*/Clubs.push({name: "Science Olympiad", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Science Olympiad
+//*0*/Clubs.push({name: "Science Olympiad", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Science Olympiad
 /*1*/Clubs.push({name: "Science National Honor Society", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Thu", weekly: false});//Science National Honor Society
 /*1*/Clubs.push({name: "Speech, Debate, & Forensics ", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Thu", weekly: true});//Speech, Debate, & Forensics
 /*1*/Clubs.push({name: "Spanish Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Spanish Club
 /*1*/Clubs.push({name: "Spanish National Honor Society", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Spanish National Honor Society
-//*0*/Clubs.push({name: "Student Advisory Council (SAC)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Student Advisory Council (SAC)
-//*0*/Clubs.push({name: "Student Government Association (SGA)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Student Government Association (SGA)
-//*0*/Clubs.push({name: "Students Against Destructive Decisions (SADD)", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Students Against Destructive Decisions (SADD)
+//*0*/Clubs.push({name: "Student Advisory Council (SAC)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Student Advisory Council (SAC)
+//*0*/Clubs.push({name: "Student Government Association (SGA)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Student Government Association (SGA)
+//*0*/Clubs.push({name: "Students Against Destructive Decisions (SADD)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Students Against Destructive Decisions (SADD)
 /*1*/Clubs.push({name: "Student 2 Student (Ambassadors) ", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Mon", weekly: false});//Student 2 Student (Ambassadors)
 /*1*/Clubs.push({name: "Technology Student Association (TSA)", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 10, day: "Wed", weekly: false});//Technology Student Association (TSA)
-//*0*/Clubs.push({name: "Tri M Music Honor Society", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Tri M Music Honor Society
-//*0*/Clubs.push({name: "Woodson Buddies", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Woodson Buddies
-//*0*/Clubs.push({name: "Young Hearts", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Young Hearts
-//*0*/Clubs.push({name: "Young Republicans", hourStart: -1, minStart: -1, hourEnd: -1, minEnd: -1, day: "", weekly: false});//Young Republicans
+//*0*/Clubs.push({name: "Tri M Music Honor Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Tri M Music Honor Society
+//*0*/Clubs.push({name: "Woodson Buddies", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Woodson Buddies
+//*0*/Clubs.push({name: "Young Hearts", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Hearts
+//*0*/Clubs.push({name: "Young Republicans", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Republicans
 //Extra Clubs and thingys
 var Stupid=new Array();
-<<<<<<< HEAD
 /*1*/Stupid.push({name: "Model United Nations Sat", hourStart: 9, minStart: 0, hourEnd:17, minEnd: 0, day: "Sat", weekly: false});//Model United Nations
 /*1*/Stupid.push({name: "Model United Nations Fri", hourStart: 16, minStart: 30, hourEnd: 21, minEnd: 0, day: "Fri", weekly: false});//Model United Nations
 /*1*/Stupid.push({name: "Relay for Life Smoothie", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 30, day: "Fri", weekly: true});//Relay for Life
-=======
-/*1*/Stupid.push({name: "Model United Nations Sat", hourStart: 9, minStart: 0, hourEnd:17, minEnd: 0, day: "Sat", weekly: false});//Model United Nations [0]
-/*1*/Stupid.push({name: "Model United Nations Fri", hourStart: 16, minStart: 30, hourEnd: 21, minEnd: 0, day: "Fri", weekly: false});//Model United Nations [1]
-/*1*/Stupid.push({name: "Relay for Life Smoothie", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 30, day: "Fri", weekly: true});//Relay for Life [2]
->>>>>>> origin/master
+
+
