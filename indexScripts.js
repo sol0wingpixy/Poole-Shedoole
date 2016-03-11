@@ -1,79 +1,75 @@
 //called when Generate button clicked
-	var classesIn = new Array();	
-			var clubsIn = new Array();
-			var sportsIn = new Array();	
-			
-        function checkBoxes(){
-				
-            //creates array of all input objects    
-			var inputs = document.getElementsByTagName("input");
-			
-            //will be array of selected values
-            
-            //loop through all inputs
-			for(var i=0; i < inputs.length; i++){
 
-                //if input is a checkbox, sees if it is checked
-                if(inputs[i].type == "checkbox"){
-				    if(inputs[i].checked){
-						if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
-                            classesIn.push(inputs[i].value);
-                        }
-						if (inputs[i].id === "club") {//'id' tells whether sport, club, or class
-                            clubsIn.push(inputs[i].value);
-							if(inputs[i].value=="Model United Nations") {
-								clubsIn.push(Stupid[0]);
-								clubsIn.push(Stupid[1]);
-							}
-                        }
-						if (inputs[i].id === "sport") {//'id' tells whether sport, club, or class
-							sportsIn.push(inputs[i].value);
-						}
-                        //adds value (which == name)
+function checkBoxes(){
+
+	//creates array of all input objects
+	var inputs = document.getElementsByTagName("input");
+	//will be array of selected values
+
+	//loop through all inputs
+	for(var i=0; i < inputs.length; i++){
+
+		//if input is a checkbox, sees if it is checked
+		if(inputs[i].type == "checkbox"){
+			if(inputs[i].checked){
+				if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
+					classesIn.push(inputs[i].value);
+				}
+				if (inputs[i].id === "club") {//'id' tells whether sport, club, or class
+					clubsIn.push(inputs[i].value);
+					if(inputs[i].value=="Model United Nations") {
+						clubsIn.push(Stupid[0]);
+						clubsIn.push(Stupid[1]);
 					}
-                }
+				}
+				if (inputs[i].id === "sport") {//'id' tells whether sport, club, or class
+					sportsIn.push(inputs[i].value);
+				}
+				//adds value (which == name)
 			}
-			window.open("scheduleLayout.html", "_self");
 		}
+	}
+	window.open("scheduleLayout.html", "_self");
+}
 
 
-        //function to move into the schedule grid
-       function intoTheShedoole() {
-			
-            var fileIn = {
-            classes:classesIn,//temp - will check if class, sport, or club
-            sports: sportsIn,
-            clubs: clubsIn
-        };//get this from
-        for (var k = 0; k < fileIn.classes.length; k++) {
-            for (var i = 0; i < Classes.length; i++) {
-                if (Classes[i].name === fileIn.classes[k]) {
-                    fileIn.classes[k] = Classes[i];
-                }
-            }
-        }
-        for (var k = 0; k < fileIn.sports.length; k++) {
-            for (var i = 0; i < Sports.length; i++) {
-                if (Sports[i].name === fileIn.sports[k]) {
-                    fileIn.sports[k] = Sports[i];
-                }
-            }
-        }
-        for (var k = 0; k < fileIn.clubs.length; k++) {
-            for (var i = 0; i < Clubs.length; i++) {
-                if (Clubs[i].name === fileIn.clubs[k]) {
-                    fileIn.clubs[k] = Clubs[i];
-                }
-            }
-        }
-        
-        funcy(fileIn);
-    }
-	
-	function funcy(fileIn){
-		
-			
-			
+//function to move into the schedule grid
+function intoTheShedoole() {
+
+	var fileIn = {
+		classes:classesIn,//temp - will check if class, sport, or club
+		sports: sportsIn,
+		clubs: clubsIn
+	};//get this from
+	for (var k = 0; k < fileIn.classes.length; k++) {
+		for (var i = 0; i < Classes.length; i++) {
+			if (Classes[i].name === fileIn.classes[k]) {
+				fileIn.classes[k] = Classes[i];
+			}
+		}
+	}
+	for (var k = 0; k < fileIn.sports.length; k++) {
+		for (var i = 0; i < Sports.length; i++) {
+			if (Sports[i].name === fileIn.sports[k]) {
+				fileIn.sports[k] = Sports[i];
+			}
+		}
+	}
+	for (var k = 0; k < fileIn.clubs.length; k++) {
+		for (var i = 0; i < Clubs.length; i++) {
+			if (Clubs[i].name === fileIn.clubs[k]) {
+				fileIn.clubs[k] = Clubs[i];
+			}
+		}
+	}
+
+	funcy(fileIn);
+}
+
+function funcy(fileIn){
+
+
+
 	//special for MUN
 	array = new Array(16);
 	for (var i = 0; i < array.length; i++)
@@ -407,20 +403,20 @@
 				}
 			}
 		}
-		
+
 		var container= document.getElementById("canvas123");
 		container.appendChild(canvas);
-		
-		
+
+
 	};
-	
+
 	function onLoad(){
 		createCanvas();
 		drawGrid();
 	}
-	
 
-	
+
+
 	onLoad();
 
 }
