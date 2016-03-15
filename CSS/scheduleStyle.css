@@ -1,4 +1,7 @@
 #canvas123{
-	margin: 50px;
-	margin-top: 200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 200px;
+  box-sizing: border-box; 
+  display: block;
 } 
