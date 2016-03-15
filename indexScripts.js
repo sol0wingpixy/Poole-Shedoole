@@ -356,7 +356,7 @@ function funcy(fileIn){
 				}
 				if(hour>=startHr&&hour<=endHr&&((x>0&&x<7)||(x>7&&x<14)))
 				{
-					if(!(hour==startHr&&(min)<startMin)&&!(hour==endHr&&(min)>endMin))
+					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
 					{
 						ctx.fillStyle='#9944ff';
 						ctx.fillRect(x*width,y*height,width,height);
