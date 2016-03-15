@@ -2,6 +2,10 @@
 
 function checkBoxes(){
 
+	var classesIn = new Array();
+	var clubsIn = new Array();
+	var sportsIn = new Array();
+
 	//creates array of all input objects
 	var inputs = document.getElementsByTagName("input");
 	//will be array of selected values
@@ -29,6 +33,11 @@ function checkBoxes(){
 			}
 		}
 	}
+
+	sessionStorage.setItem('classes', classesIn);
+	sessionStorage.setItem('clubs', clubsIn);
+	sessionStorage.setItem('sports', sportsIn);
+
 	window.open("scheduleLayout.html", "_self");
 }
 
@@ -36,11 +45,28 @@ function checkBoxes(){
 //function to move into the schedule grid
 function intoTheShedoole() {
 
+
+
 	var fileIn = {
-		classes:classesIn,//temp - will check if class, sport, or club
-		sports: sportsIn,
-		clubs: clubsIn
+		classes: sessionStorage.getItem("classes").split(","),//temp - will check if class, sport, or club
+		sports:  sessionStorage.getItem("sports").split(","),
+		clubs:  sessionStorage.getItem("clubs").split(",")
 	};//get this from
+		if(fileIn.classes[0].length<=0)
+		{
+			fileIn.classes = new Array();
+		}
+
+		if(fileIn.clubs[0].length<=0)
+		{
+			fileIn.clubs = new Array();
+		}
+	
+		if(fileIn.sports[0].length<=0)
+		{
+			fileIn.sports = new Array();
+		}
+
 	for (var k = 0; k < fileIn.classes.length; k++) {
 		for (var i = 0; i < Classes.length; i++) {
 			if (Classes[i].name === fileIn.classes[k]) {
