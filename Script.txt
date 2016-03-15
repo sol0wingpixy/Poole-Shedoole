@@ -1,0 +1,17 @@
+Our Schedule Picker is straightforward and easy to use.
+Our simplistic interface proudly shows our school colors without creating a distraction for the user 
+	and allows the page to load quickly on any device.
+With a full list of classes and clubs available, simply select your classes, clubs and sports, and click 
+	on the button marked "GENERATE" at the top of the screen.
+With a generated Schedule, the time requirements are displayed clearly with color coded boxes. 
+The schedule displays two weeks of information to allow for the user to plan for clubs and after school 
+	activities that occur bimonthly.
+The boxes include a title at the top to inform the user what activity is being displayed. 
+The homework slot is a total of the amount of homework every week, divided by the number of days to provide
+	an approximation of the time needed to complete the homework for the selected classes.
+Conflicts are shown clearly in bright red, allowing for the user to easily find any conflicts created.
+On Top of the interface being easy to use, the code is easily modifiable.
+With a few simple changes to the information in the database, our project can be modified to allow the use
+	by students other than freshmen who want to plan out their schedule based on their classes.
+As times change and classes are added and removed, the code has been set up to allow for faculty
+	to easily edit the database to update information for future Woodson Students.
