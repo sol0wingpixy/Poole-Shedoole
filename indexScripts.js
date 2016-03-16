@@ -209,7 +209,7 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
-				if((x==4||(x==11&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Thur")!=-1)//thursday
+				if((x==4||(x==11&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Thu")!=-1)//thursday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
