@@ -172,7 +172,7 @@ function funcy(fileIn){
 			var endMinS=0;
 			for(var i=0;i<fileIn.clubs.length;i++)
 			{
-				if((x==1||(x==8&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Mon")!=-1)//monday
+				if((x==1||(x==8&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Mon")!=-1)//monday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
@@ -182,7 +182,7 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
-				if((x==2||(x==9&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Tue")!=-1)//tuesday
+				if((x==2||(x==9&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Tue")!=-1)//tuesday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
@@ -192,7 +192,7 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
-				if((x==3||(x==10&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Wed")!=-1)//wednesday
+				if((x==3||(x==10&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Wed")!=-1)//wednesday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
@@ -202,7 +202,7 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
-				if((x==4||(x==11&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Thu")!=-1)//thursday
+				if((x==4||(x==11&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Thu")!=-1)//thursday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
@@ -212,7 +212,7 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
-				if((x==5||(x==12&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Fri")!=-1)//friday
+				if((x==5||(x==12&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Fri")!=-1)//friday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
@@ -222,7 +222,7 @@ function funcy(fileIn){
 					endHrC=fileIn.clubs[i].hourEnd;
 					endMinC=fileIn.clubs[i].minEnd;
 				}
-				if((x==6||(x==13&&fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Sat")!=-1)//saturday
+				if((x==6||(x==13&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Sat")!=-1)//saturday
 				{
 					clubName=fileIn.clubs[i].name;
 					startHr=fileIn.clubs[i].hourEnd+1;
