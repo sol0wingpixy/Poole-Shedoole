@@ -114,11 +114,27 @@ function funcy(fileIn){
 	}
 	for(var x=1;x<13;x++)
 	{
-		if(x<6||x>7)
-			for(var y=2;y<30;y++)
-			{
-				array[x][y]="#00aaff";//school day
-			}
+		if(x<6) {
+			if (x % 2 == 0)
+				for (var y = 2; y < 30; y++) {
+					array[x][y] = "#00aaff";//Odd day
+				}
+			else
+				for (var y = 2; y < 30; y++) {
+					array[x][y] = "#1100ee";//Even day
+				}
+		}
+		else
+		if(x>7)
+			if (x % 2 == 0)
+				for (var y = 2; y < 30; y++) {
+					array[x][y] = "#00aaee";//Even day
+				}
+			else
+				for (var y = 2; y < 30; y++) {
+					array[x][y] = "#00aaff";//Odd day
+				}
+
 	}
 	function createCanvas(){
 		// Declare canvas & properties
