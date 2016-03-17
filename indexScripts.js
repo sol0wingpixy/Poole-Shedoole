@@ -15,6 +15,8 @@ function checkBoxes(){
 
 		//if input is a checkbox, sees if it is checked
 		if(inputs[i].type == "checkbox"){
+			
+			//if checked adds to the appropriate array
 			if(inputs[i].checked){
 				if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
 					classesIn.push(inputs[i].value);
@@ -34,10 +36,12 @@ function checkBoxes(){
 		}
 	}
 
+	//sessionStorage adds values to global of the entire window, used to transfer information between pages
 	sessionStorage.setItem('classes', classesIn);
 	sessionStorage.setItem('clubs', clubsIn);
 	sessionStorage.setItem('sports', sportsIn);
 
+	//opens new window which runs intoTheShedoole on opening
 	window.open("scheduleLayout.html", "_self");
 }
 

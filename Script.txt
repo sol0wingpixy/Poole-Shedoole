@@ -15,3 +15,5 @@ With a few simple changes to the information in the database, our project can be
 	by students other than freshmen who want to plan out their schedule based on their classes.
 As times change and classes are added and removed, the code has been set up to allow for faculty
 	to easily edit the database to update information for future Woodson Students.
+
+
