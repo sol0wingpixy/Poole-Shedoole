@@ -44,15 +44,12 @@ function checkBoxes(){
 
 //function to move into the schedule grid
 function intoTheShedoole() {
-
-
-
 	var fileIn = {
-		classes: sessionStorage.getItem("classes").split(","),//temp - will check if class, sport, or club
+		classes: sessionStorage.getItem("classes").split(","),//asign vars to permament stuff
 		sports:  sessionStorage.getItem("sports").split(","),
 		clubs:  sessionStorage.getItem("clubs").split(",")
 	};//get this from
-		if(fileIn.classes[0].length<=0)
+		if(fileIn.classes[0].length<=0)//if no data, make it say so
 		{
 			fileIn.classes = new Array();
 		}
@@ -70,7 +67,7 @@ function intoTheShedoole() {
 	for (var k = 0; k < fileIn.classes.length; k++) {
 		for (var i = 0; i < Classes.length; i++) {
 			if (Classes[i].name === fileIn.classes[k]) {
-				fileIn.classes[k] = Classes[i];
+				fileIn.classes[k] = Classes[i];//String to object
 			}
 		}
 	}
@@ -93,33 +90,30 @@ function intoTheShedoole() {
 }
 
 function funcy(fileIn){
-
-
-
 	//special for MUN
-	array = new Array(16);
+	array = new Array(16);//array stores colors of grid at locations
 	for (var i = 0; i < array.length; i++)
 	{
 		array[i] = new Array(66);
 		for(var k=0;k<66;k++)
 		{
-			array[i][k]="#ffffff";
+			array[i][k]="#ffffff";//define array
 		}
 	}
 	for(var y=0;y<array[0].length;y++)
 	{
-		array[0][y]="#bbbbbb";
+		array[0][y]="#bbbbbb";//left column
 	}
 	for(var x=0;x<array.length;x++)
 	{
-		array[x][0]="#bbbbbb";
+		array[x][0]="#bbbbbb";//top row
 	}
 	for(var x=1;x<13;x++)
 	{
 		if(x<6||x>7)
 			for(var y=2;y<30;y++)
 			{
-				array[x][y]="#00aaff";
+				array[x][y]="#00aaff";//school day
 			}
 	}
 	function createCanvas(){
@@ -147,16 +141,11 @@ function funcy(fileIn){
 		var height=17.5;//canvas.height/numY;
 
 		//draw line function
-		var line = function(x1,y1,x2,y2){
-			ctx.moveTo(x1,y1);
-			ctx.lineTo(x2,y2);
-			ctx.stroke();
-		};
 
 		var hwTime=0;
 		for(var i=0;i<fileIn.classes.length;i++)
 		{
-			hwTime+=fileIn.classes[i].time;
+			hwTime+=fileIn.classes[i].time;//set up proper daily HW time
 		}
 		hwTime/=6;
 		for(var x=0;x<15;x++)
@@ -306,7 +295,7 @@ function funcy(fileIn){
 			var startMinTol=startMin+60*startHr;
 			var endMinTol=startMinTol+hwTime;
 			var endMin=endMinTol%60;
-			var endHr=parseInt(endMinTol/60);
+			var endHr=parseInt(endMinTol/60);//Club/sport time
 			var hour=8;
 			var min=0;
 			for(var y=0;y<numY;y++)
