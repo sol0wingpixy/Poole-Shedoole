@@ -117,11 +117,11 @@ function funcy(fileIn){
 		if(x<6||x>7)
 			if (x % 2 == 0)
 				for (var y = 2; y < 30; y++) {
-					array[x][y] = "#999999";//Odd day
+					array[x][y] = "#0c26ed";//Odd day
 				}
 			else
 				for (var y = 2; y < 30; y++) {
-					array[x][y] = "#1100ee";//Even day
+					array[x][y] = "#0091e0";//Even day
 				}
 	}
 	function createCanvas(){
