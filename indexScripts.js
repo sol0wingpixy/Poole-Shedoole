@@ -45,6 +45,14 @@ function checkBoxes(){
 	window.open("scheduleLayout.html", "_self");
 }
 
+  function onSleepChange()
+  {
+    var timeToSleep = document.getElementById("tosleep").value;
+    var timeToWake = document.getElementById("towake").value;
+    document.getElementById("sleepdata").innerHTML =
+    "Time to Sleep: "+fixHour(timeToSleep)+"<br>Time to Wake: "+fixHour(timeToWake) +"<br>Time Asleep: " +timeAsleep();
+  }
+
 
 //function to move into the schedule grid
 function intoTheShedoole() {

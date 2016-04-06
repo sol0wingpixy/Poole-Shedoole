@@ -10,10 +10,11 @@
   </script>
 	<script src="indexScripts.js">
 		checkBoxes();
+		onSleepChange();
 	</script>
 	<head>
 	
-		<title>Schedule Picker</title>
+		<title>Course Calculator</title>
 		<link rel="icon" type="image/png" href="images/woodsonlogo.png">
 		 <!-- CSS
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -24,7 +25,7 @@
 	<body>
 		<nav class="fixed-nav-bar">
             <img src="images/Something cool.png" alt="Woodson Logo" style="width:150px;height:150px;margin-right: 40px; float:left;">
-			<div id="title"><h1>Schedule Picker</h1>
+			<div id="title"><h1>Course Calculator</h1>
 				<a onClick="checkBoxes()" id="generate" class="button-primary">Generate</a>
 			 </div>
 			
@@ -44,6 +45,19 @@
 		</div>-->
 		
 		<div class="container">
+		
+				<div id="sleepSliders">
+		<ul id="sliders">
+			<li>
+				<input id="tosleep" type="range" min="1140" max="1500" onchange="onSleepChange()" ondrag="onSleepChange()">
+			</li>
+			<li>
+				<input id="towake" type="range" min="300" max="500" onchange="onSleepChange()" ondrag="onSleepChange()">
+			</li>
+		</ul>
+		<p id="sleepdata" style="margin: 8px;">Time asleep:</p>
+		</div>
+		
                 <div class="row">
                     <div class="columns" class="classList">
 						<div class="colHead">

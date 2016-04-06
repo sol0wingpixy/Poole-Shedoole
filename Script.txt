@@ -6,7 +6,7 @@ Our simplistic interface proudly shows our school colors without creating a dist
 	and allows the page to load quickly on any device.
 
 With a full list of classes, based on the freshman course selection sheet, 
-simply select your classes, clubs and sports, and click (click Anime, Baseball and English 9)
+simply select your classes, clubs and sports, and click (click Anime, Baseball and English 9 HN, Algebra 1, World History & Geography HN)
 	on the button marked "GENERATE" at the top of the screen to display your potential schedule
 
 With a generated Schedule, the time requirements and differences in odd and even days are displayed clearly with color coded boxes. 
