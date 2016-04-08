@@ -1,340 +1,340 @@
 ﻿<!DOCTYPE html>
 <!--By Emilia  Cabrera-->
 <html>
-   
-  <!--Extra methods-->
-  <script>
-	  var classesIn = new Array();
-	  var clubsIn = new Array();
-	  var sportsIn = new Array();
-  </script>
-	<script src="indexScripts.js">
-		checkBoxes();
-		onSleepChange();
-	</script>
-	<head>
-	
-		<title>Course Calculator</title>
-		<link rel="icon" type="image/png" href="images/woodsonlogo.png">
-		 <!-- CSS
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link href="CSS/style.css" rel="stylesheet"/>
-		<link href="CSS/responsive.css" rel="stylesheet"/>
+
+<!--Extra methods-->
+<script>
+	var classesIn = new Array();
+	var clubsIn = new Array();
+	var sportsIn = new Array();
+</script>
+<script src="indexScripts.js">
+	checkBoxes();
+	onSleepChange();
+</script>
+<head>
+
+	<title>Course Calculator</title>
+	<link rel="icon" type="image/png" href="images/woodsonlogo.png">
+	<!-- CSS
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="CSS/style.css" rel="stylesheet"/>
+	<link href="CSS/responsive.css" rel="stylesheet"/>
 	</header>
 
-	<body>
-		<nav class="fixed-nav-bar">
-            <img src="images/Something cool.png" alt="Woodson Logo" style="width:150px;height:150px;margin-right: 40px; float:left;">
-			<div id="title"><h1>Course Calculator</h1>
-				<a onClick="checkBoxes()" id="generate" class="button-primary">Generate</a>
-			 </div>
-			
-				<!--<form action="#frame1" method="get" id="top-buttons">
-					<input class="button-primary" type="button" value="Classes" />
-				</form>
-				<form action="#frame9" method="get" id="top-buttons">
-					<input class="button-primary" type="button" value="Activities" />
-				</form>-->
-				
-					
-				
-		</nav>
-		
-		<!--<div id="classes" class="sectionHead">
-			<h3> Classes </h3>
-		</div>-->
-		
-		<div class="container">
-		
-				<div id="sleepSliders">
+<body>
+<nav class="fixed-nav-bar">
+	<img src="images/Something cool.png" alt="Woodson Logo" style="width:150px;height:150px;margin-right: 40px; float:left;">
+	<div id="title"><h1>Course Calculator</h1>
+		<a onClick="checkBoxes()" id="generate" class="button-primary">Generate</a>
+	</div>
+
+	<!--<form action="#frame1" method="get" id="top-buttons">
+        <input class="button-primary" type="button" value="Classes" />
+    </form>
+    <form action="#frame9" method="get" id="top-buttons">
+        <input class="button-primary" type="button" value="Activities" />
+    </form>-->
+
+
+
+</nav>
+
+<!--<div id="classes" class="sectionHead">
+    <h3> Classes </h3>
+</div>-->
+
+<div class="container">
+
+	<div id="sleepSliders">
 		<ul id="sliders">
 			<!--<li>
 				<input id="tosleep" type="range" min="1140" max="1500" onchange="onSleepChange()" ondrag="onSleepChange()">
 			</li>-->
 			<li>
-				<input id="towake" type="range" min="500" max="730" onchange="onSleepChange()" ondrag="onSleepChange()">
+				<input id="towake" type="range" min="340" max="450" onchange="onSleepChange()" ondrag="onSleepChange()">
 			</li>
 		</ul>
-		<p id="sleepdata" style="margin: 8px;">Time asleep: </p>
+		<p id="sleepdata" style="margin: 8px;">Wake up at: </p>
+	</div>
+
+	<div class="row">
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>English</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame1">
+				<h4>English</h4>
+
+				<form id="English">
+				</form>
+
+				<br>
+				<br>
+
+				<h4>ESOL</h4>
+				<form id="ESOL"></form>
+
+			</div>
 		</div>
-		
-                <div class="row">
-                    <div class="columns" class="classList">
-						<div class="colHead">
-							<p>
-								<h3>English</h3>
-							</p>
-                        </div>  
-						<div class="frame" id="frame1">
-								<h4>English</h4>
-	
-								<form id="English">
-								</form>
-	
-								<br>
-								<br>
-	
-								<h4>ESOL</h4>
-								<form id="ESOL"></form>
-
-						</div>
-                    </div>
-                    <div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Math</h3>
-							</p>
-                        </div>
-						<div class="frame" id="frame2">
-							<form id="math">
-							</form>		
-						</div>
-                    </div>
-                    <div class="columns" class="classList">
-                         <div class="colHead">
-							<p>
-								<h3>Science</h3>
-							</p>
-                        </div>
-						<div class="frame" id="frame3">
-							<form id="science">
-							</form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                         <div class="colHead">
-							<p>
-								<h3>Social Studies</h3>
-							</p>
-                        </div>
-						<div class="frame" id="frame4">
-							<form id="social science">
-							</form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                          <div class="colHead">
-							<p>
-								<h3>Languages</h3>
-							</p>
-                        </div>  
-						<div class="frame" id="frame5">
-							<form id="World Languages"></form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Fine Arts</h3>
-							</p>
-                        </div>    
-						<div class="frame" id="frame6">
-						
-							<h4>Visual Arts</h4>
-	
-							<form id="visual arts">
-							</form>
-	
-							<br>
-							<br>
-							
-							<h4>Performing Arts</h4>
-							<form id="performing arts">
-							</form>
-						</div>
-					</div>
-					<div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Student Resources</h3>
-							</p>
-                        </div>     
-						<div class="frame" id="frame7">
-							<form id="resources"></form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Other Electives</h3>
-							</p>
-                        </div>    
-						<div class="frame" id="frame8">
-							<h4>Health and Physical Education</h4>
-							<form id="health">
-							</form>
-								
-								<br>
-								<br>
-								
-								<h4>Business and Information Technology</h4>
-								<form id="business">
-								</form>
-								
-								<br>
-								<br>
-								
-								<h4>Technology and Engineering</h4>
-								<form id="technology">
-								</form>
-								
-								<br>
-								<br>
-								
-								<h4>Family and Consumer Sciences</h4>
-								<form id="family">
-								</form>
-						</div>
-                    </div>
-					
-                </div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Math</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame2">
+				<form id="math">
+				</form>
+			</div>
 		</div>
-		</section>
-
-		<!--<div id="activities" class="sectionHead">
-			<h3> Activities </h3>
-		</div>-->
-		
-		<div class="container">
-			<div class="columns" class="classList">
-                <div class="colHead">
-                    <p>
-					   <h3>Clubs</h3>
-                    </p>
-                </div>    
-				<div class="frame" id="frame9">
-					<form id="clubs"></form>
-				</div>
-            </div>
-
-            <div class="columns" class="classList">
-                <div class="colHead">
-                    <p>
-                        <h3>Sports</h3>
-                    </p>
-                </div>    
-                <div class="frame" id="frame10">
-                    <form id="sports"></form>
-                </div>
-            </div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Science</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame3">
+				<form id="science">
+				</form>
+			</div>
 		</div>
-	
-	</body> 
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Social Studies</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame4">
+				<form id="social science">
+				</form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Languages</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame5">
+				<form id="World Languages"></form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Fine Arts</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame6">
 
-	<script>
-		(function(){
-				var scheduleList;
+				<h4>Visual Arts</h4>
 
-				var container;
-				
-				for(var i=0;i<Classes.length;i++)
-				{
-					if(Classes[i].header == "Mathematics"){
-						container = document.getElementById("math");
-					}
-					
-					if(Classes[i].header == "English"){
-						container = document.getElementById("English");
+				<form id="visual arts">
+				</form>
 
-					}
-					
-					if(Classes[i].header == "ESOL"){
-						container = document.getElementById("ESOL");
+				<br>
+				<br>
 
-					}
-					
-					if(Classes[i].header == "Social Studies"){
-						container = document.getElementById("social science");
+				<h4>Performing Arts</h4>
+				<form id="performing arts">
+				</form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Student Resources</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame7">
+				<form id="resources"></form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Other Electives</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame8">
+				<h4>Health and Physical Education</h4>
+				<form id="health">
+				</form>
 
-					}
-					
-					if(Classes[i].header == "Science"){
-						container = document.getElementById("science");
+				<br>
+				<br>
 
-					}
-					
-					if(Classes[i].header == "Fine and Visual Arts"){
-						container = document.getElementById("visual arts");
-					}
-					
-					if(Classes[i].header == "Fine and Performing Arts"){
-						container = document.getElementById("performing arts");
-					}
-					
-					if(Classes[i].header == "World Languages"){
-						container = document.getElementById("World Languages");
-					}
-					
-					if(Classes[i].header == "Student Resources"){
-						container = document.getElementById("resources");
-					}
-					
-					if(Classes[i].header == "Health and Physical Education"){
-						container = document.getElementById("health");
-					}
-					
-					if(Classes[i].header == "Business/Information Tech & Marketing"){
-						container = document.getElementById("business");
+				<h4>Business and Information Technology</h4>
+				<form id="business">
+				</form>
 
-					}
-					
-					if(Classes[i].header == "Technology and Engineering"){
-						container = document.getElementById("technology");
+				<br>
+				<br>
 
-					}
-					
-					if(Classes[i].header == "Family & Consumer Sciences"){
-						container = document.getElementById("family");
-					}
-					
-					
-					var input = document.createElement("input");
-					input.type = "checkbox";
-					input.value = Classes[i].name;
-					input.class = "checkbox";
-					input.id = "class";//'id' tells whether sport, club, or class
-					input.appendChild
-					container.appendChild(input); // put it into the DOM
-						
-					var e = document.createElement("label");
-					e.setAttribute("class", "text"); 
-					e.innerHTML = Classes[i].name + "<br>";
-					container.appendChild(e);
-					
-				}
-				
-				for(var i=0; i<Clubs.length; i++){
-						container = document.getElementById("clubs");
-						var input = document.createElement("input");
-						input.type = "checkbox";
-						input.value = Clubs[i].name;
-						input.id = "club"; //'id' tells whether sport, club, or class
-						input.appendChild
-						container.appendChild(input); // put it into the DOM
-						
-						var e = document.createElement("label");
-						e.setAttribute("class", "text"); 
-						e.innerHTML = Clubs[i].name + "<br>";
-						container.appendChild(e);
-				}
+				<h4>Technology and Engineering</h4>
+				<form id="technology">
+				</form>
 
-                for(var i=0; i<Sports.length; i++){
-                        container = document.getElementById("sports");
-                        var input = document.createElement("input");
-                        input.type = "checkbox";
-                        input.value = Sports[i].name;
-                        input.id = "sport"; //'id' tells whether sport, club, or class
-                        input.appendChild
-                        container.appendChild(input); // put it into the DOM
-                        
-                        var e = document.createElement("label");
-                        e.setAttribute("class", "text"); 
-                        e.innerHTML = Sports[i].name + "<br>";
-                        container.appendChild(e);
-                }
-				
-				
-			
-		}).call(this);	
-	</script>
+				<br>
+				<br>
+
+				<h4>Family and Consumer Sciences</h4>
+				<form id="family">
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+</section>
+
+<!--<div id="activities" class="sectionHead">
+    <h3> Activities </h3>
+</div>-->
+
+<div class="container">
+	<div class="columns" class="classList">
+		<div class="colHead">
+			<p>
+			<h3>Clubs</h3>
+			</p>
+		</div>
+		<div class="frame" id="frame9">
+			<form id="clubs"></form>
+		</div>
+	</div>
+
+	<div class="columns" class="classList">
+		<div class="colHead">
+			<p>
+			<h3>Sports</h3>
+			</p>
+		</div>
+		<div class="frame" id="frame10">
+			<form id="sports"></form>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script>
+	(function(){
+		var scheduleList;
+
+		var container;
+
+		for(var i=0;i<Classes.length;i++)
+		{
+			if(Classes[i].header == "Mathematics"){
+				container = document.getElementById("math");
+			}
+
+			if(Classes[i].header == "English"){
+				container = document.getElementById("English");
+
+			}
+
+			if(Classes[i].header == "ESOL"){
+				container = document.getElementById("ESOL");
+
+			}
+
+			if(Classes[i].header == "Social Studies"){
+				container = document.getElementById("social science");
+
+			}
+
+			if(Classes[i].header == "Science"){
+				container = document.getElementById("science");
+
+			}
+
+			if(Classes[i].header == "Fine and Visual Arts"){
+				container = document.getElementById("visual arts");
+			}
+
+			if(Classes[i].header == "Fine and Performing Arts"){
+				container = document.getElementById("performing arts");
+			}
+
+			if(Classes[i].header == "World Languages"){
+				container = document.getElementById("World Languages");
+			}
+
+			if(Classes[i].header == "Student Resources"){
+				container = document.getElementById("resources");
+			}
+
+			if(Classes[i].header == "Health and Physical Education"){
+				container = document.getElementById("health");
+			}
+
+			if(Classes[i].header == "Business/Information Tech & Marketing"){
+				container = document.getElementById("business");
+
+			}
+
+			if(Classes[i].header == "Technology and Engineering"){
+				container = document.getElementById("technology");
+
+			}
+
+			if(Classes[i].header == "Family & Consumer Sciences"){
+				container = document.getElementById("family");
+			}
+
+
+			var input = document.createElement("input");
+			input.type = "checkbox";
+			input.value = Classes[i].name;
+			input.class = "checkbox";
+			input.id = "class";//'id' tells whether sport, club, or class
+			input.appendChild
+			container.appendChild(input); // put it into the DOM
+
+			var e = document.createElement("label");
+			e.setAttribute("class", "text");
+			e.innerHTML = Classes[i].name + "<br>";
+			container.appendChild(e);
+
+		}
+
+		for(var i=0; i<Clubs.length; i++){
+			container = document.getElementById("clubs");
+			var input = document.createElement("input");
+			input.type = "checkbox";
+			input.value = Clubs[i].name;
+			input.id = "club"; //'id' tells whether sport, club, or class
+			input.appendChild
+			container.appendChild(input); // put it into the DOM
+
+			var e = document.createElement("label");
+			e.setAttribute("class", "text");
+			e.innerHTML = Clubs[i].name + "<br>";
+			container.appendChild(e);
+		}
+
+		for(var i=0; i<Sports.length; i++){
+			container = document.getElementById("sports");
+			var input = document.createElement("input");
+			input.type = "checkbox";
+			input.value = Sports[i].name;
+			input.id = "sport"; //'id' tells whether sport, club, or class
+			input.appendChild
+			container.appendChild(input); // put it into the DOM
+
+			var e = document.createElement("label");
+			e.setAttribute("class", "text");
+			e.innerHTML = Sports[i].name + "<br>";
+			container.appendChild(e);
+		}
+
+
+
+	}).call(this);
+</script>
 </html>

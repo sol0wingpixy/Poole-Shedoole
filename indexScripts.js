@@ -1,5 +1,5 @@
 //called when Generate button clicked
-
+var toWake=0;
 function checkBoxes(){
 
 	var classesIn = new Array();
@@ -15,7 +15,7 @@ function checkBoxes(){
 
 		//if input is a checkbox, sees if it is checked
 		if(inputs[i].type == "checkbox"){
-			
+
 			//if checked adds to the appropriate array
 			if(inputs[i].checked){
 				if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
@@ -40,18 +40,21 @@ function checkBoxes(){
 	sessionStorage.setItem('classes', classesIn);
 	sessionStorage.setItem('clubs', clubsIn);
 	sessionStorage.setItem('sports', sportsIn);
+	sessionStorage.setItem('wakeUp', toWake);
 
 	//opens new window which runs intoTheShedoole on opening
 	window.open("scheduleLayout.html", "_self");
 }
 
-  function onSleepChange()
-  {
-    var timeToSleep = document.getElementById("tosleep").value;
-    var timeToWake = document.getElementById("towake").value;
-    document.getElementById("sleepdata").innerHTML =
-    "Time to Sleep: "+fixHour(timeToSleep)+"<br>Time to Wake: "+fixHour(timeToWake) +"<br>Time Asleep: " +timeAsleep();
-  }
+function onSleepChange()
+{
+	toWake = document.getElementById("towake").value;
+	var hour=Math.floor(toWake/60);
+	var min=""+toWake%60;
+	if(min<10)
+	min="0"+min;
+	document.getElementById("sleepdata").innerHTML = "Wake up at: "+hour+":"+min;
+}
 
 
 //function to move into the schedule grid
@@ -61,20 +64,20 @@ function intoTheShedoole() {
 		sports:  sessionStorage.getItem("sports").split(","),
 		clubs:  sessionStorage.getItem("clubs").split(",")
 	};//get this from
-		if(fileIn.classes[0].length<=0)//if no data, make it say so
-		{
-			fileIn.classes = new Array();
-		}
+	if(fileIn.classes[0].length<=0)//if no data, make it say so
+	{
+		fileIn.classes = new Array();
+	}
 
-		if(fileIn.clubs[0].length<=0)
-		{
-			fileIn.clubs = new Array();
-		}
-	
-		if(fileIn.sports[0].length<=0)
-		{
-			fileIn.sports = new Array();
-		}
+	if(fileIn.clubs[0].length<=0)
+	{
+		fileIn.clubs = new Array();
+	}
+
+	if(fileIn.sports[0].length<=0)
+	{
+		fileIn.sports = new Array();
+	}
 
 	for (var k = 0; k < fileIn.classes.length; k++) {
 		for (var i = 0; i < Classes.length; i++) {
