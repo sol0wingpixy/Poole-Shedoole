@@ -1,3 +1,7 @@
+function chooseClassFunction(name){
+	document.getElementById(name).classList.toggle("show");
+}
+
 //called when Generate button clicked
 
 function checkBoxes(){

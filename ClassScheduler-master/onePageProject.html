@@ -1,0 +1,261 @@
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+
+	<link href="css/libs.css" rel="stylesheet">
+	<link href="css/_all.css" rel="stylesheet">
+	<link href="css/all.css?v=2.510" rel="stylesheet">
+	<link href="myCss.css" rel="stylesheet">
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-animate.min.js"></script>
+	<script src="js/angular-aria.min.js"></script>
+	<script src="js/angular-touch.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.js"></script>
+	<script src="js/datavariables/data.js"></script>
+	<script src="js/datavariables/sports.js"></script>
+	
+	<script>
+		$(function(){
+			$("#includedContent").load("sheet001.html");
+			
+		});
+		
+	</script>
+</head>
+
+<body>
+
+<script src="js/datavariables/data.js"></script>
+<script>
+	
+		function chooseClassFunction(name){
+			document.getElementById(name).classList.toggle("show");
+		}
+
+		<!-- makes class objects to show in class selection dropdown menu-->
+		function makeClasses(classArray, elementID){
+			for(i = 0; i <English.length;i++){
+				var name = classArray[i].Course;
+				
+				
+				var doc = document.getElementById(elementID);
+				var inputElement = document.createElement("INPUT");
+				var labelElement = document.createElement("label");
+				
+				inputElement.setAttribute("type","checkbox");
+				inputElement.setAttribute("name",name);
+				inputElement.setAttribute("value",name);
+				//var textName = document.createTextNode("test"+name +"<br>");
+				//inputElement.appendChild(textName);
+				//labelElement.innerHTML = name;
+				
+				//labelElement.appendChild(inputElement);
+				labelElement.innerHTML ="<input type=\"checkbox\" name=\"" + name +"\" value=\"" + name + "\">" + name + "<br>";
+				doc.appendChild(labelElement);
+			}
+		}
+		function makeMathClasses(){
+			<!--var English = ([-->
+			<!--	{"id":1,"Course":"English 9","Homework Time":"18" }-->
+			<!--	]); -->
+			<!--console.log(makeClasses());-->
+				<!--var element = document.getElementById("englishForm");-->
+			for(i = 0; i <English.length;i++){
+				var name = English[i].Course;
+				
+				
+				var doc = document.getElementById("englishForm");
+				var inputElement = document.createElement("INPUT");
+				var labelElement = document.createElement("label");
+				
+				
+				
+				
+				
+				inputElement.setAttribute("type","checkbox");
+				inputElement.setAttribute("name",name);
+				inputElement.setAttribute("value",name);
+				//var textName = document.createTextNode("test"+name +"<br>");
+				//inputElement.appendChild(textName);
+				//labelElement.innerHTML = name;
+				
+				//labelElement.appendChild(inputElement);
+				labelElement.innerHTML ="<input type=\"checkbox\" name=\"" + name +"\" value=\"" + name + "\">" + name + "<br>";
+				doc.appendChild(labelElement);
+				
+				
+				
+				
+				
+				
+				//doc.appendChild(label)
+			}
+		}
+		
+		function checkboxResponse(){
+		
+		}
+	
+</script>
+
+<title>
+Freshman Class Schedule
+</title>
+	
+	<!--
+	<div id="circle-container">
+	<div class="quarter top-left"></div>
+	<div class="quarter top-right"></div>
+	<div class="quarter bottom-left"></div>
+	<div class="quarter bottom-right"></div>
+	</div>-->
+	
+		<div class="panel panel-default" ng-controller="ChangeEquipController">
+			<div class="panel-heading collapse-header" data-toggle="collapse" data-parent="#accordionOne" href="#collapseOne" target="#collapseOne">
+										<h4 class="panel-title">Select Your Courses and Activities</h4>
+			</div>
+			
+			<div id="collapseOne" class="panel-collapse collapse in">
+<!--Classes -->
+				<div class="classDropdown">
+					<button onclick="chooseClassFunction('hiddenDropdown-class')" class= "dropbtn">Classes</button>
+					
+					<div id= "hiddenDropdown-class" class = "dropdown-content">
+						<div class= "categoryDropdown"> 
+						
+							<button onclick="chooseClassFunction('hiddenDropdown-math')" class= "dropbtn-nested">Math</button>
+							<div id= "hiddenDropdown-math" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "mathForm">
+									<script> makeClasses(Mathematics, "mathForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-science')" class= "dropbtn-nested">Science</button>
+							<div id= "hiddenDropdown-science" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "scienceForm">
+									<script> makeClasses(Science, "scienceForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-english')" class= "dropbtn-nested">English</button>
+							<div id= "hiddenDropdown-english" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id="englishForm">
+									<script>makeClasses(English, "englishForm"); </script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-socialstds')" class= "dropbtn-nested">Social Studies</button>
+							<div id= "hiddenDropdown-socialstds" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "socialstdyForm">
+									<script> makeClasses(SocialStudies, "socialstdyForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-wrldLang')" class= "dropbtn-nested">World Languages</button>
+							<div id= "hiddenDropdown-wrldLang" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "wrldLangForm">
+									<script> makeClasses(WorldLanguages, "wrldLangForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-preformArt')" class= "dropbtn-nested">Performing Arts</button>
+							<div id= "hiddenDropdown-preformArt" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "preformArtForm">
+									<script> makeClasses(PerformingArts, "preformArtForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-visualArt')" class= "dropbtn-nested">Visual Arts</button>
+							<div id= "hiddenDropdown-visualArt" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "visualArtForm">
+									<script> makeClasses(VisualArts, "visualArtForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-pe')" class= "dropbtn-nested">Physical Education</button>
+							<div id= "hiddenDropdown-pe" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "peForm">
+									<script> makeClasses(PE, "peForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-tech')" class= "dropbtn-nested">Technology</button>
+							<div id= "hiddenDropdown-tech" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "techForm">
+									<script> makeClasses(Tech, "techForm");</script>
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-esol')" class= "dropbtn-nested">ESOL</button>
+							<div id= "hiddenDropdown-esol" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp" id = "esolForm">
+									<script> makeClasses(ESOL, "esolForm");</script>
+								</form>
+							</div>
+						</div> <!--make this show-->
+						
+					</div>
+				</div>
+<!--Sports-->			
+				<div class="sportsDropdown">
+					<button onclick="chooseClassFunction('hiddenDropdown-sports')" class= "dropbtn">Sports</button>
+						
+					<div id= "hiddenDropdown-sports" class = "dropdown-content">
+						<div class= "categoryDropdown"> 
+							<button onclick="chooseClassFunction('hiddenDropdown-fall')" class= "dropbtn-nested">Fall</button>
+							<div id= "hiddenDropdown-fall" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp">
+								</form>
+								<!--<a href= "#">English Regular</a>-->
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-winter')" class= "dropbtn-nested">Winter</button>
+							<div id= "hiddenDropdown-winter" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp">
+								</form>
+								<!--<a href= "#">English Regular</a>-->
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-spring')" class= "dropbtn-nested">Spring</button>
+							<div id= "hiddenDropdown-spring" class = "subjectDropdown-content"  style="display:none;">
+								<form action= "demo_form.asp">
+								</form>
+								<!--<a href= "#">English Regular</a>-->
+							</div>
+						</div> 
+						
+					</div>
+					
+				</div>
+				
+<!--Clubs -->
+				<div class="clubsDropdown">
+					<button onclick="chooseClassFunction('hiddenDropdown-clubs')" class= "dropbtn">Clubs</button>
+						
+						<div id= "hiddenDropdown-clubs" class = "dropdown-content">
+						<div class= "categoryDropdown"> 
+						</div> 
+						
+						</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	<div class= "split-div">
+		<div>
+		<!--<link rel="import" href="sheet001.htm">-->
+		
+		</div>
+		
+		<div class= "infoDisplay" id ="display-div">
+		Classes:
+		</div>
+	</div>
+</body>
+</html>

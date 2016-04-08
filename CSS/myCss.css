@@ -1,0 +1,202 @@
+html{
+	position: relative;
+	min-height: 100%;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	color: #777;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+tr{
+	margin-left: auto;
+	margin-right: auto;
+}
+thead{
+	margin-left: auto;
+	margin-right: auto;
+}
+tbody{
+	margin-left: auto;
+	margin-right: auto;
+}
+button{
+	padding: 16px;
+	display: list-item;
+}
+
+.split-div{
+	position: relative;
+	padding: 20px;
+}
+.tableDiv{
+	position: relative;
+	display:inline-block;
+	padding: 20px;
+}
+.panel-default{
+	/*margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	display:inline-block;*/
+}
+
+.collapse-header{
+	padding: 16px;
+}
+
+.table-body{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.table-title{
+	text-align: center;
+}
+/*dropdown button*/
+.dropbtn{
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px 16px 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.dropbtn-nested{
+	background-color: #0072b2;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+/*dropbutton hover and focus*/
+.dropbtn:hover, dropbtn:focus{
+	background-color:#3e8e41;
+}
+
+.dropbtn-nested:hover{
+	background-color:#005585;
+	
+}
+
+/*the class selection dropdown */
+.classDropdown{
+	position: relative;
+	display: inline-block;
+}
+
+.sportsDropdown{
+	position: relative;
+	display: inline-block;
+} 
+
+.clubsDropdown{
+	position: relative;
+	display: inline-block;
+}
+
+/*the subject selection dropdown within the class selection dropdown*/
+.categoryDropdown{
+	position: absolute;
+	z-index: 10;
+	/*padding: 16px;*/
+	display: inline-block;
+}
+
+/*default for first level dropdown items*/
+.dropdown-content{
+	display: none;
+	background-color: #f9f9f9;
+	min-width:160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	/*padding: 16px;*/
+}
+
+/* links in dorpdown*/
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content div{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	
+}
+/* default for nested/ second level dropdown items*/
+
+.subjectDropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width:200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	color: #0072b2;
+}
+/* links in dropdown*/
+.subjectDropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.subjectDropdown-content div{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+
+
+/* dropdown items*/
+.dropdown-item{
+	position: relative;
+	/*display: inline-block;*/
+	display: none;
+}
+
+
+.infoDisplay{
+	color:white;
+	background-color:black;
+	position: absolute;
+	z-index: 1;
+}
+
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+#collapseOne{
+	padding: 20px;
+	/*display:initial;*/
+	/*position: relative;*/
+}
+
+
+/*
+#circle-container{width:100px;height:100px}
+.quarter{width:60px;height:50px}
+.top-left{border-top-left-radius:50px;background:#09f;float:left}
+.top-right{border-top-right-radius:50px;background:#666;float:right}
+.bottom-left{border-bottom-left-radius:50px;background:#aaa;float:left}
+.bottom-right{border-bottom-right-radius:50px;background:#333;float:right}
+*/

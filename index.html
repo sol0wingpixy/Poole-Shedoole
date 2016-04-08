@@ -11,7 +11,11 @@
 	<script src="indexScripts.js">
 		checkBoxes();
 		onSleepChange();
+		function chooseClassFunction(name){
+			document.getElementById(name).classList.toggle("show");
+		}
 	</script>
+
 	<head>
 	
 		<title>Course Calculator</title>
@@ -20,6 +24,7 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<link href="CSS/style.css" rel="stylesheet"/>
 		<link href="CSS/responsive.css" rel="stylesheet"/>
+		<link href="CSS/myCSS.css" rel="stylesheet"/>
 	</header>
 
 	<body>
@@ -59,7 +64,140 @@
 		</div>
 		
                 <div class="row">
+					
                     <div class="columns" class="classList">
+						<button onclick="chooseClassFunction('hiddenDropdown-class')" class="colHead">
+							<p>
+								<h3>Classes</h3>
+							</p>
+                        </button>  
+						
+						<div id= "hiddenDropdown-class" class="dropdown-content">
+							<button onclick="chooseClassFunction('hiddenDropdown-math')" class= "dropbtn-nested">Math</button>
+							<div id= "hiddenDropdown-math" class = "subjectDropdown-content" >
+								<form id = "math">
+									
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-science')" class= "dropbtn-nested">Science</button>
+							<div id= "hiddenDropdown-science" class = "subjectDropdown-content">
+								<form id = "science">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-english')" class= "dropbtn-nested">English</button>
+							<div id= "hiddenDropdown-english" class = "subjectDropdown-content" >
+								<form  id="english">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-socialstds')" class= "dropbtn-nested">Social Studies</button>
+							<div id= "hiddenDropdown-socialstds" class = "subjectDropdown-content">
+								<form  id = "social science">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-wrldLang')" class= "dropbtn-nested">World Languages</button>
+							<div id= "hiddenDropdown-wrldLang" class = "subjectDropdown-content">
+								<form  id = "World Languages">
+								
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-preformArt')" class= "dropbtn-nested">Performing Arts</button>
+							<div id= "hiddenDropdown-preformArt" class = "subjectDropdown-content">
+								<form  id = "preforming arts">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-visualArt')" class= "dropbtn-nested">Visual Arts</button>
+							<div id= "hiddenDropdown-visualArt" class = "subjectDropdown-content">
+								<form  id = "visual arts">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-pe')" class= "dropbtn-nested">Physical Education</button>
+							<div id= "hiddenDropdown-pe" class = "subjectDropdown-content" >
+								<form  id = "health">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-tech')" class= "dropbtn-nested">Technology</button>
+							<div id= "hiddenDropdown-tech" class = "subjectDropdown-content" >
+								<form  id = "technology">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-business')" class= "dropbtn-nested">Business/Information</button>
+							<div id= "hiddenDropdown-business" class = "subjectDropdown-content" >
+								<form  id = "business">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-res')" class= "dropbtn-nested">Student Resources</button>
+							<div id= "hiddenDropdown-res" class = "subjectDropdown-content"  >
+								<form  id = "resources">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-fam')" class= "dropbtn-nested">Family and Consumer Sciences</button>
+							<div id= "hiddenDropdown-fam" class = "subjectDropdown-content" >
+								<form  id = "family">
+
+								</form>
+							</div>
+							
+							<button onclick="chooseClassFunction('hiddenDropdown-esol')" class= "dropbtn-nested">ESOL</button>
+							<div id= "hiddenDropdown-esol" class = "subjectDropdown-content" >
+								<form  id = "esolForm">
+
+								</form>
+							</div>
+
+						</div>
+                    </div>
+				
+				  <div class="columns" class="classList">
+						<button onclick="chooseClassFunction('hiddenDropdown-sports')" class="colHead">
+							<p>
+								<h3>Sports</h3>
+							</p>
+                        </button>  
+						
+						<div id= "hiddenDropdown-sports" class="dropdown-content">
+								<form  id = "sports">
+
+								</form>
+						</div>
+                    </div>
+				
+				                    <div class="columns" class="classList">
+						<button onclick="chooseClassFunction('hiddenDropdown-clubs')" class="colHead">
+							<p>
+								<h3>Clubs</h3>
+							</p>
+                        </button>  
+						
+						<div id= "hiddenDropdown-clubs" class="dropdown-content">
+								<form  id = "clubs">
+
+								</form>
+						</div>
+                    </div>
+				
+				
+				
+                    <!--<div class="columns" class="classList">
 						<div class="colHead">
 							<p>
 								<h3>English</h3>
@@ -79,6 +217,7 @@
 
 						</div>
                     </div>
+					
                     <div class="columns" class="classList">
                         <div class="colHead">
 							<p>
@@ -193,7 +332,7 @@
 
 		<!--<div id="activities" class="sectionHead">
 			<h3> Activities </h3>
-		</div>-->
+		</div>
 		
 		<div class="container">
 			<div class="columns" class="classList">
@@ -217,7 +356,7 @@
                     <form id="sports"></form>
                 </div>
             </div>
-		</div>
+		</div> -->
 	
 	</body> 
 
@@ -287,7 +426,7 @@
 						container = document.getElementById("family");
 					}
 					
-					
+					if(container != null){
 					var input = document.createElement("input");
 					input.type = "checkbox";
 					input.value = Classes[i].name;
@@ -300,6 +439,7 @@
 					e.setAttribute("class", "text"); 
 					e.innerHTML = Classes[i].name + "<br>";
 					container.appendChild(e);
+					}
 					
 				}
 				
