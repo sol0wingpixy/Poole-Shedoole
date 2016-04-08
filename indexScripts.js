@@ -64,6 +64,7 @@ function intoTheShedoole() {
 		sports:  sessionStorage.getItem("sports").split(","),
 		clubs:  sessionStorage.getItem("clubs").split(",")
 	};//get this from
+	toWake=sessionStorage.getItem("wakeUp");
 	if(fileIn.classes[0].length<=0)//if no data, make it say so
 	{
 		fileIn.classes = new Array();
@@ -152,9 +153,11 @@ function funcy(fileIn){
 		c.height = 1160;//window.innerHeight;
 
 		//Draw grid
+		var startTime=Math.floor(toWake/60);
+		var endTime=24;
 		//8:00 is 0:00
 		//20:00 is 14:00
-		var numY=16*4+2;//num hours*number of boxes per hours*hour
+		var numY=(endTime-startTime)*4+2;//num hours*number of boxes per hours*hour
 		var width=100;//c.width/8;
 		var height=17.5;//canvas.height/numY;
 
@@ -314,7 +317,7 @@ function funcy(fileIn){
 			var endMinTol=startMinTol+hwTime;
 			var endMin=endMinTol%60;
 			var endHr=parseInt(endMinTol/60);//Club/sport time
-			var hour=8;
+			var hour=startTime;
 			var min=0;
 			for(var y=0;y<numY;y++)
 			{
