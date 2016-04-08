@@ -97,7 +97,6 @@ function intoTheShedoole() {
 			}
 		}
 	}
-
 	funcy(fileIn);
 }
 
