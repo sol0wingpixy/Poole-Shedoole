@@ -333,10 +333,12 @@ function funcy(fileIn){
 				if((x>0&&x<6)||(x>7&&x<13))
 				{
 					if (hour == startTime&&min < toWake % 60&&y>0) {
-							ctx.fillStyle = "#000000";
+							ctx.fillStyle = "#ffa500";
 							ctx.fillRect(x * width, y * height, width, height);
+
 					}
-					if (hour >= 8 && hour <= 15) {
+					if (hour >= 8 && hour <= 15)
+					{
 						if (x % 2 == 0) {
 							ctx.fillStyle = "#0c26ed";
 							ctx.fillRect(x * width, y * height, width, height);
