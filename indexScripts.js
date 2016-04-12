@@ -3,7 +3,7 @@ function chooseClassFunction(name){
 }
 
 //called when Generate button clicked
-var toWake=0;
+var toWake=420;
 function checkBoxes(){
 
 	var classesIn = new Array();
@@ -56,7 +56,7 @@ function onSleepChange()
 	var hour=Math.floor(toWake/60);
 	var min=""+toWake%60;
 	if(min<10)
-	min="0"+min;
+		min="0"+min;
 	document.getElementById("sleepdata").innerHTML = "Wake up at: "+hour+":"+min;
 }
 
@@ -127,18 +127,20 @@ function funcy(fileIn){
 	{
 		array[x][0]="#bbbbbb";//top row
 	}
-	for(var x=1;x<13;x++)
-	{
-		if(x<6||x>7)
-			if (x % 2 == 0)
-				for (var y = 2; y < 30; y++) {
-					array[x][y] = "#0c26ed";//Odd day
-				}
-			else
-				for (var y = 2; y < 30; y++) {
-					array[x][y] = "#0091e0";//Even day
-				}
-	}
+	/*
+	 for(var x=1;x<13;x++)
+	 {
+	 if(x<6||x>7)
+	 if (x % 2 == 0)
+	 for (var y = 2; y < 30; y++) {
+	 array[x][y] = "#0c26ed";//Odd day
+	 }
+	 else
+	 for (var y = 2; y < 30; y++) {
+	 array[x][y] = "#0091e0";//Even day
+	 }
+	 }
+	 */
 	function createCanvas(){
 		// Declare canvas & properties
 		var canvas  = document.createElement("canvas");
@@ -328,6 +330,27 @@ function funcy(fileIn){
 				ctx.fillStyle=array[x][y];
 				ctx.fillRect(x*width,y*height,width,height);
 				ctx.strokeRect(x*width,y*height,width,height);
+				if((x>0&&x<6)||(x>7&&x<13))
+				{
+					if (hour == startTime&&min < toWake % 60&&y>0) {
+							ctx.fillStyle = "#000000";
+							ctx.fillRect(x * width, y * height, width, height);
+					}
+					if (hour >= 8 && hour <= 15) {
+						if (x % 2 == 0) {
+							ctx.fillStyle = "#0c26ed";
+							ctx.fillRect(x * width, y * height, width, height);
+						}
+						else {
+							ctx.fillStyle = "#0091e0";
+							ctx.fillRect(x * width, y * height, width, height);
+						}
+						if (hour == 8 && min == 0) {
+							ctx.fillStyle = "#000000";
+							ctx.fillText("School Day", x * width + 1, y * height + (height * 0.85));
+						}
+					}
+				}
 				if(y==0&&(x==1||x==8))
 				{
 					ctx.fillStyle="#000000";
@@ -363,11 +386,7 @@ function funcy(fileIn){
 					ctx.fillStyle="#000000";
 					ctx.fillText("Sunday",x*width+1,y*height+(height*0.85));
 				}
-				if(y==2&&((x>0&&x<6)||(x>7&&x<13)))
-				{
-					ctx.fillStyle = "#000000";
-					ctx.fillText("School Day", x * width + 1, y * height + (height * 0.85));
-				}
+
 				if(hour>=startHr&&hour<=endHr&&((x>0&&x<7)||(x>7&&x<14)))
 				{
 					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
