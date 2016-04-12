@@ -1,0 +1,8 @@
+Clubs
+
+Academic
+Art
+Humanities
+Languages
+Sports
+Others

@@ -172,111 +172,106 @@
 			</div>
 		</div>
 -->
+		<div class="tabHeader">
+			<h3>Classes</h3>
+		</div>
 		
-                <div class="row">
-					
                     <div class="columns" class="list">
-						<button onclick="chooseClassFunction('classes')" class="colHead">
-							<p>
-								<h3>Classes</h3>
-							</p>
-                        </button>  
-						
-						<div id= "classes" class="dropdownContent">
+						<div id= "classes">
 							<button onclick="chooseClassFunction('hiddenDropdownMath')">Math</button>
-							<div id= "hiddenDropdownMath" class = "subjectDropdownContent" >
+							<div id= "hiddenDropdownMath" class = "dropdownContent">
 								<form id = "math">
 									
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownScience')" class= "dropbtn-nested">Science</button>
-							<div id= "hiddenDropdownScience" class = "subjectDropdownContent">
+							<div id= "hiddenDropdownScience" class = "dropdownContent">
 								<form id = "science">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownEnglish')" class= "dropbtn-nested">English</button>
-							<div id= "hiddenDropdownEnglish" class ="subjectDropdownContent">
+							<div id= "hiddenDropdownEnglish" class ="dropdownContent">
 								<form  id="english">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownSocialstds')" class= "dropbtn-nested">Social Studies</button>
-							<div id= "hiddenDropdownSocialstds" class = "subjectDropdownContent">
+							<div id= "hiddenDropdownSocialstds" class = "dropdownContent">
 								<form  id = "social science">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownWrldLang')" class= "dropbtn-nested">World Languages</button>
-							<div id= "hiddenDropdownWrldLang" class = "subjectDropdownContent">
+							<div id= "hiddenDropdownWrldLang" class = "dropdownContent">
 								<form  id = "World Languages">
 								
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownPerformArt')" class="dropbtn-nested">Performing Arts</button>
-							<div id= "hiddenDropdownPerformArt" class = "subjectDropdownContent">
+							<div id= "hiddenDropdownPerformArt" class = "dropdownContent">
 								<form  id = "preforming arts">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownVisualArt')" class= "dropbtn-nested">Visual Arts</button>
-							<div id= "hiddenDropdownVisualArt" class = "subjectDropdownContent">
+							<div id= "hiddenDropdownVisualArt" class = "dropdownContent">
 								<form  id = "visual arts">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownPe')" class= "dropbtn-nested">Physical Education</button>
-							<div id= "hiddenDropdownPe" class = "subjectDropdownContent" >
+							<div id= "hiddenDropdownPe" class = "dropdownContent" >
 								<form  id = "health">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownTech')" class= "dropbtn-nested">Technology</button>
-							<div id= "hiddenDropdownTech" class = "subjectDropdownContent" >
+							<div id= "hiddenDropdownTech" class = "dropdownContent" >
 								<form  id = "technology">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownBusiness')" class= "dropbtn-nested">Business/Information</button>
-							<div id= "hiddenDropdownBusiness" class = "subjectDropdownContent" >
+							<div id= "hiddenDropdownBusiness" class = "dropdownContent" >
 								<form  id = "business">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownRes')" class= "dropbtn-nested">Student Resources</button>
-							<div id= "hiddenDropdownRes" class = "subjectDropdownContent"  >
+							<div id= "hiddenDropdownRes" class = "dropdownContent"  >
 								<form  id = "resources">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownFam')" class= "dropbtn-nested">Family and Consumer Sciences</button>
-							<div id= "hiddenDropdownFam" class = "subjectDropdownContent" >
+							<div id= "hiddenDropdownFam" class = "dropdownContent" >
 								<form  id = "family">
 
 								</form>
 							</div>
 							
 							<button onclick="chooseClassFunction('hiddenDropdownEsol')" class= "dropbtn-nested">ESOL</button>
-							<div id= "hiddenDropdownEsol" class = "subjectDropdownContent" >
-								<form  id = "esolForm">
+							<div id= "hiddenDropdownEsol" class = "dropdownContent" >
+								<form  id = "esol">
 
 								</form>
 							</div>
 
 						</div>
                     </div>
-                    </div>
+
 				
 				  <div class="columns" class="classList">
 						<button onclick="chooseClassFunction('hiddenDropdown-sports')" class="colHead">
@@ -484,12 +479,12 @@
 					}
 					
 					if(Classes[i].header == "English"){
-						container = document.getElementById("English");
+						container = document.getElementById("english");
 
 					}
 					
 					if(Classes[i].header == "ESOL"){
-						container = document.getElementById("ESOL");
+						container = document.getElementById("esol");
 
 					}
 					
