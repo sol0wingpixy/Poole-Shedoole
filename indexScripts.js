@@ -1,6 +1,23 @@
 function chooseClassFunction(name){
-	document.getElementById(name).classList.toggle("show");
+document.getElementById(name).classList.toggle("show");
 }
+
+	function hideClassFunction(){
+			
+			var elements = document.getElementsByClassName('dropdownContent');
+			for (var i in elements) {
+				elements[i].className = 'hide';
+			}
+		}
+		
+		function hideDivFunction(name){
+var list = document.getElementsByClassName("dropdown-content")
+			for (var i in list) {
+				list[i].className = 'hide';
+			}
+			
+			chooseClassFunction(name);
+		}
 
 //called when Generate button clicked
 var toWake=420;

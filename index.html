@@ -2,7 +2,7 @@
 <!--By Emilia  Cabrera-->
 <html>
    
-  <!--Extra methods-->
+  <!--bExtra methods-->
   <script>
 	  var classesIn = new Array();
 	  var clubsIn = new Array();
@@ -13,7 +13,24 @@
 		checkBoxes();
 		onSleepChange();
 		function chooseClassFunction(name){
-			document.getElementById(name).classList.toggle("show");
+document.getElementById(name).classList.toggle("show");
+}
+
+	function hideClassFunction(){
+			
+			var elements = document.getElementsByClassName('dropdownContent');
+			for (var i in elements) {
+				elements[i].className = 'hide';
+			}
+		}
+		
+		function hideDivFunction(name){
+var list = document.getElementsByClassName("dropdown-content")
+			for (var i in list) {
+				list[i].className = 'hide';
+			}
+			
+			chooseClassFunction(name);
 		}
 	</script>
 
@@ -25,7 +42,7 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<link href="CSS/style.css" rel="stylesheet"/>
 		<link href="CSS/responsive.css" rel="stylesheet"/>
-		<link href="CSS/myCSS.css" rel="stylesheet"/>
+
 
 <!--Extra methods-->
 <script>
@@ -71,20 +88,21 @@
 </div>-->
 
 <!--Sleep Slider-->
+<!--
 <div class="container">
 
 	<div id="sleepSliders">
 		<ul id="sliders">
-			<!--<li>
+			<li>
 				<input id="tosleep" type="range" min="1140" max="1500" onchange="onSleepChange()" ondrag="onSleepChange()">
-			</li>-->
+			</li>
 			<li>
 				<input id="towake" type="range" min="340" max="450" onchange="onSleepChange()" ondrag="onSleepChange()">
 			</li>
 		</ul>
 		<p id="sleepdata" style="margin: 8px;">Wake up at: </p>
 	</div>
-
+-->
 	<!--
 	<div class="row">
 		<div class="columns" class="classList">
@@ -172,26 +190,26 @@
 			</div>
 		</div>
 -->
-		<div class="tabHeader">
-			<h3>Classes</h3>
-		</div>
 		
-                    <div class="columns" class="list">
-						<div id= "classes">
-							<button onclick="chooseClassFunction('hiddenDropdownMath')">Math</button>
-							<div id= "hiddenDropdownMath" class = "dropdownContent">
-								<form id = "math">
+		<div class="container">
+			<div class="tabHeader" onclick="hideDivFunction('hiddenDropdown-classes')">
+				<h3>Classes</h3>
+			</div>
+		
+			<div id= "hiddenDropdown-classes" class="dropdown-content">
+				<button onclick="chooseClassFunction('hiddenDropdownMath')">Math</button>
+				<div id= "hiddenDropdownMath" class = "dropdownContent">
+					<form id = "math">
 									
-								</form>
-							</div>
-							
-							<button onclick="chooseClassFunction('hiddenDropdownScience')" class= "dropbtn-nested">Science</button>
-							<div id= "hiddenDropdownScience" class = "dropdownContent">
-								<form id = "science">
+					</form>
+				</div>
 
-								</form>
-							</div>
-							
+				<button onclick="chooseClassFunction('hiddenDropdownScience')" class= "dropbtn-nested">Science</button>
+				<div id= "hiddenDropdownScience" class = "dropdownContent">
+					<form id = "science">
+
+					</form>
+				</div>
 							<button onclick="chooseClassFunction('hiddenDropdownEnglish')" class= "dropbtn-nested">English</button>
 							<div id= "hiddenDropdownEnglish" class ="dropdownContent">
 								<form  id="english">
@@ -230,7 +248,6 @@
 							<button onclick="chooseClassFunction('hiddenDropdownPe')" class= "dropbtn-nested">Physical Education</button>
 							<div id= "hiddenDropdownPe" class = "dropdownContent" >
 								<form  id = "health">
-
 								</form>
 							</div>
 							
@@ -267,41 +284,34 @@
 								<form  id = "esol">
 
 								</form>
-							</div>
+				</div>
 
-						</div>
-                    </div>
+			</div>
 
-				
-				  <div class="columns" class="classList">
-						<button onclick="chooseClassFunction('hiddenDropdown-sports')" class="colHead">
-							<p>
-								<h3>Sports</h3>
-							</p>
-                        </button>  
-						
-						<div id= "hiddenDropdown-sports" class="dropdown-content">
-								<form  id = "sports">
+			<!--SPORTS-->
+			<div class="tabHeader" onclick="chooseClassFunction('hiddenDropdown-sports')">
+				<h3>Sports</h3>
+			</div>
+		
+			<div id= "hiddenDropdown-sports" class="dropdown-content">
+				<form  id = "sports">
 
-								</form>
-						</div>
-                    </div>
-				
-				                    <div class="columns" class="classList">
-						<button onclick="chooseClassFunction('hiddenDropdown-clubs')" class="colHead">
-							<p>
-								<h3>Clubs</h3>
-							</p>
-                        </button>  
-						
-						<div id= "hiddenDropdown-clubs" class="dropdown-content">
-								<form  id = "clubs">
+				</form>
+            </div>
+			
+			<!--CLUBS-->
+			<div class="tabHeader" onclick="chooseClassFunction('hiddenDropdown-clubs')">
+				<h3>Clubs</h3>
+			</div>
+			
+			<div id= "hiddenDropdown-clubs" class="dropdown-content">
+				<form  id = "clubs">
 
-								</form>
-						</div>
-                    </div>
+				</form>
+					
+            </div>
 				
-				
+		</div>		
 				
                     <!--<div class="columns" class="classList">
 						<div class="colHead">

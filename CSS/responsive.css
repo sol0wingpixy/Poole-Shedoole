@@ -41,13 +41,16 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 .container {
   width: 100%;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 200px;
   padding: 0 20px;
   box-sizing: border-box; 
   display: block;
   margin-bottom: 50px;
+  margin-right: 50px;
  }
+ 
 .columns {
+  display:none;
   width: 100%;
   float: left;
   box-sizing: border-box; }

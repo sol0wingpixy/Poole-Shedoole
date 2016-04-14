@@ -11,6 +11,16 @@
 
 .tabHeader{
 	width: 100%;
+	background-color: #232767;
+	border-radius: 25px;
+	position: relative;
+	padding-top: 10px;
+	margin-right: 50px;
+	text-align: center;
+	height: 80px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	
 }
 
 /*----- DROP DOWN STUFF --------*/
@@ -19,10 +29,12 @@
 .dropbtn {
     background-color: #4CAF50;
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    padding: 16px 20px 16px 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-left: 20px;
+	margin-top: 5px;
 }
 
 /* Dropdown button on hover & focus */
@@ -40,10 +52,15 @@
 .dropdownContent {
     display: none;
     position: relative;
-    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
+.dropdown-content{
+	display: none;
+	min-width:160px;
+	/*padding: 16px;*/
+}
+
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -53,11 +70,23 @@
     display: block;
 }
 
+.dropbtn-nested{
+	background-color: #0072b2;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display: block;}
+
+.hide{display:none;}
 
 .subjectDropdownContent{
 	display: none;
@@ -93,6 +122,24 @@ section{
 	padding-top: auto;
 	margin-top: 40px;
 }
+
+/* Columns
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 0 20px;
+  box-sizing: border-box; 
+  display: block;
+  margin-bottom: 50px;
+  margin-right: 50px;
+ }
+ 
+.columns {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
 
 p{
 	display: table-cell;
@@ -245,12 +292,13 @@ li{
 	padding-right: 20px;
 }
 
+
 .button, a,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: block;
+  display: inline-block;
   height: 38px;
   padding: 0 30px;
   color: #232767;
