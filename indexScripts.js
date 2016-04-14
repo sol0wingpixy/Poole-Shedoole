@@ -1,6 +1,7 @@
 function chooseClassFunction(name){
 document.getElementById(name).classList.toggle("show");
 }
+<<<<<<< HEAD
 
 	function hideClassFunction(){
 			
@@ -19,17 +20,22 @@ var list = document.getElementsByClassName("dropdown-content")
 			chooseClassFunction(name);
 		}
 
+=======
+var classesIn = sessionStorage.getItem("classes");
+var clubsIn= sessionStorage.getItem("clubs");
+var sportsIn= sessionStorage.getItem("sports");
+>>>>>>> origin/master
 //called when Generate button clicked
 var toWake=420;
 function checkBoxes(){
 
-	var classesIn = new Array();
-	var clubsIn = new Array();
-	var sportsIn = new Array();
+	classesIn = new Array();
+	clubsIn = new Array();
+	sportsIn = new Array();
 
-	//creates array of all input objects
+	//creates colour of all input objects
 	var inputs = document.getElementsByTagName("input");
-	//will be array of selected values
+	//will be colour of selected values
 
 	//loop through all inputs
 	for(var i=0; i < inputs.length; i++){
@@ -37,7 +43,7 @@ function checkBoxes(){
 		//if input is a checkbox, sees if it is checked
 		if(inputs[i].type == "checkbox"){
 
-			//if checked adds to the appropriate array
+			//if checked adds to the appropriate colour
 			if(inputs[i].checked){
 				if (inputs[i].id === "class") {//'id' tells whether sport, club, or class
 					classesIn.push(inputs[i].value);
@@ -127,22 +133,24 @@ function intoTheShedoole() {
 
 function funcy(fileIn){
 	//special for MUN
-	array = new Array(16);//array stores colors of grid at locations
-	for (var i = 0; i < array.length; i++)
+	var numY=17*4+2;//num hours*number of boxes per hours*hour +2
+
+	colour = new Array(16);//colour stores colors of grid at locations
+	for (var i = 0; i < colour.length; i++)
 	{
-		array[i] = new Array(66);
-		for(var k=0;k<66;k++)
+		colour[i] = new Array(numY);
+		for(var k=0;k<numY;k++)
 		{
-			array[i][k]="#ffffff";//define array
+			colour[i][k]="#ffffff";//define colour
 		}
 	}
-	for(var y=0;y<array[0].length;y++)
+	for(var y=0; y<colour[0].length; y++)
 	{
-		array[0][y]="#bbbbbb";//left column
+		colour[0][y]="#bbbbbb";//left column
 	}
-	for(var x=0;x<array.length;x++)
+	for(var x=0; x<colour.length; x++)
 	{
-		array[x][0]="#bbbbbb";//top row
+		colour[x][0]="#bbbbbb";//top row
 	}
 	/*
 	 for(var x=1;x<13;x++)
@@ -150,11 +158,11 @@ function funcy(fileIn){
 	 if(x<6||x>7)
 	 if (x % 2 == 0)
 	 for (var y = 2; y < 30; y++) {
-	 array[x][y] = "#0c26ed";//Odd day
+	 colour[x][y] = "#0c26ed";//Odd day
 	 }
 	 else
 	 for (var y = 2; y < 30; y++) {
-	 array[x][y] = "#0091e0";//Even day
+	 colour[x][y] = "#0091e0";//Even day
 	 }
 	 }
 	 */
@@ -172,19 +180,20 @@ function funcy(fileIn){
 		var c = document.getElementById("canvas");
 		var ctx=canvas.getContext("2d");
 		//resize grid to window
-		c.width =  1500;//window.innerWidth;
-		c.height = 1160;//window.innerHeight;
+
 
 		//Draw grid
 		var startTime=Math.floor(toWake/60);
 		var endTime=24;
-		//8:00 is 0:00
-		//20:00 is 14:00
-		var numY=(endTime-startTime)*4+2;//num hours*number of boxes per hours*hour
+		var sleepTime=(toWake-(8*60));
+		var sleepHr=Math.floor(sleepTime/60);
+		var sleepMin=sleepTime%60;
+
 		var width=100;//c.width/8;
 		var height=17.5;//canvas.height/numY;
 
-		//draw line function
+		c.width =  1500;//window.innerWidth;
+		c.height = numY*17.5;//window.innerHeight;
 
 		var hwTime=0;
 		for(var i=0;i<fileIn.classes.length;i++)
@@ -344,7 +353,7 @@ function funcy(fileIn){
 			var min=0;
 			for(var y=0;y<numY;y++)
 			{
-				ctx.fillStyle=array[x][y];
+				ctx.fillStyle=colour[x][y];
 				ctx.fillRect(x*width,y*height,width,height);
 				ctx.strokeRect(x*width,y*height,width,height);
 				if((x>0&&x<6)||(x>7&&x<13))
@@ -352,7 +361,6 @@ function funcy(fileIn){
 					if (hour == startTime&&min < toWake % 60&&y>0) {
 							ctx.fillStyle = "#ffa500";
 							ctx.fillRect(x * width, y * height, width, height);
-
 					}
 					if (hour >= 8 && hour <= 15)
 					{
@@ -410,6 +418,8 @@ function funcy(fileIn){
 				{
 					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
 					{
+						colour[x][y]='#9944ff';
+						/*
 						ctx.fillStyle='#9944ff';
 						ctx.fillRect(x*width,y*height,width,height);
 						ctx.strokeRect(x*width,y*height,width,height);
@@ -419,12 +429,15 @@ function funcy(fileIn){
 							ctx.fillStyle = "#000000";
 							ctx.fillText("Homework", x * width + 1, y * height + (height * 0.85));
 						}
+						*/
 					}
 				}
 				if(hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))
 				{
 					if(!(hour==startHrC&&(min)<=startMinC)&&!(hour==endHrC&&(min)>endMinC))
 					{
+						colour[x][y]='#00ff00';
+						/*
 						ctx.fillStyle='#00ff00';
 						ctx.fillRect(x*width,y*height,width,height);
 						ctx.strokeRect(x*width,y*height,width,height);
@@ -434,6 +447,7 @@ function funcy(fileIn){
 							ctx.fillStyle = "#000000";
 							ctx.fillText(clubName, x * width + 1, y * height + (height * 0.85));
 						}
+						*/
 					}
 				}
 				if(hour>=startHrS&&hour<=endHrS&&((x>0&&x<7)||(x>7&&x<14)))
@@ -442,13 +456,18 @@ function funcy(fileIn){
 					{
 						if((hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))&&!(hour == startHrC && (min) <= startMinC) && !(hour == endHrC && (min) > endMinC))
 						{
+							colour[x][y]='#ff0000';
+							/*
 							ctx.fillStyle = '#ff0000';
 							ctx.fillRect(x * width, y * height, width, height);
 							ctx.strokeRect(x * width, y * height, width, height);
 							ctx.fillStyle = "#000000";
 							ctx.fillText("Conflict!", x * width + 10, y * height + (height * 0.85));
+							*/
 						}
 						else {
+							colour[x][y]='#ffff00';
+							/*
 							ctx.fillStyle = '#ffff00';
 							ctx.fillRect(x * width, y * height, width, height);
 							ctx.strokeRect(x * width, y * height, width, height);
@@ -457,9 +476,15 @@ function funcy(fileIn){
 								ctx.fillStyle = "#000000";
 								ctx.fillText(sportName, x * width + 1, y * height + (height * 0.85));
 							}
+							*/
 						}
 					}
 				}
+				if(hour>=sleepHr&&min>=sleepMin) {
+					colour[x][y]="#999999";
+				}
+				ctx.fillStyle=colour[x][y];
+				ctx.fillRect(x*width,y*height,width,height);
 				if(y>0) {
 					ctx.fillStyle = "#000000";
 					ctx.font = "15px sans-serif";
