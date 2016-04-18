@@ -13,10 +13,10 @@
 		checkBoxes();
 		onSleepChange();
 		function chooseClassFunction(name){
-document.getElementById(name).classList.toggle("show");
-}
+			document.getElementById(name).classList.toggle("show");
+		}
 
-	function hideClassFunction(){
+		function hideClassFunction(){
 			
 			var elements = document.getElementsByClassName('dropdownContent');
 			for (var i in elements) {
@@ -25,7 +25,7 @@ document.getElementById(name).classList.toggle("show");
 		}
 		
 		function hideDivFunction(name){
-var list = document.getElementsByClassName("dropdown-content")
+			var list = document.getElementsByClassName("dropdown-content")
 			for (var i in list) {
 				list[i].className = 'hide';
 			}
@@ -192,7 +192,7 @@ var list = document.getElementsByClassName("dropdown-content")
 -->
 		
 		<div class="container">
-			<div class="tabHeader" onclick="hideDivFunction('hiddenDropdown-classes')">
+			<div class="tabHeader" onclick="chooseClassFunction('hiddenDropdown-classes')">
 				<h3>Classes</h3>
 			</div>
 		
@@ -233,7 +233,7 @@ var list = document.getElementsByClassName("dropdown-content")
 							
 							<button onclick="chooseClassFunction('hiddenDropdownPerformArt')" class="dropbtn-nested">Performing Arts</button>
 							<div id= "hiddenDropdownPerformArt" class = "dropdownContent">
-								<form  id = "preforming arts">
+								<form  id = "performing arts">
 
 								</form>
 							</div>

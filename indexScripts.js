@@ -1,7 +1,7 @@
 function chooseClassFunction(name){
 document.getElementById(name).classList.toggle("show");
 }
-<<<<<<< HEAD
+
 
 	function hideClassFunction(){
 			
@@ -20,11 +20,11 @@ var list = document.getElementsByClassName("dropdown-content")
 			chooseClassFunction(name);
 		}
 
-=======
+
 var classesIn = sessionStorage.getItem("classes");
 var clubsIn= sessionStorage.getItem("clubs");
 var sportsIn= sessionStorage.getItem("sports");
->>>>>>> origin/master
+
 //called when Generate button clicked
 var toWake=420;
 function checkBoxes(){
