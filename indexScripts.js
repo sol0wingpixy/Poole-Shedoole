@@ -26,7 +26,6 @@ var clubsIn= sessionStorage.getItem("clubs");
 var sportsIn= sessionStorage.getItem("sports");
 
 //called when Generate button clicked
-var toWake=420;
 function checkBoxes(){
 
 	classesIn = new Array();
@@ -343,6 +342,7 @@ function funcy(fileIn){
 			var endHr=parseInt(endMinTol/60);//Club/sport time
 			var hour=6;
 			var min=30;
+			var printed = [false,false,false];//{HW,clubs,Sports}
 			for(var y=0;y<numY;y++)
 			{
 				ctx.fillStyle=colour[x][y];
@@ -402,18 +402,10 @@ function funcy(fileIn){
 					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
 					{
 						colour[x][y]='#9944ff';//HW
-						content="Homework";
-						/*
-						ctx.fillStyle='#9944ff';
-						ctx.fillRect(x*width,y*height,width,height);
-						ctx.strokeRect(x*width,y*height,width,height);
-						if(!printH)
-						{
-							printH=true;
-							ctx.fillStyle = "#000000";
-							ctx.fillText("Homework", x * width + 1, y * height + (height * 0.85));
+						if(!printed[0]) {
+							content = "Homework";
+							printed[0] = true;
 						}
-						*/
 					}
 				}
 				if(hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))
@@ -421,18 +413,11 @@ function funcy(fileIn){
 					if(!(hour==startHrC&&(min)<=startMinC)&&!(hour==endHrC&&(min)>endMinC))
 					{
 						colour[x][y]='#00ff00';//Clubs
-						content=clubName;
-						/*
-						ctx.fillStyle='#00ff00';
-						ctx.fillRect(x*width,y*height,width,height);
-						ctx.strokeRect(x*width,y*height,width,height);
-						if(!printC)
+						if(!printed[1])
 						{
-							printC=true;
-							ctx.fillStyle = "#000000";
-							ctx.fillText(clubName, x * width + 1, y * height + (height * 0.85));
+							ontent = clubName;
+							printed[1] = true;
 						}
-						*/
 					}
 				}
 				if(hour>=startHrS&&hour<=endHrS&&((x>0&&x<7)||(x>7&&x<14)))
@@ -443,27 +428,14 @@ function funcy(fileIn){
 						{
 							colour[x][y]='#ff0000';//Conflict!
 							content="Confict";
-							/*
-							ctx.fillStyle = '#ff0000';
-							ctx.fillRect(x * width, y * height, width, height);
-							ctx.strokeRect(x * width, y * height, width, height);
-							ctx.fillStyle = "#000000";
-							ctx.fillText("Conflict!", x * width + 10, y * height + (height * 0.85));
-							*/
 						}
 						else {
 							colour[x][y]='#ffff00';//Sports
-							content=sportName;
-							/*
-							ctx.fillStyle = '#ffff00';
-							ctx.fillRect(x * width, y * height, width, height);
-							ctx.strokeRect(x * width, y * height, width, height);
-							if (!printS) {
-								printS = true;
-								ctx.fillStyle = "#000000";
-								ctx.fillText(sportName, x * width + 1, y * height + (height * 0.85));
+							if(!printed[2])
+							{
+								ontent = sportName;
+								printed[2] = true;
 							}
-							*/
 						}
 					}
 				}
