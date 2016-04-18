@@ -171,7 +171,7 @@ function funcy(fileIn){
 		var canvas  = document.createElement("canvas");
 		// set canvas id and append canvas to body
 		canvas.setAttribute("id","canvas");
-		canvas.setAttribute("style","overflow:auto")
+		canvas.setAttribute("style","overflow:auto");
 		document.getElementById("canvas123").appendChild(canvas);
 	};
 	function drawGrid(){
@@ -183,11 +183,6 @@ function funcy(fileIn){
 
 
 		//Draw grid
-		var startTime=Math.floor(toWake/60);
-		var endTime=24;
-		var sleepTime=(toWake-(8*60));
-		var sleepHr=Math.floor(sleepTime/60);
-		var sleepMin=sleepTime%60;
 
 		var width=100;//c.width/8;
 		var height=17.5;//canvas.height/numY;
@@ -196,16 +191,13 @@ function funcy(fileIn){
 		c.height = numY*17.5;//window.innerHeight;
 
 		var hwTime=0;
-		for(var i=0;i<fileIn.classes.length;i++)
+		for(i=0;i<fileIn.classes.length;i++)
 		{
 			hwTime+=fileIn.classes[i].time;//set up proper daily HW time
 		}
 		hwTime/=6;
 		for(var x=0;x<15;x++)
 		{
-			var printS=false;
-			var printH=false;
-			var printC=false;
 			var clubName;
 			var sportName;
 
@@ -219,7 +211,7 @@ function funcy(fileIn){
 			var startMinS=0;
 			var endHrS=16;
 			var endMinS=0;
-			for(var i=0;i<fileIn.clubs.length;i++)
+			for(i=0;i<fileIn.clubs.length;i++)
 			{
 				if((x==1||(x==8&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Mon")!=-1)//monday
 				{
@@ -349,76 +341,68 @@ function funcy(fileIn){
 			var endMinTol=startMinTol+hwTime;
 			var endMin=endMinTol%60;
 			var endHr=parseInt(endMinTol/60);//Club/sport time
-			var hour=startTime;
-			var min=0;
+			var hour=6;
+			var min=30;
 			for(var y=0;y<numY;y++)
 			{
 				ctx.fillStyle=colour[x][y];
 				ctx.fillRect(x*width,y*height,width,height);
 				ctx.strokeRect(x*width,y*height,width,height);
+				var content=null;//content of text
 				if((x>0&&x<6)||(x>7&&x<13))
 				{
-					if (hour == startTime&&min < toWake % 60&&y>0) {
-							ctx.fillStyle = "#ffa500";
-							ctx.fillRect(x * width, y * height, width, height);
-					}
 					if (hour >= 8 && hour <= 15)
 					{
-						if (x % 2 == 0) {
-							ctx.fillStyle = "#0c26ed";
-							ctx.fillRect(x * width, y * height, width, height);
-						}
-						else {
-							ctx.fillStyle = "#0091e0";
-							ctx.fillRect(x * width, y * height, width, height);
-						}
+						if (x % 2 == 0)
+							colour[x][y] = "#0c26ed";//even day
+						else
+							colour[x][y] = "#0091e0";//odd day
 						if (hour == 8 && min == 0) {
-							ctx.fillStyle = "#000000";
-							ctx.fillText("School Day", x * width + 1, y * height + (height * 0.85));
+							content="School Day";
 						}
 					}
 				}
 				if(y==0&&(x==1||x==8))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Monday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Monday";
 				}
 				if(y==0&&(x==2||x==9))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Tuesday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Tuesday";
 				}
 				if(y==0&&(x==3||x==10))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Wednesday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Wednesday";
 				}
 				if(y==0&&(x==4||x==11))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Thursday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Thursday";
 				}
 				if(y==0&&(x==5||x==12))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Friday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Friday";
 				}
 				if(y==0&&(x==6||x==13))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Saturday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Saturday";
 				}
 				if(y==0&&(x==7||x==14))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Sunday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Sunday";
 				}
-
 				if(hour>=startHr&&hour<=endHr&&((x>0&&x<7)||(x>7&&x<14)))
 				{
 					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
 					{
-						colour[x][y]='#9944ff';
+						colour[x][y]='#9944ff';//HW
+						content="Homework";
 						/*
 						ctx.fillStyle='#9944ff';
 						ctx.fillRect(x*width,y*height,width,height);
@@ -436,7 +420,8 @@ function funcy(fileIn){
 				{
 					if(!(hour==startHrC&&(min)<=startMinC)&&!(hour==endHrC&&(min)>endMinC))
 					{
-						colour[x][y]='#00ff00';
+						colour[x][y]='#00ff00';//Clubs
+						content=clubName;
 						/*
 						ctx.fillStyle='#00ff00';
 						ctx.fillRect(x*width,y*height,width,height);
@@ -456,7 +441,8 @@ function funcy(fileIn){
 					{
 						if((hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))&&!(hour == startHrC && (min) <= startMinC) && !(hour == endHrC && (min) > endMinC))
 						{
-							colour[x][y]='#ff0000';
+							colour[x][y]='#ff0000';//Conflict!
+							content="Confict";
 							/*
 							ctx.fillStyle = '#ff0000';
 							ctx.fillRect(x * width, y * height, width, height);
@@ -466,7 +452,8 @@ function funcy(fileIn){
 							*/
 						}
 						else {
-							colour[x][y]='#ffff00';
+							colour[x][y]='#ffff00';//Sports
+							content=sportName;
 							/*
 							ctx.fillStyle = '#ffff00';
 							ctx.fillRect(x * width, y * height, width, height);
@@ -480,11 +467,13 @@ function funcy(fileIn){
 						}
 					}
 				}
-				if(hour>=sleepHr&&min>=sleepMin) {
-					colour[x][y]="#999999";
-				}
 				ctx.fillStyle=colour[x][y];
 				ctx.fillRect(x*width,y*height,width,height);
+				if(content!=null)
+				{
+					ctx.fillStyle = "#000000";
+					ctx.fillText(content, x * width + 1, y * height + (height * 0.85));
+				}
 				if(y>0) {
 					ctx.fillStyle = "#000000";
 					ctx.font = "15px sans-serif";
