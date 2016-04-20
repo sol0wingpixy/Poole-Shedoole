@@ -5,20 +5,23 @@ document.getElementById(name).classList.toggle("show");
 
 	function hideClassFunction(){
 			
-			var elements = document.getElementsByClassName('dropdownContent');
-			for (var i in elements) {
-				elements[i].className = 'hide';
+			var list = document.getElementsByClassName('dropdownContent');
+			for(var i = 0; i < list.length; i++) {
+				list[i].classList.toggle("show", false);
 			}
 		}
 		
-		function hideDivFunction(name){
-var list = document.getElementsByClassName("dropdown-content")
-			for (var i in list) {
-				list[i].className = 'hide';
+		function hideDivFunction(){
+			var list = document.getElementsByClassName("dropdown-content");
+			for(var i = 0; i < list.length; i++){
+				list[i].classList.toggle("show", false);
 			}
-			
-			chooseClassFunction(name);
 		}
+		
+		function chooseClassFunction(name){
+			document.getElementById(name).classList.toggle("show");
+		}
+
 
 
 var classesIn = sessionStorage.getItem("classes");
