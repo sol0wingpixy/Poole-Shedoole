@@ -5,20 +5,23 @@ document.getElementById(name).classList.toggle("show");
 
 	function hideClassFunction(){
 			
-			var elements = document.getElementsByClassName('dropdownContent');
-			for (var i in elements) {
-				elements[i].className = 'hide';
+			var list = document.getElementsByClassName('dropdownContent');
+			for(var i = 0; i < list.length; i++) {
+				list[i].classList.toggle("show", false);
 			}
 		}
 		
-		function hideDivFunction(name){
-var list = document.getElementsByClassName("dropdown-content")
-			for (var i in list) {
-				list[i].className = 'hide';
+		function hideDivFunction(){
+			var list = document.getElementsByClassName("dropdown-content");
+			for(var i = 0; i < list.length; i++){
+				list[i].classList.toggle("show", false);
 			}
-			
-			chooseClassFunction(name);
 		}
+		
+		function chooseClassFunction(name){
+			document.getElementById(name).classList.toggle("show");
+		}
+
 
 
 var classesIn = sessionStorage.getItem("classes");
@@ -26,7 +29,6 @@ var clubsIn= sessionStorage.getItem("clubs");
 var sportsIn= sessionStorage.getItem("sports");
 
 //called when Generate button clicked
-var toWake=420;
 function checkBoxes(){
 
 	classesIn = new Array();
@@ -67,8 +69,6 @@ function checkBoxes(){
 	sessionStorage.setItem('classes', classesIn);
 	sessionStorage.setItem('clubs', clubsIn);
 	sessionStorage.setItem('sports', sportsIn);
-	sessionStorage.setItem('wakeUp', toWake);
-
 	//opens new window which runs intoTheShedoole on opening
 	window.open("scheduleLayout.html", "_self");
 }
@@ -91,7 +91,6 @@ function intoTheShedoole() {
 		sports:  sessionStorage.getItem("sports").split(","),
 		clubs:  sessionStorage.getItem("clubs").split(",")
 	};//get this from
-	toWake=sessionStorage.getItem("wakeUp");
 	if(fileIn.classes[0].length<=0)//if no data, make it say so
 	{
 		fileIn.classes = new Array();
@@ -171,7 +170,7 @@ function funcy(fileIn){
 		var canvas  = document.createElement("canvas");
 		// set canvas id and append canvas to body
 		canvas.setAttribute("id","canvas");
-		canvas.setAttribute("style","overflow:auto")
+		canvas.setAttribute("style","overflow:auto");
 		document.getElementById("canvas123").appendChild(canvas);
 	};
 	function drawGrid(){
@@ -183,11 +182,6 @@ function funcy(fileIn){
 
 
 		//Draw grid
-		var startTime=Math.floor(toWake/60);
-		var endTime=24;
-		var sleepTime=(toWake-(8*60));
-		var sleepHr=Math.floor(sleepTime/60);
-		var sleepMin=sleepTime%60;
 
 		var width=100;//c.width/8;
 		var height=17.5;//canvas.height/numY;
@@ -196,16 +190,13 @@ function funcy(fileIn){
 		c.height = numY*17.5;//window.innerHeight;
 
 		var hwTime=0;
-		for(var i=0;i<fileIn.classes.length;i++)
+		for(i=0;i<fileIn.classes.length;i++)
 		{
 			hwTime+=fileIn.classes[i].time;//set up proper daily HW time
 		}
 		hwTime/=6;
 		for(var x=0;x<15;x++)
 		{
-			var printS=false;
-			var printH=false;
-			var printC=false;
 			var clubName;
 			var sportName;
 
@@ -219,7 +210,7 @@ function funcy(fileIn){
 			var startMinS=0;
 			var endHrS=16;
 			var endMinS=0;
-			for(var i=0;i<fileIn.clubs.length;i++)
+			for(i=0;i<fileIn.clubs.length;i++)
 			{
 				if((x==1||(x==8&&!fileIn.clubs[i].weekly))&&fileIn.clubs[i].day.indexOf("Mon")!=-1)//monday
 				{
@@ -349,105 +340,84 @@ function funcy(fileIn){
 			var endMinTol=startMinTol+hwTime;
 			var endMin=endMinTol%60;
 			var endHr=parseInt(endMinTol/60);//Club/sport time
-			var hour=startTime;
-			var min=0;
+			var hour=6;
+			var min=30;
+			var printed = [false,false,false];//{HW,clubs,Sports}
 			for(var y=0;y<numY;y++)
 			{
 				ctx.fillStyle=colour[x][y];
 				ctx.fillRect(x*width,y*height,width,height);
 				ctx.strokeRect(x*width,y*height,width,height);
+				var content=null;//content of text
 				if((x>0&&x<6)||(x>7&&x<13))
 				{
-					if (hour == startTime&&min < toWake % 60&&y>0) {
-							ctx.fillStyle = "#ffa500";
-							ctx.fillRect(x * width, y * height, width, height);
-					}
 					if (hour >= 8 && hour <= 15)
 					{
-						if (x % 2 == 0) {
-							ctx.fillStyle = "#0c26ed";
-							ctx.fillRect(x * width, y * height, width, height);
-						}
-						else {
-							ctx.fillStyle = "#0091e0";
-							ctx.fillRect(x * width, y * height, width, height);
-						}
+						if (x % 2 == 0)
+							colour[x][y] = "#0c26ed";//even day
+						else
+							colour[x][y] = "#0091e0";//odd day
 						if (hour == 8 && min == 0) {
-							ctx.fillStyle = "#000000";
-							ctx.fillText("School Day", x * width + 1, y * height + (height * 0.85));
+							content="School Day";
 						}
 					}
 				}
 				if(y==0&&(x==1||x==8))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Monday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Monday";
 				}
 				if(y==0&&(x==2||x==9))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Tuesday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Tuesday";
 				}
 				if(y==0&&(x==3||x==10))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Wednesday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Wednesday";
 				}
 				if(y==0&&(x==4||x==11))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Thursday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Thursday";
 				}
 				if(y==0&&(x==5||x==12))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Friday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Friday";
 				}
 				if(y==0&&(x==6||x==13))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Saturday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Saturday";
 				}
 				if(y==0&&(x==7||x==14))
 				{
-					ctx.fillStyle="#000000";
-					ctx.fillText("Sunday",x*width+1,y*height+(height*0.85));
+					colour[x][y]="#eeeeee";
+					content="Sunday";
 				}
-
 				if(hour>=startHr&&hour<=endHr&&((x>0&&x<7)||(x>7&&x<14)))
 				{
 					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
 					{
-						colour[x][y]='#9944ff';
-						/*
-						ctx.fillStyle='#9944ff';
-						ctx.fillRect(x*width,y*height,width,height);
-						ctx.strokeRect(x*width,y*height,width,height);
-						if(!printH)
-						{
-							printH=true;
-							ctx.fillStyle = "#000000";
-							ctx.fillText("Homework", x * width + 1, y * height + (height * 0.85));
+						colour[x][y]='#9944ff';//HW
+						if(!printed[0]) {
+							content = "Homework";
+							printed[0] = true;
 						}
-						*/
 					}
 				}
 				if(hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))
 				{
 					if(!(hour==startHrC&&(min)<=startMinC)&&!(hour==endHrC&&(min)>endMinC))
 					{
-						colour[x][y]='#00ff00';
-						/*
-						ctx.fillStyle='#00ff00';
-						ctx.fillRect(x*width,y*height,width,height);
-						ctx.strokeRect(x*width,y*height,width,height);
-						if(!printC)
+						colour[x][y]='#00ff00';//Clubs
+						if(!printed[1])
 						{
-							printC=true;
-							ctx.fillStyle = "#000000";
-							ctx.fillText(clubName, x * width + 1, y * height + (height * 0.85));
+							ontent = clubName;
+							printed[1] = true;
 						}
-						*/
 					}
 				}
 				if(hour>=startHrS&&hour<=endHrS&&((x>0&&x<7)||(x>7&&x<14)))
@@ -456,35 +426,26 @@ function funcy(fileIn){
 					{
 						if((hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))&&!(hour == startHrC && (min) <= startMinC) && !(hour == endHrC && (min) > endMinC))
 						{
-							colour[x][y]='#ff0000';
-							/*
-							ctx.fillStyle = '#ff0000';
-							ctx.fillRect(x * width, y * height, width, height);
-							ctx.strokeRect(x * width, y * height, width, height);
-							ctx.fillStyle = "#000000";
-							ctx.fillText("Conflict!", x * width + 10, y * height + (height * 0.85));
-							*/
+							colour[x][y]='#ff0000';//Conflict!
+							content="Confict";
 						}
 						else {
-							colour[x][y]='#ffff00';
-							/*
-							ctx.fillStyle = '#ffff00';
-							ctx.fillRect(x * width, y * height, width, height);
-							ctx.strokeRect(x * width, y * height, width, height);
-							if (!printS) {
-								printS = true;
-								ctx.fillStyle = "#000000";
-								ctx.fillText(sportName, x * width + 1, y * height + (height * 0.85));
+							colour[x][y]='#ffff00';//Sports
+							if(!printed[2])
+							{
+								ontent = sportName;
+								printed[2] = true;
 							}
-							*/
 						}
 					}
 				}
-				if(hour>=sleepHr&&min>=sleepMin) {
-					colour[x][y]="#999999";
-				}
 				ctx.fillStyle=colour[x][y];
 				ctx.fillRect(x*width,y*height,width,height);
+				if(content!=null)
+				{
+					ctx.fillStyle = "#000000";
+					ctx.fillText(content, x * width + 1, y * height + (height * 0.85));
+				}
 				if(y>0) {
 					ctx.fillStyle = "#000000";
 					ctx.font = "15px sans-serif";
@@ -546,13 +507,13 @@ Classes.push({header: "English", name:"Forensics (Spring)", time: 0});//Forensic
 
 //ENGLISH FOR SPEAKERS OF OTHER LANGUAGES (ESOL)
 /*done*/
-Classes.push({header: "ESOL", name:"ESOL Level 2/3 Beg/Developing", time: 60});//ESOL Level 2/3 Beg/Developing
-Classes.push({header: "ESOL", name:"", time: 60});//Default Class Thingy I Guess
-Classes.push({header: "ESOL", name:"ESOL Level 3 Developing", time: 60});//ESOL Level 3 Developing
-Classes.push({header: "ESOL", name:"ESOL Level 4 Expanding", time: 60});//ESOL Level 4 Expanding
-Classes.push({header: "ESOL", name:"English 9 Transitional (ESOL)", time: 60});//English 9 Transitional (ESOL)
-Classes.push({header: "ESOL", name:"Individualized Math", time: 60});//Individualized Math
-Classes.push({header: "ESOL", name:"Strategies for Success ESOL", time: 60});//Strategies for Success ESOL
+Classes.push({header: "English", name:"ESOL Level 2/3 Beg/Developing", time: 60});//ESOL Level 2/3 Beg/Developing
+Classes.push({header: "English", name:"", time: 60});//Default Class Thingy I Guess
+Classes.push({header: "English", name:"ESOL Level 3 Developing", time: 60});//ESOL Level 3 Developing
+Classes.push({header: "English", name:"ESOL Level 4 Expanding", time: 60});//ESOL Level 4 Expanding
+Classes.push({header: "English", name:"English 9 Transitional (ESOL)", time: 60});//English 9 Transitional (ESOL)
+Classes.push({header: "English", name:"Individualized Math", time: 60});//Individualized Math
+Classes.push({header: "English", name:"Strategies for Success ESOL", time: 60});//Strategies for Success ESOL
 
 //SCIENCE
 /*done*/

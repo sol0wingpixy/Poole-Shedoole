@@ -40,17 +40,13 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   width: 100%;
-  margin: 0 auto;
-  margin-top: 200px;
-  padding: 0 20px;
-  box-sizing: border-box; 
+  margin-bottom: 100px;
   display: block;
   margin-bottom: 50px;
   margin-right: 50px;
  }
  
 .columns {
-  display:none;
   width: 100%;
   float: left;
   box-sizing: border-box; }
@@ -62,7 +58,8 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 	align: center;
 	}
   .columns {
-	width: 92%;
+	width: 46%;
+	margin-left: 4%; 
 	}
   .columns:first-child {
     margin-left: 0; }
@@ -70,34 +67,26 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* For devices 600-800px wide */
 @media (min-width: 650px) {
-  .container {
-    width: 80%; 
-	align: center;
-	}
-  .columns {
-    margin-left: 4%; 
-	width: 46%;
-	}
-}
 
-/* For devices 800-1340px wide */
-@media (min-width: 860px) {
-  .container {
-    width: 95%; }
   .columns {
     margin-left: 4%; 
 	width: 28%;
 	}
 }
 
-/* For devices larger than 1110px */
-@media (min-width: 1110px) {
-  .container {
-    width: 95%; 
-	align: center;
-	}
+/* For devices 800-1340px wide */
+@media (min-width: 860px) {
   .columns {
     margin-left: 4%; 
 	width: 21%;
+	}
+}
+
+/* For devices larger than 1110px */
+@media (min-width: 1110px) {
+
+  .columns {
+    margin-left: 4%; 
+	width: 18%;
 	}
 }
