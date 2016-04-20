@@ -61,255 +61,137 @@
 	<div id="title"><h1>Schedule Simulator</h1>
 		<a onClick="checkBoxes()" id="generate" class="button-primary">Generate</a>
 	</div>
-
-	<!--<form action="#frame1" method="get" id="top-buttons">
-        <input class="button-primary" type="button" value="Classes" />
-    </form>
-    <form action="#frame9" method="get" id="top-buttons">
-        <input class="button-primary" type="button" value="Activities" />
-    </form>-->
-
-
-
 </nav>
 
-
-<!--<div id="classes" class="sectionHead">
-    <h3> Classes </h3>
-</div>-->
-
-<!--Sleep Slider-->
-<!--
 <div class="container">
-
-	<div id="sleepSliders">
-		<ul id="sliders">
-			<li>
-				<input id="tosleep" type="range" min="1140" max="1500" onchange="onSleepChange()" ondrag="onSleepChange()">
-			</li>
-			<li>
-				<input id="towake" type="range" min="340" max="420" onchange="onSleepChange()" ondrag="onSleepChange()">
-			</li>
-		</ul>
-		<p id="sleepdata" style="margin: 8px;">Wake up at: </p>
+	<div class="tabHeader" onclick="hideDivFunction(); chooseClassFunction('hiddenDropdown-classes');">
+		<h3>Classes</h3>
 	</div>
--->
-	<!--
-	<div class="row">
-		<div class="columns" class="classList">
-			<div class="colHead">
-				<p>
-				<h3>English</h3>
-				</p>
-			</div>
-			<div class="frame" id="frame1">
-				<h4>English</h4>
-
-				<form id="English">
-				</form>
-
-				<br>
-				<br>
-
-				<h4>ESOL</h4>
-				<form id="ESOL"></form>
-
-			</div>
-		</div>
-		<div class="columns" class="classList">
-			<div class="colHead">
-				<p>
-				<h3>Math</h3>
-				</p>
-			</div>
-			<div class="frame" id="frame2">
-				<form id="math">
-				</form>
-			</div>
-		</div>
-		<div class="columns" class="classList">
-			<div class="colHead">
-				<p>
-				<h3>Science</h3>
-				</p>
-			</div>
-			<div class="frame" id="frame3">
-				<form id="science">
-				</form>
-			</div>
-		</div>
-		<div class="columns" class="classList">
-			<div class="colHead">
-				<p>
-				<h3>Social Studies</h3>
-				</p>
-			</div>
-			<div class="frame" id="frame4">
-				<form id="social science">
-				</form>
-			</div>
-		</div>
-		<div class="columns" class="classList">
-			<div class="colHead">
-				<p>
-				<h3>Languages</h3>
-				</p>
-			</div>
-			<div class="frame" id="frame5">
-				<form id="World Languages"></form>
-			</div>
-		</div>
-		<div class="columns" class="classList">
-			<div class="colHead">
-				<p>
-				<h3>Fine Arts</h3>
-				</p>
-			</div>
-			<div class="frame" id="frame6">
-
-				<h4>Visual Arts</h4>
-
-				<form id="visual arts">
-				</form>
-
-				<br>
-				<br>
-
-				<h4>Performing Arts</h4>
-				<form id="performing arts">
-				</form>
-			</div>
-		</div>
--->
 		
-		<div class="container">
-			<div class="tabHeader" onclick="hideDivFunction(); chooseClassFunction('hiddenDropdown-classes');">
-				<h3>Classes</h3>
-			</div>
-		
-			<div id= "hiddenDropdown-classes" class="dropdown-content" class="container">
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownMath');">Math</button>
+	<table id= "hiddenDropdown-classes" class="dropdown-content" align="center">
+				<tr>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownMath');"><h4>Math</h4></div>
 						<div id= "hiddenDropdownMath" class = "dropdownContent">
 						<form id = "math">
 									
 						</form>
 						</div>
 						
-				</div>
+				</td>
 
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownScience');">Science</button>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownScience');"><h4>Science</h4></div>
 					<div id= "hiddenDropdownScience" class = "dropdownContent">
 						<form id = "science">
 
 						</form>
 					</div>
-				</div>
+				</td>
 				
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownEnglish')" >English</button>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownEnglish')" ><h4>English</h4></div>
 					<div id= "hiddenDropdownEnglish" class ="dropdownContent">
 						<form  id="english">
-
+						</form>
+						
+						<form  id = "esol">
 						</form>
 					</div>
-				</div>
+				</td>
 				
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownSocialstds')" >Social Studies</button>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownSocialstds')" ><h4>Social Studies</h4></div>
 						<div id= "hiddenDropdownSocialstds" class = "dropdownContent">
 							<form  id = "social science">
 
 							</form>
 						</div>
-				</div>
+				</td>
+				</tr>
 				
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownWrldLang')" >World Languages</button>
+				<tr>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownWrldLang')" ><h4>Languages</h4></div>
 						<div id= "hiddenDropdownWrldLang" class = "dropdownContent">
 							<form  id = "World Languages">
 								
 							</form>
 						</div>
-				</div>
+				</td>
 				
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownPerformArt')" >Performing Arts</button>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownPerformArt')" ><h4>Performing Arts</h4></div>
 						<div id= "hiddenDropdownPerformArt" class = "dropdownContent">
 							<form  id = "performing arts">
 
 							</form>
 						</div>
-				</div>
+				</td>
 				
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownVisualArt')" >Visual Arts</button>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownVisualArt')" ><h4>Visual Arts</h4></div>
 					<div id= "hiddenDropdownVisualArt" class = "dropdownContent">
 						<form  id = "visual arts">
 
 						</form>
 					</div>
-				</div>
+				</td>
 							
-				<div class="columns">
-					<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownPe')">Physical Education</button>
+				<td>
+					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownPe')"><h4>Physical Education</h4></div>
 					<div id= "hiddenDropdownPe" class = "dropdownContent" >
 						<form  id = "health">
 						</form>
 					</div>
-				</div>
+				</td>
+				</tr>
 				
-				<div class="columns">			
-							<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownTech')" >Technology</button>
+				<tr>
+				<td>			
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownTech')" ><h4>Technology</h4></div>
 							<div id= "hiddenDropdownTech" class = "dropdownContent" >
 								<form  id = "technology">
 
 								</form>
 							</div>
-				</div>
+				</td>
 				
-				<div class="columns">				
-							<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownBusiness')">Business/Information</button>
+				<td>				
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownBusiness')"><h4>Business/Information</h4></div>
 							<div id= "hiddenDropdownBusiness" class = "dropdownContent" >
 								<form  id = "business">
 
 								</form>
 							</div>
-				</div>
+				</td>
 				
-				<div class="columns">			
-							<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownRes')" >Student Resources</button>
+				<td>			
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownRes')"><h4>Student Resources</h4></div>
 							<div id= "hiddenDropdownRes" class = "dropdownContent"  >
 								<form  id = "resources">
 
 								</form>
 							</div>
-				</div>
+				</td>
 				
-				<div class="columns">			
-							<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownFam')">Family and Consumer Sciences</button>
+				<td>			
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownFam')"><h4>Family and Consumer Sciences</h4></div>
 							<div id= "hiddenDropdownFam" class = "dropdownContent" >
 								<form  id = "family">
 
 								</form>
 							</div>
-				</div>
-				
-				<div class="columns">			
-							<button onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownEsol')" >ESOL</button>
-							<div id= "hiddenDropdownEsol" class = "dropdownContent" >
-								<form  id = "esol">
-
-								</form>
-							</div>
-				</div>
-			</div>
+				</td>
+				</tr>
+			</table>
 
 			<!--SPORTS-->
 			<div class="tabHeader" onclick="hideDivFunction(); chooseClassFunction('hiddenDropdown-sports');">
 				<h3>Sports</h3>
 			</div>
+			
+			
 		
 			<div id= "hiddenDropdown-sports" class="dropdown-content">
 				<form  id = "sports">
@@ -330,169 +212,6 @@
             </div>
 				
 		</div>		
-				
-                    <!--<div class="columns" class="classList">
-						<div class="colHead">
-							<p>
-								<h3>English</h3>
-							</p>
-                        </div>  
-						<div class="frame" id="frame1">
-								<h4>English</h4>
-	
-								<form id="English">
-								</form>
-	
-								<br>
-								<br>
-	
-								<h4>ESOL</h4>
-								<form id="ESOL"></form>
-
-						</div>
-                    </div>
-					
-                    <div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Math</h3>
-							</p>
-                        </div>
-						<div class="frame" id="frame2">
-							<form id="math">
-							</form>		
-						</div>
-                    </div>
-                    <div class="columns" class="classList">
-                         <div class="colHead">
-							<p>
-								<h3>Science</h3>
-							</p>
-                        </div>
-						<div class="frame" id="frame3">
-							<form id="science">
-							</form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                         <div class="colHead">
-							<p>
-								<h3>Social Studies</h3>
-							</p>
-                        </div>
-						<div class="frame" id="frame4">
-							<form id="social science">
-							</form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                          <div class="colHead">
-							<p>
-								<h3>Languages</h3>
-							</p>
-                        </div>  
-						<div class="frame" id="frame5">
-							<form id="World Languages"></form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Fine Arts</h3>
-							</p>
-                        </div>    
-						<div class="frame" id="frame6">
-						
-							<h4>Visual Arts</h4>
-	
-							<form id="visual arts">
-							</form>
-	
-							<br>
-							<br>
-							
-							<h4>Performing Arts</h4>
-							<form id="performing arts">
-							</form>
-						</div>
-					</div>
-					<div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Student Resources</h3>
-							</p>
-                        </div>     
-						<div class="frame" id="frame7">
-							<form id="resources"></form>
-						</div>
-                    </div>
-					<div class="columns" class="classList">
-                        <div class="colHead">
-							<p>
-								<h3>Other Electives</h3>
-							</p>
-                        </div>    
-						<div class="frame" id="frame8">
-							<h4>Health and Physical Education</h4>
-							<form id="health">
-							</form>
-								
-								<br>
-								<br>
-								
-								<h4>Business and Information Technology</h4>
-								<form id="business">
-								</form>
-								
-								<br>
-								<br>
-								
-								<h4>Technology and Engineering</h4>
-								<form id="technology">
-								</form>
-								
-								<br>
-								<br>
-								
-								<h4>Family and Consumer Sciences</h4>
-								<form id="family">
-								</form>
-						</div>
-                    </div>
-					
-                </div>
-		</div>
-		</section>
-
-		<!--<div id="activities" class="sectionHead">
-			<h3> Activities </h3>
-		</div>
-		
-		<div class="container">
-			<div class="columns" class="classList">
-                <div class="colHead">
-                    <p>
-					   <h3>Clubs</h3>
-                    </p>
-                </div>    
-				<div class="frame" id="frame9">
-					<form id="clubs"></form>
-				</div>
-            </div>
-
-            <div class="columns" class="classList">
-                <div class="colHead">
-                    <p>
-                        <h3>Sports</h3>
-                    </p>
-                </div>    
-                <div class="frame" id="frame10">
-                    <form id="sports"></form>
-                </div>
-            </div>
-		</div> -->
-	
-
 
 	<script>
 		(function(){
