@@ -67,8 +67,9 @@
 	<div class="tabHeader" onclick="hideDivFunction(); chooseClassFunction('hiddenDropdown-classes');">
 		<h3>Classes</h3>
 	</div>
-		
-	<table id= "hiddenDropdown-classes" class="dropdown-content" align="center">
+	
+	<div style="overflow-x:auto; overflow-y:visible;">
+		<table id= "hiddenDropdown-classes" class="dropdown-content" align="center">
 				<tr>
 				<td>
 					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownMath');"><h4>Math</h4></div>
@@ -93,9 +94,6 @@
 					<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownEnglish')" ><h4>English</h4></div>
 					<div id= "hiddenDropdownEnglish" class ="dropdownContent">
 						<form  id="english">
-						</form>
-						
-						<form  id = "esol">
 						</form>
 					</div>
 				</td>
@@ -185,6 +183,7 @@
 				</td>
 				</tr>
 			</table>
+		</div>
 
 			<!--SPORTS-->
 			<div class="tabHeader" onclick="hideDivFunction(); chooseClassFunction('hiddenDropdown-sports');">

@@ -111,7 +111,6 @@ section{
 }
 
 .sectionHead{
-  height: 50px;
   padding: 0 30px;
   color: #232767;
   text-align: center;
@@ -200,8 +199,10 @@ h1 {
 h4{
 	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #222;
-	font-size: 12px;
-	font-weight: bold;
+	font-weight: normal;
+	font-size: 2.0rem; 
+	line-height: 1.35; 
+	letter-spacing: .08rem;
 	text-transform: uppercase;
 	text-decoration: none;
 	vertical-align: center;
@@ -210,7 +211,6 @@ h4{
 h5{
 	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: white;
-	font-size: 11px;
 	text-align: center;
 	font-weight: 600;
 	line-height: 60px;
