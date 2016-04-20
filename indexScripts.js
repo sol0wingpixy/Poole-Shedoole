@@ -223,8 +223,11 @@ function funcy(fileIn){
 			for(i=0;i<fileIn.clubs.length;i++)
 			{
 				for (var xe = 1; xe < 7; xe++) {
-					var day = "Mon";
+					var day = "";
 					switch (xe) {
+						case 1:
+							day="Mon"
+							break;
 						case 2:
 							day = "Tue";
 							break;
