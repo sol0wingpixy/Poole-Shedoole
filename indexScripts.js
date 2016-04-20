@@ -578,7 +578,7 @@ Classes.push({header: "English", name:"Forensics (Spring)", time: 0});//Forensic
 //ENGLISH FOR SPEAKERS OF OTHER LANGUAGES (ESOL)
 /*done*/
 Classes.push({header: "English", name:"ESOL Level 2/3 Beg/Developing", time: 60});//ESOL Level 2/3 Beg/Developing
-Classes.push({header: "English", name:"", time: 60});//Default Class Thingy I Guess
+//Classes.push({header: "English", name:"", time: 60});//Default Class Thingy I Guess
 Classes.push({header: "English", name:"ESOL Level 3 Developing", time: 60});//ESOL Level 3 Developing
 Classes.push({header: "English", name:"ESOL Level 4 Expanding", time: 60});//ESOL Level 4 Expanding
 Classes.push({header: "English", name:"English 9 Transitional (ESOL)", time: 60});//English 9 Transitional (ESOL)
