@@ -69,8 +69,6 @@ function checkBoxes(){
 	sessionStorage.setItem('classes', classesIn);
 	sessionStorage.setItem('clubs', clubsIn);
 	sessionStorage.setItem('sports', sportsIn);
-	sessionStorage.setItem('wakeUp', toWake);
-
 	//opens new window which runs intoTheShedoole on opening
 	window.open("scheduleLayout.html", "_self");
 }
@@ -93,7 +91,6 @@ function intoTheShedoole() {
 		sports:  sessionStorage.getItem("sports").split(","),
 		clubs:  sessionStorage.getItem("clubs").split(",")
 	};//get this from
-	toWake=sessionStorage.getItem("wakeUp");
 	if(fileIn.classes[0].length<=0)//if no data, make it say so
 	{
 		fileIn.classes = new Array();
