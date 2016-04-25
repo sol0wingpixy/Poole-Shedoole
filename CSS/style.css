@@ -62,12 +62,14 @@ td{
     display: none;
     position: relative;
     min-width: 160px;
+	padding-left: 30px;
 }
 
 .dropdown-content{
 	display: none;
 	min-width:160px;
 	position: relative;
+	padding-left: 20px;
 }
 
 
@@ -119,8 +121,8 @@ section{
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; 
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .colHead{
@@ -206,6 +208,8 @@ h4{
 	text-transform: uppercase;
 	text-decoration: none;
 	vertical-align: center;
+	margin-left: -20px;
+	margin-right: -20px;
 }
 
 h5{
