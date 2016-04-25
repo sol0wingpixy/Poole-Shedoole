@@ -482,7 +482,7 @@ function funcy(fileIn){
 var Classes = new Array();//Database for all the available classes name, time
 //ENGLISH
 /*done*/
-<<<<<<< HEAD
+
 Classes.push({header: "English", name:"English 9", time: 90, description: "hello world"});//English 9
 Classes.push({header: "English", name:"English 9HN", time: 150});//English 9HN
 Classes.push({header: "English", name:"English 9 (LDTeam)", time: 75});//English 9 (LDTeam)
@@ -498,7 +498,7 @@ Classes.push({header: "English", name:"Film Study (F/S)", time: 15});//Film Stud
 Classes.push({header: "English", name:"Literacy LAB 1", time: 0});//Literacy LAB 1
 Classes.push({header: "English", name:"Debate (Fall)", time: 0});//Debate (Fall)
 Classes.push({header: "English", name:"Forensics (Spring)", time: 0});//Forensics (Spring)
-=======
+
 var i=0;
 Classes[i++]=({header: "English", name:"English 9", time: 90});//English 9
 Classes[i++]=({header: "English", name:"English 9HN", time: 150});//English 9HN
@@ -515,7 +515,7 @@ Classes[i++]=({header: "English", name:"Film Study (F/S)", time: 15});//Film Stu
 Classes[i++]=({header: "English", name:"Literacy LAB 1", time: 0});//Literacy LAB 1
 Classes[i++]=({header: "English", name:"Debate (Fall)", time: 0});//Debate (Fall)
 Classes[i++]=({header: "English", name:"Forensics (Spring)", time: 0});//Forensics (Spring)
->>>>>>> origin/master
+
 
 //ENGLISH FOR SPEAKERS OF OTHER LANGUAGES (ESOL)
 /*done*/
@@ -714,7 +714,6 @@ Sports[i++]=({header: "fall", name: "Volleyball", hourStart: [15, 15, 15, 15, 15
 //**CLUBS**
 var Clubs = new Array();
 /*MILITARY TIME*/
-<<<<<<< HEAD
 
 /*1*/Clubs.push({header: "art",name: "Anime Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Anime Club
 //*0*/Clubs.push({header: "academic",name: "Astronomy Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Astronomy Club
@@ -784,7 +783,7 @@ var Clubs = new Array();
 //*0*/Clubs.push({header: "volunteer",name: "Woodson Buddies", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Woodson Buddies
 //*0*/Clubs.push({header: "volunteer",name: "Young Hearts", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Hearts
 //*0*/Clubs.push({header: "other",name: "Young Republicans", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Republicans
-=======
+
 i=0;
 //Clubs.insert({name:"String", hourStart:int, minStart:int, time:int, day:"String", weekly:boolean});
 /*1*/Clubs[i++]=({name: "Anime Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Anime Club
@@ -855,7 +854,7 @@ i=0;
 //*0*/Clubs[i++]=({name: "Woodson Buddies", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Woodson Buddies
 //*0*/Clubs[i++]=({name: "Young Hearts", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Hearts
 //*0*/Clubs[i++]=({name: "Young Republicans", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Republicans
->>>>>>> origin/master
+
 //Extra Clubs and thingys
 var Stupid=new Array();
 i=0;
