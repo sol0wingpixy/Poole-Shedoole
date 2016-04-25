@@ -197,203 +197,125 @@ function funcy(fileIn){
 		hwTime/=6;
 		for(var x=0;x<15;x++)
 		{
-			var clubName;
-			var sportName;
+			var clubName=["clubName"];
+			var sportName=["sportName"];
 
 			var startHr=16;//HW
 			var startMin=0;
 
-			var startHrC=16;//clubs
-			var startMinC=0;
-			var endHrC=16;
-			var endMinC=0;
-			var doneC=false;
+			var startHrC=[16];//clubs
+			var startMinC=[0];
+			var endHrC=[16];
+			var endMinC=[0];
+			var cDex=0;
 
-			var startHrS=16;//sports
-			var startMinS=0;
-			var endHrS=16;
-			var endMinS=0;
-			var doneS=false;
+			var startHrS=[16];//sports
+			var startMinS=[0];
+			var endHrS=[16];
+			var endMinS=[0];
+			var sDex=0;
 
-			var startHrCon=16;//conflict
-			var startMinCon=0;
-			var endHrCon=16;
-			var endMinCon=0;
+			var startHrCon=[16];//conflict
+			var startMinCon=[0];
+			var endHrCon=[16];
+			var endMinCon=[0];
+			var conDex=0;
 
 			for(i=0;i<fileIn.clubs.length;i++)
 			{
-				for (var xe = 1; xe < 7; xe++) {
-					var day = "";
-					switch (xe) {
-						case 1:
-							day="Mon"
-							break;
-						case 2:
-							day = "Tue";
-							break;
-						case 3:
-							day = "Wed";
-							break;
-						case 4:
-							day = "Thu";
-							break;
-						case 5:
-							day = "Fri";
-							break;
-						default:
-							day = "Sat";
-							break;
-					}
-					if ((x == xe || (x == (xe + 7) && !fileIn.clubs[i].weekly)) && fileIn.clubs[i].day.indexOf(day) != -1) {
-						if (doneC) {
-							startHrCon = Math.max(startHrC, fileIn.clubs[i].hourStart);
-							startMinCon = Math.max(startMinC, fileIn.clubs[i].minStart);
-							endHrCon = Math.min(endHrC, fileIn.clubs[i].hourEnd);
-							endMinCon = Math.min(endMinC, fileIn.clubs[i].minEnd);
-							if (startHrCon > endHrCon || (startHrCon == endHrCon && startMinCon >= endMinCon)) {
-								doneC = true;
-								clubName = fileIn.clubs[i].name;
-								startHr = fileIn.clubs[i].hourEnd + 1;
+				var xe=x%7;
+				var day = "";
+				switch (xe) {
+					case 1:
+						day="Mon";
+						break;
+					case 2:
+						day = "Tue";
+						break;
+					case 3:
+						day = "Wed";
+						break;
+					case 4:
+						day = "Thu";
+						break;
+					case 5:
+						day = "Fri";
+						break;
+					case 6:
+						day = "Sat";
+						break;
+					default:
+						break;
+				}
+				if ((x == xe || (x == (xe + 7) && !fileIn.clubs[i].weekly)) && fileIn.clubs[i].day.indexOf(day) != -1) {
+					if (cDex>0) {
+						startHrCon[conDex] = Math.max(startHrC, fileIn.clubs[i].hourStart);
+						startMinCon[conDex] = Math.max(startMinC, fileIn.clubs[i].minStart);
+						endHrCon = Math.min(endHrC, fileIn.clubs[i].hourEnd);
+						endMinCon = Math.min(endMinC, fileIn.clubs[i].minEnd);
+						if (startHrCon > endHrCon || (startHrCon == endHrCon && startMinCon >= endMinCon)) {
+							clubName[cDex] = fileIn.clubs[i].name;
+							startHr = Math.max(fileIn.clubs[i].hourEnd + 1,startHr);
+							if(startHr==fileIn.clubs[i].hourEnd + 1)
 								startMin = fileIn.clubs[i].minEnd;
-								startHrC = fileIn.clubs[i].hourStart;
-								startMinC = fileIn.clubs[i].minStart;
-								endHrC = fileIn.clubs[i].hourEnd;
-								endMinC = fileIn.clubs[i].minEnd;
-							}
+							startHrC[cDex] = fileIn.clubs[i].hourStart;
+							startMinC[cDex] = fileIn.clubs[i].minStart;
+							endHrC[cDex] = fileIn.clubs[i].hourEnd;
+							endMinC[cDex] = fileIn.clubs[i].minEnd;
+							cDex++;
 						}
-						else {
-							doneC = true;
-							clubName = fileIn.clubs[i].name;
-							startHr = fileIn.clubs[i].hourEnd + 1;
-							startMin = fileIn.clubs[i].minEnd;
-							startHrC = fileIn.clubs[i].hourStart;
-							startMinC = fileIn.clubs[i].minStart;
-							endHrC = fileIn.clubs[i].hourEnd;
-							endMinC = fileIn.clubs[i].minEnd;
+						else
+						{
+							conDex++;
 						}
+					}
+					else {
+						clubName[cDex] = fileIn.clubs[i].name;
+						startHr[cDex] = fileIn.clubs[i].hourEnd + 1;
+						startMin[cDex] = fileIn.clubs[i].minEnd;
+						startHrC[cDex] = fileIn.clubs[i].hourStart;
+						startMinC[cDex] = fileIn.clubs[i].minStart;
+						endHrC[cDex] = fileIn.clubs[i].hourEnd;
+						endMinC[cDex] = fileIn.clubs[i].minEnd;
+						cDex++;
 					}
 				}
 			}
-			for(var i=0;i<fileIn.sports.length;i++)
-			{
-				if((x==1||x==8)&&fileIn.sports[i].hourEnd[0]>0)//monday
+			for(var i=0;i<fileIn.sports.length;i++) {
+				for (xe = 0; xe < 7; xe++)
 				{
-					if(doneS)
+					if ((x == (xe+1) || x == (xe+8)) && fileIn.sports[i].hourEnd[xe] > 0)//monday
 					{
-						startHrCon=Math.max(startHrS,fileIn.sports[i].hourStart[0]);
-						startMinCon=Math.max(startMinS,fileIn.sports[i].minStart[0]);
-						endHrCon=Math.min(endHrS,fileIn.sports[i].hourEnd[0]);
-						endMinCon=Math.min(endMinS,fileIn.sports[i].minEnd[0]);
-					}
-					else {
-						doneS=true;
-						sportName=fileIn.sports[i].name;
-						startHr=fileIn.sports[i].hourEnd[0]+1;
-						startMin=fileIn.sports[i].minEnd[0];
-						startHrS=fileIn.sports[i].hourStart[0];
-						startMinS=fileIn.sports[i].minStart[0];
-						endHrS=fileIn.sports[i].hourEnd[0];
-						endMinS=fileIn.sports[i].minEnd[0];
-					}
-				}
-				if((x==2||x==9)&&fileIn.sports[i].hourEnd[1]>0)//tuesday
-				{
-					if(doneS)
-					{
-						startHrCon=Math.max(startHrS,fileIn.sports[i].hourStart[1]);
-						startMinCon=Math.max(startMinS,fileIn.sports[i].minStart[1]);
-						endHrCon=Math.min(endHrS,fileIn.sports[i].hourEnd[1]);
-						endMinCon=Math.min(endMinS,fileIn.sports[i].minEnd[1]);
-					}
-					else {
-						doneS=true;
-						sportName=fileIn.sports[i].name;
-						startHr=fileIn.sports[i].hourEnd[1]+1;
-						startMin=fileIn.sports[i].minEnd[1];
-						startHrS=fileIn.sports[i].hourStart[1];
-						startMinS=fileIn.sports[i].minStart[1];
-						endHrS=fileIn.sports[i].hourEnd[1];
-						endMinS=fileIn.sports[i].minEnd[1];
-					}
-				}
-				if((x==3||x==10)&&fileIn.sports[i].hourEnd[2]>0)//wednesday
-				{
-					if(doneS)
-					{
-						startHrCon=Math.max(startHrS,fileIn.sports[i].hourStart[2]);
-						startMinCon=Math.max(startMinS,fileIn.sports[i].minStart[2]);
-						endHrCon=Math.min(endHrS,fileIn.sports[i].hourEnd[2]);
-						endMinCon=Math.min(endMinS,fileIn.sports[i].minEnd[2]);
-					}
-					else {
-						doneS=true;
-						sportName=fileIn.sports[i].name;
-						startHr=fileIn.sports[i].hourEnd[2]+1;
-						startMin=fileIn.sports[i].minEnd[2];
-						startHrS=fileIn.sports[i].hourStart[2];
-						startMinS=fileIn.sports[i].minStart[2];
-						endHrS=fileIn.sports[i].hourEnd[2];
-						endMinS=fileIn.sports[i].minEnd[2];
-					}
-				}
-				if((x==4||x==11)&&fileIn.sports[i].hourEnd[3]>0)//thursday
-				{
-					if(doneS)
-					{
-						startHrCon=Math.max(startHrS,fileIn.sports[i].hourStart[3]);
-						startMinCon=Math.max(startMinS,fileIn.sports[i].minStart[3]);
-						endHrCon=Math.min(endHrS,fileIn.sports[i].hourEnd[3]);
-						endMinCon=Math.min(endMinS,fileIn.sports[i].minEnd[3]);
-					}
-					else {
-						doneS=true;
-						sportName=fileIn.sports[i].name;
-						startHr=fileIn.sports[i].hourEnd[3]+1;
-						startMin=fileIn.sports[i].minEnd[3];
-						startHrS=fileIn.sports[i].hourStart[3];
-						startMinS=fileIn.sports[i].minStart[3];
-						endHrS=fileIn.sports[i].hourEnd[3];
-						endMinS=fileIn.sports[i].minEnd[3];
-					}
-				}
-				if((x==5||x==12)&&fileIn.sports[i].hourEnd[4]>0)//friday
-				{
-					if(doneS)
-					{
-						startHrCon=Math.max(startHrS,fileIn.sports[i].hourStart[4]);
-						startMinCon=Math.max(startMinS,fileIn.sports[i].minStart[4]);
-						endHrCon=Math.min(endHrS,fileIn.sports[i].hourEnd[4]);
-						endMinCon=Math.min(endMinS,fileIn.sports[i].minEnd[4]);
-					}
-					else {
-						doneS=true;
-						sportName=fileIn.sports[i].name;
-						startHr=fileIn.sports[i].hourEnd[4]+1;
-						startMin=fileIn.sports[i].minEnd[4];
-						startHrS=fileIn.sports[i].hourStart[4];
-						startMinS=fileIn.sports[i].minStart[4];
-						endHrS=fileIn.sports[i].hourEnd[4];
-						endMinS=fileIn.sports[i].minEnd[4];
-					}
-				}
-				if((x==6||x==13)&&fileIn.sports[i].hourEnd[5]>0)//saturday
-				{
-					if(doneS)
-					{
-						startHrCon=Math.max(startHrS,fileIn.sports[i].hourStart[5]);
-						startMinCon=Math.max(startMinS,fileIn.sports[i].minStart[5]);
-						endHrCon=Math.min(endHrS,fileIn.sports[i].hourEnd[5]);
-						endMinCon=Math.min(endMinS,fileIn.sports[i].minEnd[5]);
-					}
-					else {
-						doneS=true;
-						sportName=fileIn.sports[i].name;
-						startHr=fileIn.sports[i].hourEnd[5]+1;
-						startMin=fileIn.sports[i].minEnd[5];
-						startHrS=fileIn.sports[i].hourStart[5];
-						startMinS=fileIn.sports[i].minStart[5];
-						endHrS=fileIn.sports[i].hourEnd[5];
-						endMinS=fileIn.sports[i].minEnd[5];
+						if (sDex > 0) {
+							startHrCon[conDex] = Math.max(startHrC, fileIn.sports[i].hourStart[xe]);
+							startMinCon[conDex] = Math.max(startMinC, fileIn.sports[i].minStart[xe]);
+							endHrCon[conDex] = Math.min(endHrC, fileIn.sports[i].hourEnd[xe]);
+							endMinCon[conDex] = Math.min(endMinC, fileIn.sports[i].minEnd[xe]);
+							if (startHrCon > endHrCon || (startHrCon == endHrCon && startMinCon >= endMinCon)) {
+								sportName[sDex] = fileIn.sports[i].name;
+								startHr = Math.max(fileIn.sports[i].hourEnd[xe] + 1, startHr);
+								if (startHr == fileIn.sports[i].hourEnd[xe] + 1)
+									startMin = fileIn.sports[i].minEnd[xe];
+								startHrS[sDex] = fileIn.sports[i].hourStart[xe];
+								startMinS[sDex] = fileIn.sports[i].minStart[xe];
+								endHrS[sDex] = fileIn.sports[i].hourEnd[xe];
+								endMinS[sDex] = fileIn.sports[i].minEnd[xe];
+								sDex++;
+							}
+							else {
+								conDex++;
+							}
+						}
+						else {
+							sportName[sDex] = fileIn.sports[i].name;
+							startHr = fileIn.sports[i].hourEnd[xe] + 1;
+							startMin = fileIn.sports[i].minEnd[xe];
+							startHrS[sDex] = fileIn.sports[i].hourStart[xe];
+							startMinS[sDex] = fileIn.sports[i].minStart[xe];
+							endHrS[sDex] = fileIn.sports[i].hourEnd[xe];
+							endMinS[sDex] = fileIn.sports[i].minEnd[xe];
+							sDex++;
+						}
 					}
 				}
 			}
@@ -470,43 +392,44 @@ function funcy(fileIn){
 						}
 					}
 				}
-				if(hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))
+				for(var k=0;k<cDex;k++) //go through all clubz
 				{
-					if(!(hour==startHrC&&(min)<=startMinC)&&!(hour==endHrC&&(min)>endMinC))
-					{
-						colour[x][y]='#00ff00';//Clubs
-						if(!printed[1])
-						{
-							content = clubName;
-							printed[1] = true;
-						}
-					}
-				}
-				if(hour>=startHrS&&hour<=endHrS&&((x>0&&x<7)||(x>7&&x<14)))
-				{
-					if(!(hour==startHrS&&min<=startMinS)&&!(hour==endHrS&&min>endMinS))
-					{
-						if((hour>=startHrC&&hour<=endHrC&&((x>0&&x<6)||(x>7&&x<13)))&&!(hour == startHrC && (min) <= startMinC) && !(hour == endHrC && (min) > endMinC))
-						{
-							colour[x][y]='#ff0000';//Conflict!
-							content="Confict!!";
-						}
-						else {
-							colour[x][y]='#ffff00';//Sports
-							if(!printed[2])
-							{
-								content = sportName;
-								printed[2] = true;
+					if (hour >= startHrC[k] && hour <= endHrC[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) {
+						if (!(hour == startHrC[k] && (min) <= startMinC[k]) && !(hour == endHrC[k] && (min) > endMinC[k])) {
+							colour[x][y] = '#00ff00';//Clubs
+							if (!printed[1]) {
+								content = clubName[k];
+								printed[1] = true;
 							}
 						}
 					}
 				}
-				if(hour>=startHrCon&&hour<=endHrCon&&((x>0&&x<6)||(x>7&&x<13)))
+				for(k=0;k<sDex;k++) //go through all clubz
 				{
-					if(!(hour==startHrCon&&(min)<=startMinCon)&&!(hour==endHrCon&&(min)>endMinCon))
+					if (hour >= startHrS[k] && hour <= endHrS[k] && ((x > 0 && x < 7) || (x > 7 && x < 14)))
 					{
-						colour[x][y]='#ff0000';//Conflict!
-						content="Confict!!";
+						if (!(hour == startHrS[k] && min <= startMinS[k]) && !(hour == endHrS[k] && min > endMinS[k])) {
+							if ((hour >= startHrC[k] && hour <= endHrC[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) && !(hour == startHrC[k] && (min) <= startMinC[k]) && !(hour == endHrC[k] && (min) > endMinC[k])) {
+								colour[x][y] = '#ff0000';//Conflict!
+								content = "Confict!!";
+							}
+							else {
+								colour[x][y] = '#ffff00';//Sports
+								if (!printed[2]) {
+									content = sportName[k];
+									printed[2] = true;
+								}
+							}
+						}
+					}
+				}
+				for(k=0;k<sDex;k++) //go through all conflictz
+				{
+					if (hour >= startHrCon[k] && hour <= endHrCon[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) {
+						if (!(hour == startHrCon[k]&& (min) <= startMinCon[k]) && !(hour == endHrCon[k] && (min) > endMinCon[k])) {
+							colour[x][y] = '#ff0000';//Conflict!
+							content = "Confict!!";
+						}
 					}
 				}
 				ctx.fillStyle=colour[x][y];
