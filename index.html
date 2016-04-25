@@ -193,19 +193,28 @@
 				<table id= "hiddenDropdown-sports" class="dropdown-content" align="center">
 					<tr>
 						<td>
-							<form  id = "fall">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownFall')" ><h4>Fall</h4></div>
+							<div id= "hiddenDropdownFall" class = "dropdownContent" >
+								<form  id = "fall">
 
-							</form>
+								</form>
+							</div>
 						</td>
 						<td>
-							<form  id = "winter">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownWinter')" ><h4>Winter</h4></div>
+							<div id= "hiddenDropdownWinter" class = "dropdownContent" >
+								<form  id = "winter">
 
-							</form>
+								</form>
+							</div>
 						</td>
 						<td>
-							<form  id = "spring">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownSpring')" ><h4>Spring</h4></div>
+							<div id= "hiddenDropdownSpring" class = "dropdownContent" >
+								<form  id = "spring">
 
-							</form>
+								</form>
+							</div>
 						</td>
 					</tr>
 				</table>
@@ -220,36 +229,54 @@
 				<table id= "hiddenDropdown-clubs" class="dropdown-content" align="center">
 					<tr>
 						<td>
-							<form  id = "academic">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownAcademic')" ><h4>Academic</h4></div>
+							<div id= "hiddenDropdownAcademic" class = "dropdownContent">
+								<form  id = "academic">
 
-							</form>
+								</form>
+							</div>
 						</td>
 						<td>
-							<form  id = "art">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownArt')" ><h4>Arts and Literature</h4></div>
+							<div id= "hiddenDropdownArt" class = "dropdownContent" >
+								<form  id = "art">
 
-							</form>
+								</form>
+							</div>
 						</td>
 						<td>
-							<form  id = "humanities">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownVolunteer')" ><h4>Volunteer</h4></div>
+							<div id= "hiddenDropdownVolunteer" class = "dropdownContent" >
+								<form  id = "volunteer">
 
-							</form>
+								</form>
+							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<form  id = "languages">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownLanguages')" ><h4>Languages</h4></div>
+							<div id= "hiddenDropdownLanguages" class = "dropdownContent" >
+								<form  id = "languages">
 
-							</form>
+								</form>
+							</div>
 						</td>
 						<td>
-							<form  id = "sports_clubs">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownSports')" ><h4>Athletic</h4></div>
+							<div id= "hiddenDropdownSports" class = "dropdownContent" >
+								<form  id = "sports_clubs">
 
-							</form>
+								</form>
+							</div>
 						</td>
 						<td>
-							<form  id = "other">
+							<div class="sectionHead" onclick="hideClassFunction(); chooseClassFunction('hiddenDropdownOther')" ><h4>Other</h4></div>
+							<div id= "hiddenDropdownOther" class = "dropdownContent" >
+								<form  id = "other">
 
-							</form>
+								</form>
+							</div>
 						</td>
 					</tr>
 				</table>
@@ -341,14 +368,16 @@
 						
 					var e = document.createElement("label");
 					e.setAttribute("class", "text"); 
+					e.title = Classes[i].description;
 					e.innerHTML = Classes[i].name + "<br>";
+					
 					container.appendChild(e);
 					}
 					
 				}
 				
 				for(var i=0; i<Clubs.length; i++){
-					container = document.getElementById("humanities");
+					container = document.getElementById("volunteer");
 						
 					if(Clubs[i].header == "academic"){
 						container = document.getElementById("academic");
@@ -360,7 +389,7 @@
 					if(Clubs[i].header == "languages"){
 						container = document.getElementById("languages");
 					}
-					if(Clubs[i].header == "sports_clubs"){
+					if(Clubs[i].header == "sports"){
 						container = document.getElementById("sports_clubs");
 					}
 					if(Clubs[i].header == "other"){
@@ -377,6 +406,7 @@
 						
 						var e = document.createElement("label");
 						e.setAttribute("class", "text"); 
+						e.title = Clubs[i].description;
 						e.innerHTML = Clubs[i].name + "<br>";
 						container.appendChild(e);
 					}
@@ -403,6 +433,7 @@
                         
                         var e = document.createElement("label");
                         e.setAttribute("class", "text"); 
+						e.title = Sports[i].description;
                         e.innerHTML = Sports[i].name + "<br>";
                         container.appendChild(e);
 					}
