@@ -739,34 +739,34 @@ Classes.push({header: "Family & Consumer Sciences", name:"Gourmet & Internationa
 //**SPORTS**
 /*MILITARY TIME*/
 var Sports = new Array();//Databse for all available sports name, hourStart, minStart, time
-Sports.push({name: "Baseball", hourStart: [15, 16, 15, 15, 16, 9, 0], minStart: [ 30, 30, 30, 30, 30, 0, 0], hourEnd: [18, 21, 18, 18, 21, 11, 0], minEnd: [0, 0, 0, 0, 0, 30, 0]});//Baseball
-Sports.push({name: "Basketball (Boys)", hourStart: [15, 15, 15, 15, 15, 8, 0], minStart: [30, 15, 30, 30, 15, 0, 0], hourEnd: [17, 18, 17, 17, 18, 10, 0], minEnd: [30, 15, 30, 30, 15, 0, 0]});//Basketball (Boys)
-Sports.push({name: "Basketball (Girls)", hourStart: [17, 15, 17, 17, 15, 8, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [19, 17, 19, 19, 17, 10, 0], minEnd: [30, 30, 30, 30, 30, 0, 0]});//Basketball (Girls)
-//Sports.push({name: "Cheerleading", hourStart: [0,0,0,0,0,0,3], minStart: [0,0,0,0,0,0,3], hourEnd: [0,0,0,0,0,0,3], minEnd: [0,0,0,0,0,0,3]});//Cheerleading
-Sports.push({name: "Cross Country", hourStart: [15, 15, 15, 15, 15, 8, 0], minStart: [20, 20, 30, 20, 20, 0, 0], hourEnd: [17, 17, 19, 17, 17, 14, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Cross Country
-//Sports.push({name: "Crew", hourStart: [0,0,0,0,0,0,5], minStart: [0,0,0,0,0,0,6], hourEnd: [0,0,0,0,0,0,5], minEnd: [0,0,0,0,0,0,5]});//Crew
-Sports.push({name: "Field Hockey", hourStart: [19, 19, 18, 15, 18, 0, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [21, 21, 21, 17, 21, 0, 0], minEnd: [0, 0, 30, 30, 30, 0, 0]});//Field Hockey
-Sports.push({name: "Varsity Football", hourStart: [16, 16, 16, 16, 15, 9, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 18, 18, 17, 22, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Varsity Football
-Sports.push({name: "JV Football", hourStart: [16, 16, 16, 17, 15, 9, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [18, 18, 18, 19, 17, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Swim/Dive
-//Sports.push({name: "Swim/Dive", hourStart: [0,0,0,0,0,0,9], minStart: [0,0,0,0,0,0,9], hourEnd: [0,0,0,0,0,0,9], minEnd: [0,0,0,0,0,0,9]});//Golf (Boys)
-//Sports.push({name: "Golf (Boys)", hourStart: [0,0,0,0,0,0,10], minStart: [0,0,0,0,0,0,10], hourEnd: [0,0,0,0,0,0,10], minEnd: [0,0,0,0,0,0,10]});//Golf (Girls)
-//Sports.push({name: "Golf (Girls)", hourStart: [0,0,0,0,0,0,11], minStart: [0,0,0,0,0,0,11], hourEnd: [0,0,0,0,0,0,11], minEnd: [0,0,0,0,0,0,11]});//Gymnastics
-//Sports.push({name: "Gymnastics", hourStart: [0,0,0,0,0,0,12], minStart: [0,0,0,0,0,0,12], hourEnd: [0,0,0,0,0,0,12], minEnd: [0,0,0,0,0,0,12]});//Indoor Track
-//Sports.push({name: "Indoor Track", hourStart: [0,0,0,0,0,0,13], minStart: [0,0,0,0,0,0,13], hourEnd: [0,0,0,0,0,0,13], minEnd: [0,0,0,0,0,0,13]});//Lacrosse (Boys)
-Sports.push({name: "Lacrosse (Boys)", hourStart: [16, 19, 16, 19, 16, 8, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 21, 18, 21, 18, 10, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Lacrosse (Girls)
-//Sports.push({name: "Lacrosse (Girls)", hourStart: [0,0,0,0,0,0,15], minStart: [0,0,0,0,0,0,15], hourEnd: [0,0,0,0,0,0,15], minEnd: [0,0,0,0,0,0,15]});//Outdoor Track
-Sports.push({name: "Outdoor Track", hourStart: [15, 15, 15, 15, 15, 9, 0], minStart: [15, 15, 15, 15, 15, 0, 0], hourEnd: [17, 17, 17, 17, 17, 17, 0], minEnd: [30, 30, 30, 30, 30, 0, 0]});//Precisionettes
-Sports.push({name: "Precisionettes", hourStart: [15, 16, 0, 15, 0, 0, 0], minStart: [30, 30, 0, 30, 0, 0, 0], hourEnd: [18, 19, 0, 18, 0, 0, 0], minEnd: [0, 30, 0, 0, 0, 0, 0]});//Rifle
-Sports.push({name: "Rifle", hourStart: [0, 0, 0, 17, 0, 0, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [0, 0, 0, 21, 0, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Soccer (Boys)
-//Sports.push({name: "Soccer (Boys)", hourStart: [0,0,0,0,0,0,19], minStart: [0,0,0,0,0,0,19], hourEnd: [0,0,0,0,0,0,19], minEnd: [0,0,0,0,0,0,19]});//Soccer (Girls)
-//Sports.push({name: "Soccer (Girls)", hourStart: [0,0,0,0,0,0,20], minStart: [0,0,0,0,0,0,20], hourEnd: [0,0,0,0,0,0,20], minEnd: [0,0,0,0,0,0,20]});//Softball
-Sports.push({name: "Softball", hourStart: [15, 16, 15, 15, 16, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [18, 21, 18, 18, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Swim/Dive
-//Sports.push({name: "Swim/Dive", hourStart: [0,0,0,0,0,0,22], minStart: [0,0,0,0,0,0,22], hourEnd: [0,0,0,0,0,0,22], minEnd: [0,0,0,0,0,0,22]});//Tennis (Boys)
-Sports.push({name: "Tennis (Boys)", hourStart: [16, 15, 16, 15, 16, 0, 0], minStart: [0, 30, 0, 30, 0, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [15, 45, 15, 45, 15, 0, 0]});//Tennis (Girls)
-Sports.push({name: "Tennis (Girls)", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [0, 45, 0, 45, 0, 0, 0]});//Volleyball
-Sports.push({name: "Volleyball", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [21, 21, 21, 21, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Varsity Wrestling
-//Sports.push({name: "Varsity Wrestling", hourStart: [0,0,0,0,0,0,26], minStart: [0,0,0,0,0,0,26], hourEnd: [0,0,0,0,0,0,26], minEnd: [0,0,0,0,0,0,26]});//Varsity Wrestling
-//Sports.push({name: "JV Wrestling", hourStart: [0,0,0,0,0,0,27], minStart: [0,0,0,0,0,0,27], hourEnd: [0,0,0,0,0,0,27], minEnd: [0,0,0,0,0,0,27]});//JV Wrestling
+Sports.push({header: "spring", name: "Baseball", hourStart: [15, 16, 15, 15, 16, 9, 0], minStart: [ 30, 30, 30, 30, 30, 0, 0], hourEnd: [18, 21, 18, 18, 21, 11, 0], minEnd: [0, 0, 0, 0, 0, 30, 0]});//Baseball
+Sports.push({header: "winter", name: "Basketball (Boys)", hourStart: [15, 15, 15, 15, 15, 8, 0], minStart: [30, 15, 30, 30, 15, 0, 0], hourEnd: [17, 18, 17, 17, 18, 10, 0], minEnd: [30, 15, 30, 30, 15, 0, 0]});//Basketball (Boys)
+Sports.push({header: "winter", name: "Basketball (Girls)", hourStart: [17, 15, 17, 17, 15, 8, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [19, 17, 19, 19, 17, 10, 0], minEnd: [30, 30, 30, 30, 30, 0, 0]});//Basketball (Girls)
+//Sports.push({header: "fall", name: "Cheerleading", hourStart: [0,0,0,0,0,0,3], minStart: [0,0,0,0,0,0,3], hourEnd: [0,0,0,0,0,0,3], minEnd: [0,0,0,0,0,0,3]});//Cheerleading
+Sports.push({header: "fall", name: "Cross Country", hourStart: [15, 15, 15, 15, 15, 8, 0], minStart: [20, 20, 30, 20, 20, 0, 0], hourEnd: [17, 17, 19, 17, 17, 14, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Cross Country
+//Sports.push({header: "spring", name: "Crew", hourStart: [0,0,0,0,0,0,5], minStart: [0,0,0,0,0,0,6], hourEnd: [0,0,0,0,0,0,5], minEnd: [0,0,0,0,0,0,5]});//Crew
+Sports.push({header: "fall", name: "Field Hockey", hourStart: [19, 19, 18, 15, 18, 0, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [21, 21, 21, 17, 21, 0, 0], minEnd: [0, 0, 30, 30, 30, 0, 0]});//Field Hockey
+Sports.push({header: "fall", name: "Varsity Football", hourStart: [16, 16, 16, 16, 15, 9, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 18, 18, 17, 22, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Varsity Football
+Sports.push({header: "fall", name: "JV Football", hourStart: [16, 16, 16, 17, 15, 9, 0], minStart: [0, 0, 0, 30, 0, 0, 0], hourEnd: [18, 18, 18, 19, 17, 11, 0], minEnd: [30, 30, 30, 30, 0, 0, 0]});//Swim/Dive
+////Sports.push({header: "winter", name: "Swim/Dive", hourStart: [0,0,0,0,0,0,9], minStart: [0,0,0,0,0,0,9], hourEnd: [0,0,0,0,0,0,9], minEnd: [0,0,0,0,0,0,9]});//Golf (Boys)
+////Sports.push({header: "fall", name: "Golf (Boys)", hourStart: [0,0,0,0,0,0,10], minStart: [0,0,0,0,0,0,10], hourEnd: [0,0,0,0,0,0,10], minEnd: [0,0,0,0,0,0,10]});//Golf (Girls)
+////Sports.push({header: "fall", name: "Golf (Girls)", hourStart: [0,0,0,0,0,0,11], minStart: [0,0,0,0,0,0,11], hourEnd: [0,0,0,0,0,0,11], minEnd: [0,0,0,0,0,0,11]});//Gymnastics
+////Sports.push({header: "winter", name: "Gymnastics", hourStart: [0,0,0,0,0,0,12], minStart: [0,0,0,0,0,0,12], hourEnd: [0,0,0,0,0,0,12], minEnd: [0,0,0,0,0,0,12]});//Indoor Track
+////Sports.push({header: "winter", name: "Indoor Track", hourStart: [0,0,0,0,0,0,13], minStart: [0,0,0,0,0,0,13], hourEnd: [0,0,0,0,0,0,13], minEnd: [0,0,0,0,0,0,13]});//Lacrosse (Boys)
+Sports.push({header: "spring", name: "Lacrosse (Boys)", hourStart: [16, 19, 16, 19, 16, 8, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [18, 21, 18, 21, 18, 10, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Lacrosse (Girls)
+//Sports.push({header: "spring", name: "Lacrosse (Girls)", hourStart: [0,0,0,0,0,0,15], minStart: [0,0,0,0,0,0,15], hourEnd: [0,0,0,0,0,0,15], minEnd: [0,0,0,0,0,0,15]});//Outdoor Track
+Sports.push({header: "spring", name: "Outdoor Track", hourStart: [15, 15, 15, 15, 15, 9, 0], minStart: [15, 15, 15, 15, 15, 0, 0], hourEnd: [17, 17, 17, 17, 17, 17, 0], minEnd: [30, 30, 30, 30, 30, 0, 0]});//Precisionettes
+Sports.push({header: "spring", name: "Precisionettes", hourStart: [15, 16, 0, 15, 0, 0, 0], minStart: [30, 30, 0, 30, 0, 0, 0], hourEnd: [18, 19, 0, 18, 0, 0, 0], minEnd: [0, 30, 0, 0, 0, 0, 0]});//Rifle
+Sports.push({header: "winter", name: "Rifle", hourStart: [0, 0, 0, 17, 0, 0, 0], minStart: [0, 0, 0, 0, 0, 0, 0], hourEnd: [0, 0, 0, 21, 0, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Soccer (Boys)
+//Sports.push({header: "spring", name: "Soccer (Boys)", hourStart: [0,0,0,0,0,0,19], minStart: [0,0,0,0,0,0,19], hourEnd: [0,0,0,0,0,0,19], minEnd: [0,0,0,0,0,0,19]});//Soccer (Girls)
+//Sports.push({header: "spring", name: "Soccer (Girls)", hourStart: [0,0,0,0,0,0,20], minStart: [0,0,0,0,0,0,20], hourEnd: [0,0,0,0,0,0,20], minEnd: [0,0,0,0,0,0,20]});//Softball
+Sports.push({header: "spring", name: "Softball", hourStart: [15, 16, 15, 15, 16, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [18, 21, 18, 18, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Swim/Dive
+//Sports.push({header: "winter", name: "Swim/Dive", hourStart: [0,0,0,0,0,0,22], minStart: [0,0,0,0,0,0,22], hourEnd: [0,0,0,0,0,0,22], minEnd: [0,0,0,0,0,0,22]});//Tennis (Boys)
+Sports.push({header: "spring", name: "Tennis (Boys)", hourStart: [16, 15, 16, 15, 16, 0, 0], minStart: [0, 30, 0, 30, 0, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [15, 45, 15, 45, 15, 0, 0]});//Tennis (Girls)
+Sports.push({header: "spring", name: "Tennis (Girls)", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [17, 18, 17, 18, 17, 0, 0], minEnd: [0, 45, 0, 45, 0, 0, 0]});//Volleyball
+Sports.push({header: "fall", name: "Volleyball", hourStart: [15, 15, 15, 15, 15, 0, 0], minStart: [30, 30, 30, 30, 30, 0, 0], hourEnd: [21, 21, 21, 21, 21, 0, 0], minEnd: [0, 0, 0, 0, 0, 0, 0]});//Varsity Wrestling
+//Sports.push({header: "winter", name: "Varsity Wrestling", hourStart: [0,0,0,0,0,0,26], minStart: [0,0,0,0,0,0,26], hourEnd: [0,0,0,0,0,0,26], minEnd: [0,0,0,0,0,0,26]});//Varsity Wrestling
+//Sports.push({header: "winter", name: "JV Wrestling", hourStart: [0,0,0,0,0,0,27], minStart: [0,0,0,0,0,0,27], hourEnd: [0,0,0,0,0,0,27], minEnd: [0,0,0,0,0,0,27]});//JV Wrestling
 
 //**CLUBS**
 var Clubs = new Array();
