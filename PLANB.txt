@@ -1,0 +1,266 @@
+BACK UP CODE FOR INDEX
+
+	<div class="row">
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>English</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame1">
+				<h4>English</h4>
+
+				<form id="English">
+				</form>
+
+				<br>
+				<br>
+
+				<h4>ESOL</h4>
+				<form id="ESOL"></form>
+
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Math</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame2">
+				<form id="math">
+				</form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Science</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame3">
+				<form id="science">
+				</form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Social Studies</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame4">
+				<form id="social science">
+				</form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Languages</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame5">
+				<form id="World Languages"></form>
+			</div>
+		</div>
+		<div class="columns" class="classList">
+			<div class="colHead">
+				<p>
+				<h3>Fine Arts</h3>
+				</p>
+			</div>
+			<div class="frame" id="frame6">
+
+				<h4>Visual Arts</h4>
+
+				<form id="visual arts">
+				</form>
+
+				<br>
+				<br>
+
+				<h4>Performing Arts</h4>
+				<form id="performing arts">
+				</form>
+			</div>
+		</div>
+		
+
+		
+				
+                    <!--<div class="columns" class="classList">
+						<div class="colHead">
+							<p>
+								<h3>English</h3>
+							</p>
+                        </div>  
+						<div class="frame" id="frame1">
+								<h4>English</h4>
+	
+								<form id="English">
+								</form>
+	
+								<br>
+								<br>
+	
+								<h4>ESOL</h4>
+								<form id="ESOL"></form>
+
+						</div>
+                    </div>
+					
+                    <div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h3>Math</h3>
+							</p>
+                        </div>
+						<div class="frame" id="frame2">
+							<form id="math">
+							</form>		
+						</div>
+                    </div>
+                    <div class="columns" class="classList">
+                         <div class="colHead">
+							<p>
+								<h3>Science</h3>
+							</p>
+                        </div>
+						<div class="frame" id="frame3">
+							<form id="science">
+							</form>
+						</div>
+                    </div>
+					<div class="columns" class="classList">
+                         <div class="colHead">
+							<p>
+								<h3>Social Studies</h3>
+							</p>
+                        </div>
+						<div class="frame" id="frame4">
+							<form id="social science">
+							</form>
+						</div>
+                    </div>
+					<div class="columns" class="classList">
+                          <div class="colHead">
+							<p>
+								<h3>Languages</h3>
+							</p>
+                        </div>  
+						<div class="frame" id="frame5">
+							<form id="World Languages"></form>
+						</div>
+                    </div>
+					<div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h3>Fine Arts</h3>
+							</p>
+                        </div>    
+						<div class="frame" id="frame6">
+						
+							<h4>Visual Arts</h4>
+	
+							<form id="visual arts">
+							</form>
+	
+							<br>
+							<br>
+							
+							<h4>Performing Arts</h4>
+							<form id="performing arts">
+							</form>
+						</div>
+					</div>
+					<div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h3>Student Resources</h3>
+							</p>
+                        </div>     
+						<div class="frame" id="frame7">
+							<form id="resources"></form>
+						</div>
+                    </div>
+					<div class="columns" class="classList">
+                        <div class="colHead">
+							<p>
+								<h3>Other Electives</h3>
+							</p>
+                        </div>    
+						<div class="frame" id="frame8">
+							<h4>Health and Physical Education</h4>
+							<form id="health">
+							</form>
+								
+								<br>
+								<br>
+								
+								<h4>Business and Information Technology</h4>
+								<form id="business">
+								</form>
+								
+								<br>
+								<br>
+								
+								<h4>Technology and Engineering</h4>
+								<form id="technology">
+								</form>
+								
+								<br>
+								<br>
+								
+								<h4>Family and Consumer Sciences</h4>
+								<form id="family">
+								</form>
+						</div>
+                    </div>
+					
+                </div>
+		</div>
+		</section>
+
+		<!--<div id="activities" class="sectionHead">
+			<h3> Activities </h3>
+		</div>
+		
+		<div class="container">
+			<div class="columns" class="classList">
+                <div class="colHead">
+                    <p>
+					   <h3>Clubs</h3>
+                    </p>
+                </div>    
+				<div class="frame" id="frame9">
+					<form id="clubs"></form>
+				</div>
+            </div>
+
+            <div class="columns" class="classList">
+                <div class="colHead">
+                    <p>
+                        <h3>Sports</h3>
+                    </p>
+                </div>    
+                <div class="frame" id="frame10">
+                    <form id="sports"></form>
+                </div>
+            </div>
+		</div> -->
+		
+		
+SLEEP SLIDER
+
+<div id="sleepSliders">
+		<ul id="sliders">
+			<li>
+				<input id="tosleep" type="range" min="1140" max="1500" onchange="onSleepChange()" ondrag="onSleepChange()">
+			</li>
+			<li>
+				<input id="towake" type="range" min="340" max="420" onchange="onSleepChange()" ondrag="onSleepChange()">
+			</li>
+		</ul>
+		<p id="sleepdata" style="margin: 8px;">Wake up at: </p>
+	</div>
