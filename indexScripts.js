@@ -715,74 +715,74 @@ Sports[i++]=({header: "fall", name: "Volleyball", hourStart: [15, 15, 15, 15, 15
 var Clubs = new Array();
 /*MILITARY TIME*/
 
-/*1*/Clubs.push({header: "art",name: "Anime Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Anime Club
-//*0*/Clubs.push({header: "academic",name: "Astronomy Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Astronomy Club
-//*0*/Clubs.push({header: "sports", name: "Athletic Training Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Athletic Training Club
-//*0*/Clubs.push({header: "art", name: "Band", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Band
-/*1*/Clubs.push({header: "other",name: "Catholic Club", hourStart: 19, minStart: 30, hourEnd: 20, minEnd: 0, day: "Thu", weekly: true});//Catholic Club
-//*0*/Clubs.push({header: "academic",name: "Cavalcade (Newspaper)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Cavalcade (Newspaper)
-//*0*/Clubs.push({header: "academic",name: "Cavalier (Yearbook)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Cavalier (Yearbook)
-/*1*/Clubs.push({header: "academic",name: "Chess Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Mon", weekly: false});//Chess Club
-//*0*/Clubs.push({header: "art",name: "Chorus", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Chorus
-//*0*/Clubs.push({header: "other",name: "Class of 2016", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2016
-//*0*/Clubs.push({header: "other",name: "Class of 2017", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2017
-//*0*/Clubs.push({header: "other",name: "Class of 2018", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2018
-//*0*/Clubs.push({header: "other",name: "Class of 2019", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2019
-//*0*/Clubs.push({header: "sport",name: "Color Guard", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Color Guard
-/*1*/Clubs.push({header: "academic", name: "Computer Science", hourStart: 16, minStart: 0, hourEnd: 17, minEnd: 0, day: "Thu", weekly: true});//Computer Science
-/*1*/Clubs.push({header: "academic",name: "Deaf Academic Bowl", hourStart: 15, minStart: 10, hourEnd: 17, minEnd: 0, day: "Wed", weekly: true});//Deaf Academic Bowl
-//*0*/Clubs.push({header: "academic", name: "DECA", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//DECA
-//*0*/Clubs.push({header: "academic",name: "DECA Officers", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//DECA Officers
-/*1*/Clubs.push({header: "other",name: "Doctor Who Fan Club", hourStart: 15, minStart: 15, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Doctor Who Fan Club
-/*1*/Clubs.push({header: "academic",name: "Engineering Club/ACE Mentoring", hourStart: 16, minStart: 30, hourEnd: 18, minEnd: 0, day: "Wed", weekly: false});//Engineering Club/ACE Mentoring
-//*0*/Clubs.push({header: "volunteer",name: "Environment Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Environment Club
-//*0*/Clubs.push({header: "other",name: "Family, Career and Community Leaders of America (FCCLA)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Family, Career and Community Leaders of America (FCCLA)
-//*0*/Clubs.push({header: "sports",name: "Fellowship of Christian Athletes", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Fellowship of Christian Athletes
-/*1*/Clubs.push({header: "languages", name: "French Club", hourStart: 15, minStart: 15, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//French Club
-//*0*/Clubs.push({header: "languages", name: "French Honor Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//French Honor Society
-/*1*/Clubs.push({header: "other",name: "Gay-Straight Alliance (GSA)", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Gay-Straight Alliance (GSA)
-/*1*/Clubs.push({header: "languages",name: "German Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//German Club
-/*1*/Clubs.push({header: "languages",name: "German Honor Society", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//German Honor Society
-/*1*/Clubs.push({header: "sports",name: "Go Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Go Club
-//*0*/Clubs.push({header: "volunteer", name: "Habitat for Humanity", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Habitat for Humanity
-/*1*/Clubs.push({header: "art", name: "Hip Hop Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Tue", weekly: true});//Hip Hop Club
-/*1*/Clubs.push({header: "art",name: "Improv Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 15, day: "Tue", weekly: true});//Improv Club
-//*0*/Clubs.push({header: "art",name: "International Thespian Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//International Thespian Society
-/*1*/Clubs.push({header: "academic",name: "IT Girls", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue", weekly: false});//IT Girls
-//*0*/Clubs.push({header: "volunteer",name: "Key Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Key Club
-//*0*/Clubs.push({header: "other", name: "KFC (Kosher Food Club)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//KFC (Kosher Food Club)
-/*1*/Clubs.push({header: "languages",name: "Latin Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Thu", weekly: true});//Latin Club
-/*1*/Clubs.push({header: "languages",name: "Latin Honor Society", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Latin Honor Society
-//*0*/Clubs.push({header: "academic",name: "Leadership", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Leadership
-//*0*/Clubs.push({header: "academic",name: "Math Honor Society  (Mu Alpha Theta)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Math Honor Society  (Mu Alpha Theta)
-/*1*/Clubs.push({header: "academic",name: "Math Team (JV)", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 40, day: "Wed", weekly: false});//Math Team (JV)
-/*1*/Clubs.push({header: "academic",name: "Math Team (Varsity)", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Wed", weekly: false});//Math Team (Varsity)
-/*1*/Clubs.push({header: "academic",name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
-/*1*/Clubs.push({header: "art",name: "National Art Honor Society", hourStart: 15, minStart: 30, hourEnd: 17, minEnd: 0, day: "Mon", weekly: false});//National Art Honor Society
-/*1*/Clubs.push({header: "academic",name: "National English Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Tue", weekly: false});//National English Honor Society
-//*0*/Clubs.push({header: "academic",name: "National Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Thu", weekly: false});//National Honor Society
-/*1*/Clubs.push({header: "volunteer",name: "Operation Patriot", hourStart: 15, minStart: 5, hourEnd: 15, minEnd: 30, day: "Wed", weekly: false});//Operation Patriot
-//*0*/Clubs.push({header: "art",name: "Orchestra", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Orchestra
-//*0*/Clubs.push({header: "art",name: "Page (Literary/Art Magazine)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Page (Literary/Art Magazine)
-/*1*/Clubs.push({header: "art",name: "Photography Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Photography Club
-/*1*/Clubs.push({header: "art",name: "Poetry Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Poetry Club
-//*1*/Clubs.push({header: "volunteer",name: "Relay for Life", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Relay for Life
-/*1*/Clubs.push({header: "academic",name: "Robotics Club", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue, Thu", weekly: true});//Robotics Club
-/*1*/Clubs.push({header: "academic",name: "Scholastic Quiz Bowl /It's Academic", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 50, day: "Tue, Thu", weekly: true});//Scholastic Quiz Bowl /It's Academic
-//*0*/Clubs.push({header: "academic",name: "Science Olympiad", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Science Olympiad
-/*1*/Clubs.push({header: "academic", name: "Science National Honor Society", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Thu", weekly: false});//Science National Honor Society
-/*1*/Clubs.push({header: "academic",name: "Speech, Debate, & Forensics ", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Thu", weekly: true});//Speech, Debate, & Forensics
-/*1*/Clubs.push({header: "languages",name: "Spanish Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Spanish Club
-/*1*/Clubs.push({header: "languages",name: "Spanish National Honor Society", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Spanish National Honor Society
-//*0*/Clubs.push({header: "academic",name: "Student Advisory Council (SAC)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Student Advisory Council (SAC)
-//*0*/Clubs.push({header: "academic",name: "Student Government Association (SGA)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Student Government Association (SGA)
-//*0*/Clubs.push({header: "other", name: "Students Against Destructive Decisions (SADD)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Students Against Destructive Decisions (SADD)
-/*1*/Clubs.push({header: "volunteer",name: "Student 2 Student (Ambassadors) ", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Mon", weekly: false});//Student 2 Student (Ambassadors)
-/*1*/Clubs.push({header: "academic",name: "Technology Student Association (TSA)", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 10, day: "Wed", weekly: false});//Technology Student Association (TSA)
-//*0*/Clubs.push({header: "art",name: "Tri M Music Honor Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Tri M Music Honor Society
-//*0*/Clubs.push({header: "volunteer",name: "Woodson Buddies", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Woodson Buddies
-//*0*/Clubs.push({header: "volunteer",name: "Young Hearts", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Hearts
-//*0*/Clubs.push({header: "other",name: "Young Republicans", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Republicans
+/*1*/Clubs[i++]=({header: "art",name: "Anime Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Anime Club
+//*0*/Clubs[i++]=({header: "academic",name: "Astronomy Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Astronomy Club
+//*0*/Clubs[i++]=({header: "sports", name: "Athletic Training Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Athletic Training Club
+//*0*/Clubs[i++]=({header: "art", name: "Band", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Band
+/*1*/Clubs[i++]=({header: "other",name: "Catholic Club", hourStart: 19, minStart: 30, hourEnd: 20, minEnd: 0, day: "Thu", weekly: true});//Catholic Club
+//*0*/Clubs[i++]=({header: "academic",name: "Cavalcade (Newspaper)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Cavalcade (Newspaper)
+//*0*/Clubs[i++]=({header: "academic",name: "Cavalier (Yearbook)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Cavalier (Yearbook)
+/*1*/Clubs[i++]=({header: "academic",name: "Chess Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Mon", weekly: false});//Chess Club
+//*0*/Clubs[i++]=({header: "art",name: "Chorus", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Chorus
+//*0*/Clubs[i++]=({header: "other",name: "Class of 2016", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2016
+//*0*/Clubs[i++]=({header: "other",name: "Class of 2017", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2017
+//*0*/Clubs[i++]=({header: "other",name: "Class of 2018", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2018
+//*0*/Clubs[i++]=({header: "other",name: "Class of 2019", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Class of 2019
+//*0*/Clubs[i++]=({header: "sport",name: "Color Guard", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Color Guard
+/*1*/Clubs[i++]=({header: "academic", name: "Computer Science", hourStart: 16, minStart: 0, hourEnd: 17, minEnd: 0, day: "Thu", weekly: true});//Computer Science
+/*1*/Clubs[i++]=({header: "academic",name: "Deaf Academic Bowl", hourStart: 15, minStart: 10, hourEnd: 17, minEnd: 0, day: "Wed", weekly: true});//Deaf Academic Bowl
+//*0*/Clubs[i++]=({header: "academic", name: "DECA", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//DECA
+//*0*/Clubs[i++]=({header: "academic",name: "DECA Officers", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//DECA Officers
+/*1*/Clubs[i++]=({header: "other",name: "Doctor Who Fan Club", hourStart: 15, minStart: 15, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Doctor Who Fan Club
+/*1*/Clubs[i++]=({header: "academic",name: "Engineering Club/ACE Mentoring", hourStart: 16, minStart: 30, hourEnd: 18, minEnd: 0, day: "Wed", weekly: false});//Engineering Club/ACE Mentoring
+//*0*/Clubs[i++]=({header: "volunteer",name: "Environment Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Environment Club
+//*0*/Clubs[i++]=({header: "other",name: "Family, Career and Community Leaders of America (FCCLA)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Family, Career and Community Leaders of America (FCCLA)
+//*0*/Clubs[i++]=({header: "sports",name: "Fellowship of Christian Athletes", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Fellowship of Christian Athletes
+/*1*/Clubs[i++]=({header: "languages", name: "French Club", hourStart: 15, minStart: 15, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//French Club
+//*0*/Clubs[i++]=({header: "languages", name: "French Honor Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//French Honor Society
+/*1*/Clubs[i++]=({header: "other",name: "Gay-Straight Alliance (GSA)", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Gay-Straight Alliance (GSA)
+/*1*/Clubs[i++]=({header: "languages",name: "German Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//German Club
+/*1*/Clubs[i++]=({header: "languages",name: "German Honor Society", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//German Honor Society
+/*1*/Clubs[i++]=({header: "sports",name: "Go Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Go Club
+//*0*/Clubs[i++]=({header: "volunteer", name: "Habitat for Humanity", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Habitat for Humanity
+/*1*/Clubs[i++]=({header: "art", name: "Hip Hop Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Tue", weekly: true});//Hip Hop Club
+/*1*/Clubs[i++]=({header: "art",name: "Improv Club", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 15, day: "Tue", weekly: true});//Improv Club
+//*0*/Clubs[i++]=({header: "art",name: "International Thespian Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//International Thespian Society
+/*1*/Clubs[i++]=({header: "academic",name: "IT Girls", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue", weekly: false});//IT Girls
+//*0*/Clubs[i++]=({header: "volunteer",name: "Key Club", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Key Club
+//*0*/Clubs[i++]=({header: "other", name: "KFC (Kosher Food Club)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//KFC (Kosher Food Club)
+/*1*/Clubs[i++]=({header: "languages",name: "Latin Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Thu", weekly: true});//Latin Club
+/*1*/Clubs[i++]=({header: "languages",name: "Latin Honor Society", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Latin Honor Society
+//*0*/Clubs[i++]=({header: "academic",name: "Leadership", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Leadership
+//*0*/Clubs[i++]=({header: "academic",name: "Math Honor Society  (Mu Alpha Theta)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Math Honor Society  (Mu Alpha Theta)
+/*1*/Clubs[i++]=({header: "academic",name: "Math Team (JV)", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 40, day: "Wed", weekly: false});//Math Team (JV)
+/*1*/Clubs[i++]=({header: "academic",name: "Math Team (Varsity)", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Wed", weekly: false});//Math Team (Varsity)
+/*1*/Clubs[i++]=({header: "academic",name: "Model United Nations", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Wed", weekly: true});//Model United Nations
+/*1*/Clubs[i++]=({header: "art",name: "National Art Honor Society", hourStart: 15, minStart: 30, hourEnd: 17, minEnd: 0, day: "Mon", weekly: false});//National Art Honor Society
+/*1*/Clubs[i++]=({header: "academic",name: "National English Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Tue", weekly: false});//National English Honor Society
+//*0*/Clubs[i++]=({header: "academic",name: "National Honor Society", hourStart: 15, minStart: 0, hourEnd: 15, minEnd: 45, day: "Thu", weekly: false});//National Honor Society
+/*1*/Clubs[i++]=({header: "volunteer",name: "Operation Patriot", hourStart: 15, minStart: 5, hourEnd: 15, minEnd: 30, day: "Wed", weekly: false});//Operation Patriot
+//*0*/Clubs[i++]=({header: "art",name: "Orchestra", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Orchestra
+//*0*/Clubs[i++]=({header: "art",name: "Page (Literary/Art Magazine)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Page (Literary/Art Magazine)
+/*1*/Clubs[i++]=({header: "art",name: "Photography Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Photography Club
+/*1*/Clubs[i++]=({header: "art",name: "Poetry Club ", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Mon", weekly: false});//Poetry Club
+//*1*/Clubs[i++]=({header: "volunteer",name: "Relay for Life", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Relay for Life
+/*1*/Clubs[i++]=({header: "academic",name: "Robotics Club", hourStart: 15, minStart: 0, hourEnd: 18, minEnd: 0, day: "Tue, Thu", weekly: true});//Robotics Club
+/*1*/Clubs[i++]=({header: "academic",name: "Scholastic Quiz Bowl /It's Academic", hourStart: 15, minStart: 10, hourEnd: 15, minEnd: 50, day: "Tue, Thu", weekly: true});//Scholastic Quiz Bowl /It's Academic
+//*0*/Clubs[i++]=({header: "academic",name: "Science Olympiad", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Science Olympiad
+/*1*/Clubs[i++]=({header: "academic", name: "Science National Honor Society", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 0, day: "Thu", weekly: false});//Science National Honor Society
+/*1*/Clubs[i++]=({header: "academic",name: "Speech, Debate, & Forensics ", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Thu", weekly: true});//Speech, Debate, & Forensics
+/*1*/Clubs[i++]=({header: "languages",name: "Spanish Club", hourStart: 15, minStart: 0, hourEnd: 16, minEnd: 30, day: "Wed", weekly: false});//Spanish Club
+/*1*/Clubs[i++]=({header: "languages",name: "Spanish National Honor Society", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 0, day: "Wed", weekly: false});//Spanish National Honor Society
+//*0*/Clubs[i++]=({header: "academic",name: "Student Advisory Council (SAC)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Student Advisory Council (SAC)
+//*0*/Clubs[i++]=({header: "academic",name: "Student Government Association (SGA)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Student Government Association (SGA)
+//*0*/Clubs[i++]=({header: "other", name: "Students Against Destructive Decisions (SADD)", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Students Against Destructive Decisions (SADD)
+/*1*/Clubs[i++]=({header: "volunteer",name: "Student 2 Student (Ambassadors) ", hourStart: 15, minStart: 30, hourEnd: 16, minEnd: 30, day: "Mon", weekly: false});//Student 2 Student (Ambassadors)
+/*1*/Clubs[i++]=({header: "academic",name: "Technology Student Association (TSA)", hourStart: 15, minStart: 10, hourEnd: 16, minEnd: 10, day: "Wed", weekly: false});//Technology Student Association (TSA)
+//*0*/Clubs[i++]=({header: "art",name: "Tri M Music Honor Society", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Tri M Music Honor Society
+//*0*/Clubs[i++]=({header: "volunteer",name: "Woodson Buddies", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Woodson Buddies
+//*0*/Clubs[i++]=({header: "volunteer",name: "Young Hearts", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Hearts
+//*0*/Clubs[i++]=({header: "other",name: "Young Republicans", hourStart: 0, minStart: 0, hourEnd: 0, minEnd: 0, day: "", weekly: false});//Young Republicans
 
 i=0;
 //Clubs.insert({name:"String", hourStart:int, minStart:int, time:int, day:"String", weekly:boolean});
