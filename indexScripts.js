@@ -27,7 +27,12 @@ function chooseClassFunction(name){
 var classesIn = sessionStorage.getItem("classes");
 var clubsIn= sessionStorage.getItem("clubs");
 var sportsIn= sessionStorage.getItem("sports");
-
+var season=0;//0=fall 1=winter 2=spring
+function changeSeason()
+{
+	season++;
+	season%=3;
+}
 //called when Generate button clicked
 function checkBoxes(){
 
