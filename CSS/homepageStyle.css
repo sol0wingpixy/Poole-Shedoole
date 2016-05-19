@@ -20,11 +20,11 @@ html
 {
     position:fixed;
     background-color: #2C6AA3;
-    width: 25%;
-    height: 75%;
+    width: 30%;
+    height: 100%;
     left: -2.5em;
     top: 10.5em;
-    padding: 5px;
+    padding: 10px;
 }
 
 section
@@ -60,8 +60,17 @@ p
 {
 	display: table-cell;
 	vertical-align: middle;
-	width: 100%;
+	width: 80%;
 	table-layout: fixed;
+}
+
+#instructions{
+	padding: 20px;
+}
+
+li{
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
 }
 
 #title

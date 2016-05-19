@@ -32,6 +32,8 @@ td{
 	vertical-align: top;
 }
 
+
+
 /*----- DROP DOWN STUFF --------*/
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 /* Dropdown Button */
@@ -274,32 +276,6 @@ li{
 	text-decoration: none;
 }
 
-
-#sliders{
-	display: inline-block;
-	list-style: outside none none;
-	line-height: 50px;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-#sliders li{
-	margin: 0px 0px;
-}
-
-#sliders li input{
-	margin: 0px 0px;
-}
-
-#sleepSliders{
-	width: 60%;
-	margin: 0 auto;
-	padding: 0px;
-	padding-top: 150px;
-	text-align: center;
-	border: 1px solid #aaa;
-}
 
 
 /* Buttons
