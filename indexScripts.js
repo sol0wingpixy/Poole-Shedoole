@@ -276,8 +276,8 @@ function funcy(fileIn){
 					}
 					else {
 						clubName[cDex] = fileIn.clubs[i].name;
-						startHr[cDex] = fileIn.clubs[i].hourEnd + 1;
-						startMin[cDex] = fileIn.clubs[i].minEnd;
+						startHr= fileIn.clubs[i].hourEnd + 1;
+						startMin= fileIn.clubs[i].minEnd;
 						startHrC[cDex] = fileIn.clubs[i].hourStart;
 						startMinC[cDex] = fileIn.clubs[i].minStart;
 						endHrC[cDex] = fileIn.clubs[i].hourEnd;
