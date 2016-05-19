@@ -27,12 +27,8 @@ function chooseClassFunction(name){
 var classesIn = sessionStorage.getItem("classes");
 var clubsIn= sessionStorage.getItem("clubs");
 var sportsIn= sessionStorage.getItem("sports");
-var season=0;//0=fall 1=winter 2=spring
-function changeSeason()
-{
-	season++;
-	season%=3;
-}
+var season="fall";//0=fall 1=winter 2=spring
+
 //called when Generate button clicked
 function checkBoxes(){
 
@@ -185,6 +181,12 @@ function funcy(fileIn){
 		var ctx=canvas.getContext("2d");
 		//resize grid to window
 
+
+		for (var k = 0; k < fileIn.sports.length; k++) {
+			if (season === fileIn.sports[k].header) {
+				fileIn.sports.splice(k,1);
+			}
+		}
 
 		//Draw grid
 
@@ -476,7 +478,17 @@ function funcy(fileIn){
 		createCanvas();
 		drawGrid();
 	}
-
+	function changeSeason()
+	{
+		if(season=="fall")
+			season="winter";
+		else
+		if(season=="winter")
+			season="spring";
+		else
+			season="fall";
+		drawGrid();
+	}
 
 
 	onLoad();
