@@ -363,13 +363,12 @@
 					input.value = Classes[i].name;
 					input.class = "checkbox";
 					input.id = "class";//'id' tells whether sport, club, or class
-					input.appendChild
+					input.appendChild;
 					container.appendChild(input); // put it into the DOM
 						
 					var e = document.createElement("label");
 					e.setAttribute("class", "text"); 
 					e.title = Classes[i].courseDescription;
-					e.title.setAttribute("class", "hoverOver");
 					e.innerHTML = Classes[i].name + "<br>";
 					
 					container.appendChild(e);

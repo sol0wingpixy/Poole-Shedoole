@@ -32,12 +32,6 @@ td{
 	vertical-align: top;
 }
 
-.hoverOver {
-	display: inline-block;
-	width: 100px;
-	font-size: 12px;
-}
-
 /*----- DROP DOWN STUFF --------*/
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 /* Dropdown Button */
