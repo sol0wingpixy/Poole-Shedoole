@@ -87,7 +87,7 @@ function onSleepChange()
 
 //function to move into the schedule grid
 function intoTheShedoole() {
-	var fileIn = {
+	fileIn = {
 		classes: sessionStorage.getItem("classes").split(","),//asign vars to permament stuff
 		sports:  sessionStorage.getItem("sports").split(","),
 		clubs:  sessionStorage.getItem("clubs").split(",")
@@ -128,13 +128,12 @@ function intoTheShedoole() {
 			}
 		}
 	}
-	funcy(fileIn);
+	funcy();
 }
-
-function funcy(fileIn){
+var fileIn;
+function funcy(){
 	//special for MUN
 	var numY=17*4+2;//num hours*number of boxes per hours*hour +2
-
 	colour = new Array(16);//colour stores colors of grid at locations
 	for (var i = 0; i < colour.length; i++)
 	{
@@ -166,333 +165,354 @@ function funcy(fileIn){
 	 }
 	 }
 	 */
-	function createCanvas(){
-		// Declare canvas & properties
-		var canvas  = document.createElement("canvas");
-		// set canvas id and append canvas to body
-		canvas.setAttribute("id","canvas");
-		canvas.setAttribute("style","overflow:auto");
-		document.getElementById("canvas123").appendChild(canvas);
-	};
-	function drawGrid(){
 
-		// Get canvas and set context
-		var c = document.getElementById("canvas");
-		var ctx=canvas.getContext("2d");
-		//resize grid to window
+	onLoad();
 
+}
+function createCanvas(){
+	// Declare canvas & properties
+	var canvas  = document.createElement("canvas");
+	// set canvas id and append canvas to body
+	canvas.setAttribute("id","canvas");
+	canvas.setAttribute("style","overflow:auto");
+	document.getElementById("canvas123").appendChild(canvas);
+};
+function drawGrid(){
+	var numY=17*4+2;//num hours*number of boxes per hours*hour +2
+	// Get canvas and set context
+	var c = document.getElementById("canvas");
+	var ctx=c.getContext("2d");
+	//resize grid to window
 
-		for (var k = 0; k < fileIn.sports.length; k++) {
-			if (season === fileIn.sports[k].header) {
-				fileIn.sports.splice(k,1);
+	var fileIn2=JSON.parse(JSON.stringify(fileIn));
+
+	for (var k = 0; k < fileIn2.sports.length; k++) {
+		if (season != fileIn2.sports[k].header) {
+			fileIn2.sports.splice(k,1);
+			k--;
+		}
+	}
+
+	for (var i = 0; i < colour.length; i++)
+	{
+		for(var k=0;k<colour[0].length;k++)
+		{
+			colour[i][k]="#ffffff";//define colour
+		}
+	}
+	for(var y=0; y<colour[0].length; y++)
+	{
+		colour[0][y]="#bbbbbb";//left column
+	}
+	for(var x=0; x<colour.length; x++)
+	{
+		colour[x][0]="#bbbbbb";//top row
+	}
+	//Draw grid
+
+	var width=100;//c.width/8;
+	var height=17.5;//canvas.height/numY;
+
+	c.width =  1500;//window.innerWidth;
+	c.height = numY*17.5;//window.innerHeight;
+
+	var hwTime=0;
+	for(i=0;i<fileIn2.classes.length;i++)
+	{
+		hwTime+=fileIn2.classes[i].time;//set up proper daily HW time
+	}
+	hwTime/=6;
+	for(var x=0;x<15;x++)
+	{
+		var clubName=["clubName"];
+		var sportName=["sportName"];
+
+		var startHr=16;//HW
+		var startMin=0;
+
+		var startHrC=[16];//clubs
+		var startMinC=[0];
+		var endHrC=[16];
+		var endMinC=[0];
+		var cDex=0;
+
+		var startHrS=[16];//sports
+		var startMinS=[0];
+		var endHrS=[16];
+		var endMinS=[0];
+		var sDex=0;
+
+		var startHrCon=[16];//conflict
+		var startMinCon=[0];
+		var endHrCon=[16];
+		var endMinCon=[0];
+		var conDex=0;
+
+		for(i=0;i<fileIn2.clubs.length;i++)
+		{
+			var xe=x%7;
+			var day = "";
+			switch (xe) {
+				case 1:
+					day="Mon";
+					break;
+				case 2:
+					day = "Tue";
+					break;
+				case 3:
+					day = "Wed";
+					break;
+				case 4:
+					day = "Thu";
+					break;
+				case 5:
+					day = "Fri";
+					break;
+				case 6:
+					day = "Sat";
+					break;
+				default:
+					break;
+			}
+			if ((x == xe || (x == (xe + 7) && !fileIn2.clubs[i].weekly)) && fileIn2.clubs[i].day.indexOf(day) != -1) {
+				if (cDex>0) {
+					startHrCon[conDex] = Math.max(startHrC, fileIn2.clubs[i].hourStart);
+					startMinCon[conDex] = Math.max(startMinC, fileIn2.clubs[i].minStart);
+					endHrCon = Math.min(endHrC, fileIn2.clubs[i].hourEnd);
+					endMinCon = Math.min(endMinC, fileIn2.clubs[i].minEnd);
+					if (startHrCon > endHrCon || (startHrCon == endHrCon && startMinCon >= endMinCon)) {
+						clubName[cDex] = fileIn2.clubs[i].name;
+						startHr = Math.max(fileIn2.clubs[i].hourEnd + 1,startHr);
+						if(startHr==fileIn2.clubs[i].hourEnd + 1)
+							startMin = fileIn2.clubs[i].minEnd;
+						startHrC[cDex] = fileIn2.clubs[i].hourStart;
+						startMinC[cDex] = fileIn2.clubs[i].minStart;
+						endHrC[cDex] = fileIn2.clubs[i].hourEnd;
+						endMinC[cDex] = fileIn2.clubs[i].minEnd;
+						cDex++;
+					}
+					else
+					{
+						conDex++;
+					}
+				}
+				else {
+					clubName[cDex] = fileIn2.clubs[i].name;
+					startHr= fileIn2.clubs[i].hourEnd + 1;
+					startMin= fileIn2.clubs[i].minEnd;
+					startHrC[cDex] = fileIn2.clubs[i].hourStart;
+					startMinC[cDex] = fileIn2.clubs[i].minStart;
+					endHrC[cDex] = fileIn2.clubs[i].hourEnd;
+					endMinC[cDex] = fileIn2.clubs[i].minEnd;
+					cDex++;
+				}
 			}
 		}
-
-		//Draw grid
-
-		var width=100;//c.width/8;
-		var height=17.5;//canvas.height/numY;
-
-		c.width =  1500;//window.innerWidth;
-		c.height = numY*17.5;//window.innerHeight;
-
-		var hwTime=0;
-		for(i=0;i<fileIn.classes.length;i++)
-		{
-			hwTime+=fileIn.classes[i].time;//set up proper daily HW time
-		}
-		hwTime/=6;
-		for(var x=0;x<15;x++)
-		{
-			var clubName=["clubName"];
-			var sportName=["sportName"];
-
-			var startHr=16;//HW
-			var startMin=0;
-
-			var startHrC=[16];//clubs
-			var startMinC=[0];
-			var endHrC=[16];
-			var endMinC=[0];
-			var cDex=0;
-
-			var startHrS=[16];//sports
-			var startMinS=[0];
-			var endHrS=[16];
-			var endMinS=[0];
-			var sDex=0;
-
-			var startHrCon=[16];//conflict
-			var startMinCon=[0];
-			var endHrCon=[16];
-			var endMinCon=[0];
-			var conDex=0;
-
-			for(i=0;i<fileIn.clubs.length;i++)
+		for(var i=0;i<fileIn2.sports.length;i++) {
+			for (xe = 0; xe < 7; xe++)
 			{
-				var xe=x%7;
-				var day = "";
-				switch (xe) {
-					case 1:
-						day="Mon";
-						break;
-					case 2:
-						day = "Tue";
-						break;
-					case 3:
-						day = "Wed";
-						break;
-					case 4:
-						day = "Thu";
-						break;
-					case 5:
-						day = "Fri";
-						break;
-					case 6:
-						day = "Sat";
-						break;
-					default:
-						break;
-				}
-				if ((x == xe || (x == (xe + 7) && !fileIn.clubs[i].weekly)) && fileIn.clubs[i].day.indexOf(day) != -1) {
-					if (cDex>0) {
-						startHrCon[conDex] = Math.max(startHrC, fileIn.clubs[i].hourStart);
-						startMinCon[conDex] = Math.max(startMinC, fileIn.clubs[i].minStart);
-						endHrCon = Math.min(endHrC, fileIn.clubs[i].hourEnd);
-						endMinCon = Math.min(endMinC, fileIn.clubs[i].minEnd);
+				if ((x == (xe+1) || x == (xe+8)) && fileIn2.sports[i].hourEnd[xe] > 0)//monday
+				{
+					if (sDex > 0) {
+						startHrCon[conDex] = Math.max(startHrC, fileIn2.sports[i].hourStart[xe]);
+						startMinCon[conDex] = Math.max(startMinC, fileIn2.sports[i].minStart[xe]);
+						endHrCon[conDex] = Math.min(endHrC, fileIn2.sports[i].hourEnd[xe]);
+						endMinCon[conDex] = Math.min(endMinC, fileIn2.sports[i].minEnd[xe]);
 						if (startHrCon > endHrCon || (startHrCon == endHrCon && startMinCon >= endMinCon)) {
-							clubName[cDex] = fileIn.clubs[i].name;
-							startHr = Math.max(fileIn.clubs[i].hourEnd + 1,startHr);
-							if(startHr==fileIn.clubs[i].hourEnd + 1)
-								startMin = fileIn.clubs[i].minEnd;
-							startHrC[cDex] = fileIn.clubs[i].hourStart;
-							startMinC[cDex] = fileIn.clubs[i].minStart;
-							endHrC[cDex] = fileIn.clubs[i].hourEnd;
-							endMinC[cDex] = fileIn.clubs[i].minEnd;
-							cDex++;
+							sportName[sDex] = fileIn2.sports[i].name;
+							startHr = Math.max(fileIn2.sports[i].hourEnd[xe] + 1, startHr);
+							if (startHr == fileIn2.sports[i].hourEnd[xe] + 1)
+								startMin = fileIn2.sports[i].minEnd[xe];
+							startHrS[sDex] = fileIn2.sports[i].hourStart[xe];
+							startMinS[sDex] = fileIn2.sports[i].minStart[xe];
+							endHrS[sDex] = fileIn2.sports[i].hourEnd[xe];
+							endMinS[sDex] = fileIn2.sports[i].minEnd[xe];
+							sDex++;
 						}
-						else
-						{
+						else {
 							conDex++;
 						}
 					}
 					else {
-						clubName[cDex] = fileIn.clubs[i].name;
-						startHr= fileIn.clubs[i].hourEnd + 1;
-						startMin= fileIn.clubs[i].minEnd;
-						startHrC[cDex] = fileIn.clubs[i].hourStart;
-						startMinC[cDex] = fileIn.clubs[i].minStart;
-						endHrC[cDex] = fileIn.clubs[i].hourEnd;
-						endMinC[cDex] = fileIn.clubs[i].minEnd;
-						cDex++;
-					}
-				}
-			}
-			for(var i=0;i<fileIn.sports.length;i++) {
-				for (xe = 0; xe < 7; xe++)
-				{
-					if ((x == (xe+1) || x == (xe+8)) && fileIn.sports[i].hourEnd[xe] > 0)//monday
-					{
-						if (sDex > 0) {
-							startHrCon[conDex] = Math.max(startHrC, fileIn.sports[i].hourStart[xe]);
-							startMinCon[conDex] = Math.max(startMinC, fileIn.sports[i].minStart[xe]);
-							endHrCon[conDex] = Math.min(endHrC, fileIn.sports[i].hourEnd[xe]);
-							endMinCon[conDex] = Math.min(endMinC, fileIn.sports[i].minEnd[xe]);
-							if (startHrCon > endHrCon || (startHrCon == endHrCon && startMinCon >= endMinCon)) {
-								sportName[sDex] = fileIn.sports[i].name;
-								startHr = Math.max(fileIn.sports[i].hourEnd[xe] + 1, startHr);
-								if (startHr == fileIn.sports[i].hourEnd[xe] + 1)
-									startMin = fileIn.sports[i].minEnd[xe];
-								startHrS[sDex] = fileIn.sports[i].hourStart[xe];
-								startMinS[sDex] = fileIn.sports[i].minStart[xe];
-								endHrS[sDex] = fileIn.sports[i].hourEnd[xe];
-								endMinS[sDex] = fileIn.sports[i].minEnd[xe];
-								sDex++;
-							}
-							else {
-								conDex++;
-							}
-						}
-						else {
-							sportName[sDex] = fileIn.sports[i].name;
-							startHr = fileIn.sports[i].hourEnd[xe] + 1;
-							startMin = fileIn.sports[i].minEnd[xe];
-							startHrS[sDex] = fileIn.sports[i].hourStart[xe];
-							startMinS[sDex] = fileIn.sports[i].minStart[xe];
-							endHrS[sDex] = fileIn.sports[i].hourEnd[xe];
-							endMinS[sDex] = fileIn.sports[i].minEnd[xe];
-							sDex++;
-						}
-					}
-				}
-			}
-			var startMinTol=startMin+60*startHr;
-			var endMinTol=startMinTol+hwTime;
-			var endMin=endMinTol%60;
-			var endHr=parseInt(endMinTol/60);//Club/sport time
-			var hour=6;
-			var min=30;
-			var printed = [false,false,false];//{HW,clubs,Sports}
-			for(var y=0;y<numY;y++)
-			{
-				ctx.fillStyle=colour[x][y];
-				ctx.fillRect(x*width,y*height,width,height);
-				ctx.strokeRect(x*width,y*height,width,height);
-				var content=null;//content of text
-				if((x>0&&x<6)||(x>7&&x<13))
-				{
-					if ((hour >= 8 && hour <= 14)||(hour == 15 && min == 0))
-					{
-
-						if (x % 2 == 0)
-							colour[x][y] = "#0c26ed";//even day
-						else
-							colour[x][y] = "#0091e0";//odd day
-						if (hour == 8 && min == 0) {
-							content="School Day";
-						}
-					}
-				}
-				if(y==0&&(x==1||x==8))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Monday";
-				}
-				if(y==0&&(x==2||x==9))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Tuesday";
-				}
-				if(y==0&&(x==3||x==10))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Wednesday";
-				}
-				if(y==0&&(x==4||x==11))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Thursday";
-				}
-				if(y==0&&(x==5||x==12))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Friday";
-				}
-				if(y==0&&(x==6||x==13))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Saturday";
-				}
-				if(y==0&&(x==7||x==14))
-				{
-					colour[x][y]="#bbbbbb";
-					content="Sunday";
-				}
-				if(hour>=startHr&&hour<=endHr&&((x>0&&x<7)||(x>7&&x<14)))
-				{
-					if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
-					{
-						colour[x][y]='#9944ff';//HW
-						if(!printed[0]) {
-							content = "Homework";
-							printed[0] = true;
-						}
-					}
-				}
-				for(var k=0;k<cDex;k++) //go through all clubz
-				{
-					if (hour >= startHrC[k] && hour <= endHrC[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) {
-						if (!(hour == startHrC[k] && (min) <= startMinC[k]) && !(hour == endHrC[k] && (min) > endMinC[k])) {
-							colour[x][y] = '#00ff00';//Clubs
-							if (!printed[1]) {
-								content = clubName[k];
-								printed[1] = true;
-							}
-						}
-					}
-				}
-				for(k=0;k<sDex;k++) //go through all clubz
-				{
-					if (hour >= startHrS[k] && hour <= endHrS[k] && ((x > 0 && x < 7) || (x > 7 && x < 14)))
-					{
-						if (!(hour == startHrS[k] && min <= startMinS[k]) && !(hour == endHrS[k] && min > endMinS[k])) {
-							if ((hour >= startHrC[k] && hour <= endHrC[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) && !(hour == startHrC[k] && (min) <= startMinC[k]) && !(hour == endHrC[k] && (min) > endMinC[k])) {
-								colour[x][y] = '#ff0000';//Conflict!
-								content = "Confict!!";
-							}
-							else {
-								colour[x][y] = '#ffff00';//Sports
-								if (!printed[2]) {
-									content = sportName[k];
-									printed[2] = true;
-								}
-							}
-						}
-					}
-				}
-				for(k=0;k<sDex;k++) //go through all conflictz
-				{
-					if (hour >= startHrCon[k] && hour <= endHrCon[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) {
-						if (!(hour == startHrCon[k]&& (min) <= startMinCon[k]) && !(hour == endHrCon[k] && (min) > endMinCon[k])) {
-							colour[x][y] = '#ff0000';//Conflict!
-							content = "Confict!!";
-						}
-					}
-				}
-				ctx.fillStyle=colour[x][y];
-				ctx.fillRect(x*width,y*height,width,height);
-				if(content!=null)
-				{
-					ctx.fillStyle = "#000000";
-					ctx.fillText(content, x * width + 1, y * height + (height * 0.85));
-				}
-				if(y>0) {
-					ctx.fillStyle = "#000000";
-					ctx.font = "15px sans-serif";
-					//makes 9:0 into 9:00
-					var add = "";
-					if (min < 10)
-						add = "0";
-					if (x == 0) {
-						if (hour > 12)
-							ctx.fillText(hour - 12 + ":" + min + add + " PM", x * width, y * height + (height * 0.9));
-						else
-							ctx.fillText(hour + ":" + min + add + " AM", x * width, y * height + (height * 0.9));
-					}
-					min += 15;
-					if (min >= 60) {
-						hour++;
-						min = 0;
+						sportName[sDex] = fileIn2.sports[i].name;
+						startHr = fileIn2.sports[i].hourEnd[xe] + 1;
+						startMin = fileIn2.sports[i].minEnd[xe];
+						startHrS[sDex] = fileIn2.sports[i].hourStart[xe];
+						startMinS[sDex] = fileIn2.sports[i].minStart[xe];
+						endHrS[sDex] = fileIn2.sports[i].hourEnd[xe];
+						endMinS[sDex] = fileIn2.sports[i].minEnd[xe];
+						sDex++;
 					}
 				}
 			}
 		}
+		var startMinTol=startMin+60*startHr;
+		var endMinTol=startMinTol+hwTime;
+		var endMin=endMinTol%60;
+		var endHr=parseInt(endMinTol/60);//Club/sport time
+		var hour=6;
+		var min=30;
+		var printed = [false,false,false];//{HW,clubs,Sports}
+		for(var y=0;y<numY;y++)
+		{
+			ctx.fillStyle=colour[x][y];
+			ctx.fillRect(x*width,y*height,width,height);
+			ctx.strokeRect(x*width,y*height,width,height);
+			var content=null;//content of text
+			if((x>0&&x<6)||(x>7&&x<13))
+			{
+				if ((hour >= 8 && hour <= 14)||(hour == 15 && min == 0))
+				{
 
-		var container= document.getElementById("canvas123");
-		container.appendChild(canvas);
-
-
-	};
-
-	function onLoad(){
-		createCanvas();
-		drawGrid();
+					if (x % 2 == 0)
+						colour[x][y] = "#0c26ed";//even day
+					else
+						colour[x][y] = "#0091e0";//odd day
+					if (hour == 8 && min == 0) {
+						content="School Day";
+					}
+				}
+			}
+			if(y==0&&(x==1||x==8))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Monday";
+			}
+			if(y==0&&(x==2||x==9))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Tuesday";
+			}
+			if(y==0&&(x==3||x==10))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Wednesday";
+			}
+			if(y==0&&(x==4||x==11))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Thursday";
+			}
+			if(y==0&&(x==5||x==12))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Friday";
+			}
+			if(y==0&&(x==6||x==13))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Saturday";
+			}
+			if(y==0&&(x==7||x==14))
+			{
+				colour[x][y]="#bbbbbb";
+				content="Sunday";
+			}
+			if(hour>=startHr&&hour<=endHr&&((x>0&&x<7)||(x>7&&x<14)))
+			{
+				if(!(hour==startHr&&min<=startMin)&&!(hour==endHr&&(min)>endMin))
+				{
+					colour[x][y]='#9944ff';//HW
+					if(!printed[0]) {
+						content = "Homework";
+						printed[0] = true;
+					}
+				}
+			}
+			for(var k=0;k<cDex;k++) //go through all clubz
+			{
+				if (hour >= startHrC[k] && hour <= endHrC[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) {
+					if (!(hour == startHrC[k] && (min) <= startMinC[k]) && !(hour == endHrC[k] && (min) > endMinC[k])) {
+						colour[x][y] = '#00ff00';//Clubs
+						if (!printed[1]) {
+							content = clubName[k];
+							printed[1] = true;
+						}
+					}
+				}
+			}
+			for(k=0;k<sDex;k++) //go through all clubz
+			{
+				if (hour >= startHrS[k] && hour <= endHrS[k] && ((x > 0 && x < 7) || (x > 7 && x < 14)))
+				{
+					if (!(hour == startHrS[k] && min <= startMinS[k]) && !(hour == endHrS[k] && min > endMinS[k])) {
+						if ((hour >= startHrC[k] && hour <= endHrC[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) && !(hour == startHrC[k] && (min) <= startMinC[k]) && !(hour == endHrC[k] && (min) > endMinC[k])) {
+							colour[x][y] = '#ff0000';//Conflict!
+							content = "Confict!!";
+						}
+						else {
+							colour[x][y] = '#ffff00';//Sports
+							if (!printed[2]) {
+								content = sportName[k];
+								printed[2] = true;
+							}
+						}
+					}
+				}
+			}
+			for(k=0;k<sDex;k++) //go through all conflictz
+			{
+				if (hour >= startHrCon[k] && hour <= endHrCon[k] && ((x > 0 && x < 6) || (x > 7 && x < 13))) {
+					if (!(hour == startHrCon[k]&& (min) <= startMinCon[k]) && !(hour == endHrCon[k] && (min) > endMinCon[k])) {
+						colour[x][y] = '#ff0000';//Conflict!
+						content = "Confict!!";
+					}
+				}
+			}
+			ctx.fillStyle=colour[x][y];
+			ctx.fillRect(x*width,y*height,width,height);
+			if(content!=null)
+			{
+				ctx.fillStyle = "#000000";
+				ctx.fillText(content, x * width + 1, y * height + (height * 0.85));
+			}
+			if(y>0) {
+				ctx.fillStyle = "#000000";
+				ctx.font = "15px sans-serif";
+				//makes 9:0 into 9:00
+				var add = "";
+				if (min < 10)
+					add = "0";
+				if (x == 0) {
+					if (hour > 12)
+						ctx.fillText(hour - 12 + ":" + min + add + " PM", x * width, y * height + (height * 0.9));
+					else
+						ctx.fillText(hour + ":" + min + add + " AM", x * width, y * height + (height * 0.9));
+				}
+				min += 15;
+				if (min >= 60) {
+					hour++;
+					min = 0;
+				}
+			}
+			if(x==0&&y==0) {
+				ctx.fillStyle = "#000000";
+				ctx.font = "15px sans-serif";
+				ctx.fillText(season, x * width, y * height + (height * 0.9));
+			}
+		}
 	}
-	function changeSeason()
-	{
-		if(season=="fall")
-			season="winter";
-		else
-		if(season=="winter")
-			season="spring";
-		else
-			season="fall";
-		drawGrid();
-	}
+
+	var container= document.getElementById("canvas123");
+	container.appendChild(canvas);
 
 
-	onLoad();
+};
 
+function onLoad(){
+	createCanvas();
+	drawGrid();
+}
+function changeSeason()
+{
+	if(season=="fall")
+		season="winter";
+	else
+	if(season=="winter")
+		season="spring";
+	else
+		season="fall";
+	drawGrid();
 }
 
 //**CLASSES**
