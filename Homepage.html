@@ -7,7 +7,7 @@
 	</head>
 	<body>
         <nav class="fixed-nav-bar">
-            <img src="images/Something cool.png" alt="Woodson Logo" style="width:150px;height:150px;margin-right: 40px; float:left;">
+            <a href="http://www.fcps.edu/woodsonhs/"><img src="images/Something cool.png" alt="Woodson Logo" style="width:150px;height:150px;margin-right: 40px; float:left;"></a>
 			<div id="title"><h1>Schedule Simulator</h1>
 			 </div>				
 	   </nav>
@@ -40,4 +40,35 @@
 			</ul>
 		</nav>
 	</body>
+	
+		<script>
+
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+    {
+        alert('This browser is inadequate. Please use Chrome');
+    }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+        //alert('Chrome');
+    }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+    {
+        alert('This browser is inadequate. Please use Chrome');
+    }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    {
+         //alert('Firefox');
+    }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+    {
+      alert('This browser is inadequate. Please use Chrome'); 
+    }  
+    else 
+    {
+       alert('unknown');
+    }
+	
+    
+
+	</script>
 </html>
