@@ -1,0 +1,45 @@
+To use our Schedule Simulator, you first must be in Chrome or firefox as all 
+other browsers have been disabled for being inadequate.
+
+On the front page, you will see written instructions for detailed information on the use of this program.
+
+Clicking the Schedule Simulator button on the left side of the screen, you will be taken to the  
+selection page.
+
+You can click on the Classes, Sports, or Club tabs to drop down more detailed catagories for selecting 
+your schedule.
+
+Under any tab, clicking on a catagory will bring the list of available options for that list.
+
+While in the classes tab, hovering over a class will bring up a short description of the class.
+
+As we procede on our virtual tour, we arrive at the sports tab.
+
+The catagories for sports are broken up into fall, winter and spring; however, only one 
+sport can be selected at a time for each season.
+
+After selecting your sports, you may procede to the Clubs tabs and begin selecting your choice of 
+after school activities.
+
+Once all of your selections have been made, press the Generate button to be taken to an estimate 
+of your freshmen class schedule.
+
+Every event has a lable in the top box, describing what it represents.
+
+Events are color coordinated and conflicts are represened in bright red to easily show where the issues lie.
+
+The Sports are shown base9 off of the currently selected season.
+
+The currently displayed season is shown in the top left grey box on the schedule sheet.
+
+The button to change season is located at the bottom of the page. 
+
+If you click on the Homepage button on the top of the page, you will be taken back to our starting page.
+
+While on the homepage, clicking on the Woodson logo will redirect you to the Woodson website.
+
+This marks the end of our virtual tour throughout the Cyber cosmos that is the PUT schedule Simultar application.
+
+See you in cyber space
+
+signing off Aidan D. reporter of the facts
