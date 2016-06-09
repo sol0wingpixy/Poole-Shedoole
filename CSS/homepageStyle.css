@@ -18,10 +18,11 @@ html
 
 #left
 {
-    position:fixed;
+	position: fixed;
+	overflow-y: auto;
     background-color: #2C6AA3;
     width: 30%;
-    height: 100%;
+    height: 90%;
     left: -2.5em;
     top: 10.5em;
     padding: 10px;
@@ -66,6 +67,7 @@ p
 
 #instructions{
 	padding: 20px;
+	overflow-y: auto;
 }
 
 li{

@@ -188,7 +188,6 @@ p{
 
 form{
 	display: inline;
-	
 }
 
 h1 {
@@ -238,34 +237,6 @@ h3{
 	font-family: myFirstFont;
 	color: white;
 }
-
-
-.list {
-	border: 5px;
-	margin: 4rem;
-	padding: 4rem;
-}
-
-.frame {
-	width: 100%;
-	height: 350px;
-	border-radius: 12px;
-	overflow: auto;
-	float: left;
-	border: 2px solid #808080;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 5px;
-}
-
-iframe {
-	width: 100%;
-	height: 350px;
-	border-radius: 12px;
-}
-
-/*Sliders*/
-
 
 li{
 	float:left;
